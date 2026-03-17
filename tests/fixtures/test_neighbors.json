@@ -1,0 +1,44 @@
+{
+  "default": [
+    {"material_id": "mp-19006",  "formula": "Fe2O3",   "distance": 0.12, "confidence": 0.96},
+    {"material_id": "mp-19770",  "formula": "Fe3O4",   "distance": 0.45, "confidence": 0.86},
+    {"material_id": "mp-715572", "formula": "FeO",     "distance": 0.61, "confidence": 0.81},
+    {"material_id": "mp-25279",  "formula": "NiFe2O4", "distance": 0.82, "confidence": 0.76},
+    {"material_id": "mp-558",    "formula": "CoFe2O4", "distance": 0.94, "confidence": 0.73}
+  ],
+  "LiCoO2": [
+    {"material_id": "mp-25015",  "formula": "LiNiO2",  "distance": 0.31, "confidence": 0.90},
+    {"material_id": "mp-22929",  "formula": "LiMnO2",  "distance": 0.55, "confidence": 0.83},
+    {"material_id": "mp-22522",  "formula": "CoO",     "distance": 0.72, "confidence": 0.79},
+    {"material_id": "mp-25014",  "formula": "LiNiMnO2","distance": 0.89, "confidence": 0.74},
+    {"material_id": "mp-19006",  "formula": "Co3O4",   "distance": 1.02, "confidence": 0.71}
+  ],
+  "LiNiO2": [
+    {"material_id": "mp-24850",  "formula": "LiCoO2",  "distance": 0.31, "confidence": 0.90},
+    {"material_id": "mp-22929",  "formula": "LiMnO2",  "distance": 0.48, "confidence": 0.85},
+    {"material_id": "mp-22522",  "formula": "NiO",     "distance": 0.66, "confidence": 0.80},
+    {"material_id": "mp-25014",  "formula": "LiNiMnO2","distance": 0.79, "confidence": 0.77},
+    {"material_id": "mp-25954",  "formula": "LiFePO4", "distance": 1.14, "confidence": 0.68}
+  ],
+  "LiFePO4": [
+    {"material_id": "mp-782",    "formula": "FePO4",   "distance": 0.28, "confidence": 0.91},
+    {"material_id": "mp-757403", "formula": "LiMnPO4", "distance": 0.49, "confidence": 0.85},
+    {"material_id": "mp-19052",  "formula": "Fe2O3",   "distance": 0.66, "confidence": 0.80},
+    {"material_id": "mp-2078",   "formula": "Li3PO4",  "distance": 0.75, "confidence": 0.78},
+    {"material_id": "mp-757534", "formula": "LiCoPO4", "distance": 0.88, "confidence": 0.74}
+  ],
+  "BaTiO3": [
+    {"material_id": "mp-5986",   "formula": "BaTiO3",  "distance": 0.00, "confidence": 1.00},
+    {"material_id": "mp-3958",   "formula": "SrTiO3",  "distance": 0.22, "confidence": 0.93},
+    {"material_id": "mp-4269",   "formula": "CaTiO3",  "distance": 0.38, "confidence": 0.88},
+    {"material_id": "mp-3079",   "formula": "TiO2",    "distance": 0.57, "confidence": 0.83},
+    {"material_id": "mp-510624", "formula": "BaZrO3",  "distance": 0.71, "confidence": 0.79}
+  ],
+  "NaFeO2": [
+    {"material_id": "mp-18905",  "formula": "NaFeO2",  "distance": 0.00, "confidence": 1.00},
+    {"material_id": "mp-20305",  "formula": "NaCrO2",  "distance": 0.35, "confidence": 0.89},
+    {"material_id": "mp-19306",  "formula": "NaMnO2",  "distance": 0.52, "confidence": 0.84},
+    {"material_id": "mp-19770",  "formula": "Fe3O4",   "distance": 0.69, "confidence": 0.79},
+    {"material_id": "mp-2691",   "formula": "NaAlO2",  "distance": 0.81, "confidence": 0.76}
+  ]
+}

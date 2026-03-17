@@ -51,6 +51,29 @@ class SearchAPI:
             n_neighbors=self.max_neighbors, metric="euclidean"
         ).fit(mp_features_scaled)
 
+    def fit(
+        self,
+        features: np.ndarray,
+        material_ids: np.ndarray,
+        formulas: np.ndarray,
+    ) -> None:
+        """Rebuild the NearestNeighbors model on an arbitrary subset of data.
+
+        Enables leave-one-out and train/test split evaluation without reloading
+        the full HDF5 dataset.
+
+        Args:
+            features: Feature matrix of shape (n_materials, n_features).
+            material_ids: Array of material ID strings, length n_materials.
+            formulas: Array of formula strings, length n_materials.
+        """
+        self.mp_data = {
+            "features": features,
+            "material_ids": np.asarray(material_ids),
+            "formulas": np.asarray(formulas),
+        }
+        self._set_nearest_neighbors_model()
+
     def query(
         self, input_data: Composition | Structure, n_neighbors: int = 10
     ) -> list[Neighbor]:
@@ -61,7 +84,7 @@ class SearchAPI:
         )
         distances = distances.squeeze()
         indices = indices.squeeze()
-        confidences = np.exp(-distances / 3)
+        confidences = np.exp(-distances / 0.5)
 
         # Collect results
         results = []
@@ -75,4 +98,52 @@ class SearchAPI:
                     confidence=confidences[i].item(),
                 )
             )
+        return results
+
+    def query_with_exclusion(
+        self,
+        input_data: Composition | Structure,
+        exclude_ids: list[str],
+        n_neighbors: int = 10,
+    ) -> list[Neighbor]:
+        """Query KNN while excluding specific material IDs from results.
+
+        Prevents self-retrieval during leave-one-out evaluation.
+
+        Args:
+            input_data: Query composition or structure.
+            exclude_ids: Material IDs to remove from returned results.
+            n_neighbors: Number of neighbors to return after exclusion.
+        """
+        exclude_set = set(exclude_ids)
+        # Over-fetch to have enough after exclusion; cap at index size
+        fetch_n = min(n_neighbors + len(exclude_set) + 10, len(self.mp_data["material_ids"]))
+
+        input_embedding = self.featurizer.get_embedding(input_data)
+        input_embedding_scaled = self.scaler.transform(input_embedding)
+        distances, indices = self.nn_model.kneighbors(
+            input_embedding_scaled, n_neighbors=fetch_n
+        )
+        distances = distances.squeeze()
+        indices = indices.squeeze()
+        confidences = np.exp(-distances / 0.5)
+
+        results = []
+        neighbor_index = 0
+        for i, idx in enumerate(indices):
+            mid = self.mp_data["material_ids"][idx].item()
+            if mid in exclude_set:
+                continue
+            results.append(
+                Neighbor(
+                    neighbor_index=neighbor_index,
+                    material_id=mid,
+                    formula=self.mp_data["formulas"][idx].item(),
+                    distance=distances[i].item(),
+                    confidence=confidences[i].item(),
+                )
+            )
+            neighbor_index += 1
+            if len(results) >= n_neighbors:
+                break
         return results

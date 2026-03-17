@@ -3,7 +3,6 @@ from enum import Enum
 import numpy as np
 from pymatgen.core import Structure, Composition
 from matminer.featurizers.composition import ElementProperty
-from mace.calculators import mace_mp
 
 
 class InputType(Enum):
@@ -25,6 +24,7 @@ class MaterialsEmbedding:
 
     def _get_structure_embedding(self, structure: Structure) -> np.ndarray:
         if self._mace_calculator is None:
+            from mace.calculators import mace_mp
             self._mace_calculator = mace_mp()
 
         return np.array(

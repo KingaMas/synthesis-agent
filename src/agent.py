@@ -8,20 +8,19 @@ from src.embedding import InputType
 from src.search_api import SearchAPI
 from src.schema import Neighbor, SynthesisRecipe, SummaryDoc
 
-MP_API_KEY = os.getenv("MP_API_KEY")
-if MP_API_KEY is None:
-    raise ValueError("MP_API_KEY environment variable not set.")
-
 
 class SynthesisAgent:
     def __init__(self):
+        mp_api_key = os.getenv("MP_API_KEY")
+        if mp_api_key is None:
+            raise ValueError("MP_API_KEY environment variable not set.")
         self.search_api_composition = SearchAPI(
             input_type=InputType.COMPOSITION, max_neighbors=100
         )
         self.search_api_structure = SearchAPI(
             input_type=InputType.STRUCTURE, max_neighbors=100
         )
-        self.mpr = MPRester(api_key=MP_API_KEY)
+        self.mpr = MPRester(api_key=mp_api_key)
 
     def find_similar_materials_by_composition(
         self, composition_str: str, n_neighbors: int = 10

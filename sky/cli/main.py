@@ -9,6 +9,7 @@ import shutil
 from pathlib import Path
 
 import typer
+from src import ASSETS_DIR
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -202,8 +203,8 @@ def setup():
             table.add_row(module_name, "❌ Missing", description)
     
     # Check data files
-    synthesis_file = Path("/home/ryan/kricthack/kricthack/synthesis-agent/assets/mp_synthesis_recipes.json.gz")
-    embedding_file = Path("/home/ryan/kricthack/kricthack/synthesis-agent/assets/embedding/mp_dataset_composition_magpie.h5")
+    synthesis_file = ASSETS_DIR / "mp_synthesis_recipes.json.gz"
+    embedding_file = ASSETS_DIR / "embedding" / "mp_dataset_composition_magpie.h5"
     
     table.add_row(
         "Synthesis Recipes",

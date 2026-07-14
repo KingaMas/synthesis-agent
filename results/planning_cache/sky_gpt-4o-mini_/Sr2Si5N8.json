@@ -1,0 +1,21 @@
+{
+ "target_formula": "Sr2Si5N8",
+ "precursor_formulas": [
+  "Sr3N2",
+  "Si3N4",
+  "AlN"
+ ],
+ "precursor_elements": [
+  "Al",
+  "N",
+  "Si",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1750.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Sr3N2\", \"Si3N4\", \"AlN\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1750,\n  \"rationale\": \"The synthesis is adapted from similar materials featuring solid-state methods, utilizing common precursors while maintaining high-temperature processing.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 11.212251713965088,
+ "model": "gpt-4o-mini"
+}

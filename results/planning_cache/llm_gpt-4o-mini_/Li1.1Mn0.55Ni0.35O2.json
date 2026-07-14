@@ -1,0 +1,22 @@
+{
+ "target_formula": "Li1.1Mn0.55Ni0.35O2",
+ "precursor_formulas": [
+  "Li2CO3",
+  "MnO2",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "C",
+  "Li",
+  "Mn",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"Li2CO3\", \"MnO2\", \"NiO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing layered lithium transition metal oxides like Li1.1Mn0.55Ni0.35O2, allowing for the formation of the desired structure through high-temperature calcination of the mixed precursors.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.7120307211298496,
+ "model": "gpt-4o-mini"
+}

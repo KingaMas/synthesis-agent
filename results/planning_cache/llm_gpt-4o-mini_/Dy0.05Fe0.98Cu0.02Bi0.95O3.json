@@ -1,0 +1,23 @@
+{
+ "target_formula": "Dy0.05Fe0.98Cu0.02Bi0.95O3",
+ "precursor_formulas": [
+  "Dy2O3",
+  "Fe2O3",
+  "CuO",
+  "Bi2O3"
+ ],
+ "precursor_elements": [
+  "Bi",
+  "Cu",
+  "Dy",
+  "Fe",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"Dy2O3\", \"Fe2O3\", \"CuO\", \"Bi2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Dy0.05Fe0.98Cu0.02Bi0.95O3, allowing for the high-temperature reaction of metal oxides to achieve the desired stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.7623870151583105,
+ "model": "gpt-4o-mini"
+}

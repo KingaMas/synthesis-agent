@@ -1,0 +1,23 @@
+{
+ "target_formula": "Sr0.05La0.95Co1O3",
+ "precursor_formulas": [
+  "La(NO3)3.6H2O",
+  "Sr(NO3)2",
+  "Co(NO3)2.6H2O"
+ ],
+ "precursor_elements": [
+  "Co",
+  "H",
+  "La",
+  "N",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1100.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"La(NO3)3.6H2O\", \"Sr(NO3)2\", \"Co(NO3)2.6H2O\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1100,\n  \"rationale\": \"The proposed recipe is adapted from similar materials with known solid-state synthesis methods and compatible precursors. The highest known calcination temperature for these materials is 1100 \u00b0C.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 21.08614084101282,
+ "model": "gpt-4o-mini"
+}

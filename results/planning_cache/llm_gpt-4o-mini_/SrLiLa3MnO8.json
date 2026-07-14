@@ -1,0 +1,24 @@
+{
+ "target_formula": "SrLiLa3MnO8",
+ "precursor_formulas": [
+  "SrCO3",
+  "Li2CO3",
+  "La2O3",
+  "MnO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "La",
+  "Li",
+  "Mn",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"SrCO3\", \"Li2CO3\", \"La2O3\", \"MnO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like SrLiLa3MnO8, allowing for the formation of the desired phase through high-temperature reactions between the metal oxides and carbonates.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.5873605529777706,
+ "model": "gpt-4o-mini"
+}

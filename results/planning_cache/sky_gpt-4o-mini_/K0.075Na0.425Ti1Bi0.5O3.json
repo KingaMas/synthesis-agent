@@ -1,0 +1,24 @@
+{
+ "target_formula": "K0.075Na0.425Ti1Bi0.5O3",
+ "precursor_formulas": [
+  "K2CO3",
+  "Na2CO3",
+  "TiO2",
+  "Bi2O3"
+ ],
+ "precursor_elements": [
+  "Bi",
+  "C",
+  "K",
+  "Na",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1100.0,
+ "raw_text": "{\"precursors\":[\"K2CO3\",\"Na2CO3\",\"TiO2\",\"Bi2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1100,\"rationale\":\"The synthesis is adapted from similar perovskite-type materials; K2CO3 and Na2CO3 are used for potassium and sodium sources, while TiO2 and Bi2O3 serve as titanium and bismuth precursors.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 12.954197929939255,
+ "model": "gpt-4o-mini"
+}

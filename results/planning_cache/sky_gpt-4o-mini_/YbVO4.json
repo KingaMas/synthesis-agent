@@ -1,0 +1,21 @@
+{
+ "target_formula": "YbVO4",
+ "precursor_formulas": [
+  "Yb2O3",
+  "NH4VO3"
+ ],
+ "precursor_elements": [
+  "H",
+  "N",
+  "O",
+  "V",
+  "Yb"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\"precursors\":[\"Yb2O3\",\"NH4VO3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1200,\"rationale\":\"Based on the known synthesis of ErVO4, a solid-state reaction using Yb2O3 and NH4VO3 can be adapted for YbVO4. The heating temperature was chosen based on similar materials to ensure proper formation.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 10.144796269014478,
+ "model": "gpt-4o-mini"
+}

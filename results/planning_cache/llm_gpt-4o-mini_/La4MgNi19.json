@@ -1,0 +1,21 @@
+{
+ "target_formula": "La4MgNi19",
+ "precursor_formulas": [
+  "La2O3",
+  "MgO",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "La",
+  "Mg",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"La2O3\", \"MgO\", \"NiO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The target material La4MgNi19 can be synthesized through a solid-state reaction of the oxides at high temperatures, which promotes the necessary diffusion and reaction between the precursors to form the desired intermetallic compound.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 8.30587118002586,
+ "model": "gpt-4o-mini"
+}

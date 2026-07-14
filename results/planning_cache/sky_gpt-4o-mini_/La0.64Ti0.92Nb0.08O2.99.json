@@ -1,0 +1,21 @@
+{
+ "target_formula": "La0.64Ti0.92Nb0.08O2.99",
+ "precursor_formulas": [
+  "La2O3",
+  "Nb2O5",
+  "TiO2"
+ ],
+ "precursor_elements": [
+  "La",
+  "Nb",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\n    \"La2O3\",\n    \"Nb2O5\",\n    \"TiO2\"\n  ],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"La0.64Ti0.92Nb0.08O2.99 can be synthesized using the solid-state method adapted from LaTiNbO6 recipes, with the same precursors but adjusted stoichiometry to account for the target composition.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 14.34773815004155,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,19 @@
+{
+ "target_formula": "ScTaO4",
+ "precursor_formulas": [
+  "Ta2O5",
+  "Sc2O3"
+ ],
+ "precursor_elements": [
+  "O",
+  "Sc",
+  "Ta"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\"precursors\":[\"Ta2O5\",\"Sc2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1200,\"rationale\":\"The synthesis of ScTaO4 can be derived from similar tantalates like YTaO4 and Sc2(WO4)3, utilizing Ta2O5 and Sc2O3 as precursors, with a solid-state method that has proven effective for both materials.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 9.076450643129647,
+ "model": "gpt-4o-mini"
+}

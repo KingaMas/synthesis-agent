@@ -1,0 +1,19 @@
+{
+ "target_formula": "K4Nb6O17",
+ "precursor_formulas": [
+  "K2O",
+  "Nb2O5"
+ ],
+ "precursor_elements": [
+  "K",
+  "Nb",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\"precursors\":[\"K2O\",\"Nb2O5\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1200,\"rationale\":\"Similar materials do not have published recipes, but based on their compositions and the presence of alkali and niobium oxides, a solid-state method with high calcination temperature is appropriate for synthesizing K4Nb6O17.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 9.152449964080006,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+ "target_formula": "La0.64Ti0.92Nb0.08O2.99",
+ "precursor_formulas": [
+  "La2O3",
+  "TiO2",
+  "Nb2O5"
+ ],
+ "precursor_elements": [
+  "La",
+  "Nb",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"La2O3\", \"TiO2\", \"Nb2O5\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like La0.64Ti0.92Nb0.08O2.99, allowing for the formation of the desired perovskite structure through high-temperature calcination of the mixed oxides.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.8797704561147839,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,27 @@
+{
+ "target_formula": "Na2V0.96Fe1.96P3O12",
+ "precursor_formulas": [
+  "Na2CO3",
+  "V2O5",
+  "Fe2O3",
+  "H3PO4",
+  "NH4H2PO4"
+ ],
+ "precursor_elements": [
+  "C",
+  "Fe",
+  "H",
+  "N",
+  "Na",
+  "O",
+  "P",
+  "V"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 900.0,
+ "raw_text": "{\n  \"precursors\": [\"Na2CO3\", \"V2O5\", \"Fe2O3\", \"H3PO4\", \"NH4H2PO4\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 900,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex phosphates like Na2V0.96Fe1.96P3O12, allowing for the formation of the desired phase through high-temperature reactions between the precursors. The maximum heating temperature of 900\u00b0C is chosen to ensure complete reaction and crystallization of the target material.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.2525750789791346,
+ "model": "gpt-4o-mini"
+}

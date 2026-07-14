@@ -1,0 +1,19 @@
+{
+ "target_formula": "Sb2S3",
+ "precursor_formulas": [
+  "Sb2O3",
+  "S"
+ ],
+ "precursor_elements": [
+  "O",
+  "S",
+  "Sb"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 600.0,
+ "raw_text": "{\n  \"precursors\": [\"Sb2O3\", \"S\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 600,\n  \"rationale\": \"The solid-state synthesis of Sb2S3 involves the reaction of antimony(III) oxide with sulfur at elevated temperatures, allowing for the formation of the desired chalcogenide compound through solid-state diffusion.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.641725055873394,
+ "model": "gpt-4o-mini"
+}

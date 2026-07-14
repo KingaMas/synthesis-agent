@@ -1,0 +1,25 @@
+{
+ "target_formula": "Ba1Ce0.7Y0.2Zr0.1O2.9",
+ "precursor_formulas": [
+  "BaCO3",
+  "CeO2",
+  "Y2O3",
+  "ZrO2",
+  "O2"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "Ce",
+  "O",
+  "Y",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"BaCO3\", \"CeO2\", \"Y2O3\", \"ZrO2\", \"O2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Ba1Ce0.7Y0.2Zr0.1O2.9, allowing for high-temperature reactions that promote the formation of the desired perovskite structure. A maximum heating temperature of 1200\u00b0C is typically required to ensure complete reaction and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.258539194939658,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,24 @@
+{
+ "target_formula": "Ba3Nb1Mo1O8.5",
+ "precursor_formulas": [
+  "BaCO3",
+  "Nb2O5",
+  "MoO3",
+  "H2O"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "H",
+  "Mo",
+  "Nb",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"BaCO3\", \"Nb2O5\", \"MoO3\", \"H2O\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Ba3Nb1Mo1O8.5, allowing for the formation of the desired perovskite structure through high-temperature calcination of the mixed precursors.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.81321095302701,
+ "model": "gpt-4o-mini"
+}

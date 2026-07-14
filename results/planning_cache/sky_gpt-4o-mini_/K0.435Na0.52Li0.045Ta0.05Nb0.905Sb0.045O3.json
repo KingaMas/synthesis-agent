@@ -1,0 +1,28 @@
+{
+ "target_formula": "K0.435Na0.52Li0.045Ta0.05Nb0.905Sb0.045O3",
+ "precursor_formulas": [
+  "K2CO3",
+  "Na2CO3",
+  "Li2CO3",
+  "Nb2O5",
+  "Ta2O5",
+  "Sb2O5"
+ ],
+ "precursor_elements": [
+  "C",
+  "K",
+  "Li",
+  "Na",
+  "Nb",
+  "O",
+  "Sb",
+  "Ta"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1150.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\n    \"K2CO3\",\n    \"Na2CO3\",\n    \"Li2CO3\",\n    \"Nb2O5\",\n    \"Ta2O5\",\n    \"Sb2O5\"\n  ],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1150,\n  \"rationale\": \"The synthesis is adapted from similar niobate and tantalate compounds using solid-state methods. Precursors are chosen based on analogous compositions for optimal reactivity.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 16.779647798044607,
+ "model": "gpt-4o-mini"
+}

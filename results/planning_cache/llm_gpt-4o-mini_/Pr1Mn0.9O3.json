@@ -1,0 +1,20 @@
+{
+ "target_formula": "Pr1Mn0.9O3",
+ "precursor_formulas": [
+  "Pr6O11",
+  "MnO2",
+  "O2"
+ ],
+ "precursor_elements": [
+  "Mn",
+  "O",
+  "Pr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"Pr6O11\", \"MnO2\", \"O2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing perovskite-type oxides like Pr1Mn0.9O3, allowing for the formation of the desired phase through high-temperature calcination of the mixed precursors.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.8504900690168142,
+ "model": "gpt-4o-mini"
+}

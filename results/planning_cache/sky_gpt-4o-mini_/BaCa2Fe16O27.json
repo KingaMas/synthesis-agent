@@ -1,0 +1,23 @@
+{
+ "target_formula": "BaCa2Fe16O27",
+ "precursor_formulas": [
+  "Ba(NO3)2",
+  "CaCO3",
+  "Fe2O3"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "Ca",
+  "Fe",
+  "N",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1250.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Ba(NO3)2\", \"CaCO3\", \"Fe2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1250,\n  \"rationale\": \"The synthesis method for BaFe12O19 was adapted for BaCa2Fe16O27 by substituting the necessary cations while retaining similar solid-state synthesis conditions and temperature.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 18.666563898092136,
+ "model": "gpt-4o-mini"
+}

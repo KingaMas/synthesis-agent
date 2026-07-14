@@ -1,0 +1,23 @@
+{
+ "target_formula": "Sr2Co1.96Bi1.91O7.08",
+ "precursor_formulas": [
+  "SrCO3",
+  "Co3O4",
+  "Bi2O3",
+  "O2"
+ ],
+ "precursor_elements": [
+  "Bi",
+  "C",
+  "Co",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"SrCO3\", \"Co3O4\", \"Bi2O3\", \"O2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Sr2Co1.96Bi1.91O7.08, allowing for the high-temperature reaction of the metal oxides and carbonates to achieve the desired stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.9989405130036175,
+ "model": "gpt-4o-mini"
+}

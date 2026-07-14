@@ -1,0 +1,22 @@
+{
+ "target_formula": "CaMgSiO4",
+ "precursor_formulas": [
+  "CaCO3",
+  "MgO",
+  "SiO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "Mg",
+  "O",
+  "Si"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"CaCO3\", \"MgO\", \"SiO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing CaMgSiO4 as it allows for the direct reaction of the oxides and carbonate at high temperatures, promoting the formation of the desired silicate phase.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.388385308906436,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,24 @@
+{
+ "target_formula": "M0.05Li1Mn1.5Ni0.45O4",
+ "precursor_formulas": [
+  "Li2CO3",
+  "MnO2",
+  "NiO",
+  "M2O3"
+ ],
+ "precursor_elements": [
+  "C",
+  "Li",
+  "M0+",
+  "Mn",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"Li2CO3\", \"MnO2\", \"NiO\", \"M2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like M0.05Li1Mn1.5Ni0.45O4, allowing for the high-temperature reaction of metal oxides and carbonates to achieve the desired stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.224867692217231,
+ "model": "gpt-4o-mini"
+}

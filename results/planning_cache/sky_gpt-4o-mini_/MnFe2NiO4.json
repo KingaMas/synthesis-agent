@@ -1,0 +1,21 @@
+{
+ "target_formula": "MnFe2NiO4",
+ "precursor_formulas": [
+  "MnO",
+  "NiO",
+  "Fe2O3"
+ ],
+ "precursor_elements": [
+  "Fe",
+  "Mn",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"MnO\", \"NiO\", \"Fe2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"Adapted from known recipes using similar compositions; solid-state synthesis is commonly used for ferrites, and maximum heating temperature is derived from the closest matching source.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 24.380142335081473,
+ "model": "gpt-4o-mini"
+}

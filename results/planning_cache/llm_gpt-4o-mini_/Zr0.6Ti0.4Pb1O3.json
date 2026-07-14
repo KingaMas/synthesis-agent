@@ -1,0 +1,21 @@
+{
+ "target_formula": "Zr0.6Ti0.4Pb1O3",
+ "precursor_formulas": [
+  "ZrO2",
+  "TiO2",
+  "PbO"
+ ],
+ "precursor_elements": [
+  "O",
+  "Pb",
+  "Ti",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"ZrO2\", \"TiO2\", \"PbO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex perovskite materials like Zr0.6Ti0.4Pb1O3, allowing for high-temperature reactions that promote the formation of the desired phase. The maximum heating temperature of 1000\u00b0C ensures complete reaction and crystallization of the target compound.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.8911472449544817,
+ "model": "gpt-4o-mini"
+}

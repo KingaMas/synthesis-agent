@@ -1,0 +1,22 @@
+{
+ "target_formula": "M0.05Li1Mn1.5Ni0.45O4",
+ "precursor_formulas": [
+  "LiOH",
+  "MnO2",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "H",
+  "Li",
+  "Mn",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 750.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"LiOH\", \"MnO2\", \"NiO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 750,\n  \"rationale\": \"The synthesis method is adapted from LiMn2O4 recipes, incorporating NiO as a precursor for nickel substitution.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 13.758628751849756,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,23 @@
+{
+ "target_formula": "NaSr4(BO3)3",
+ "precursor_formulas": [
+  "SrCO3",
+  "Na2CO3",
+  "B(HO)3"
+ ],
+ "precursor_elements": [
+  "B",
+  "C",
+  "H",
+  "Na",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 600.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"SrCO3\", \"Na2CO3\", \"B(HO)3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 600,\n  \"rationale\": \"The synthesis is adapted from the similar materials NaSrBO3 and Sr4Li(BO3)3, using common derived precursors while keeping the solid-state method as the synthesis type.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 7.533921452006325,
+ "model": "gpt-4o-mini"
+}

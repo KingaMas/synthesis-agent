@@ -1,0 +1,19 @@
+{
+ "target_formula": "Y2Ru2O7",
+ "precursor_formulas": [
+  "Y2O3",
+  "RuO2"
+ ],
+ "precursor_elements": [
+  "O",
+  "Ru",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1300.0,
+ "raw_text": "{\"precursors\":[\"Y2O3\",\"RuO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1300,\"rationale\":\"Adapted from the synthesis of Y2Mo2O7, substituting MoO2 with RuO2 while maintaining solid-state synthesis and the same calcination temperature.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 9.101934690959752,
+ "model": "gpt-4o-mini"
+}

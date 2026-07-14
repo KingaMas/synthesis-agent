@@ -1,0 +1,21 @@
+{
+ "target_formula": "MnSiNiO4",
+ "precursor_formulas": [
+  "MnO2",
+  "SiO2",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "Mn",
+  "Ni",
+  "O",
+  "Si"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"MnO2\", \"SiO2\", \"NiO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing MnSiNiO4 due to the need for high temperatures to promote the reaction between the metal oxides and achieve the desired phase purity and crystallinity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.6836314089596272,
+ "model": "gpt-4o-mini"
+}

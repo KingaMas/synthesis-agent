@@ -1,0 +1,21 @@
+{
+ "target_formula": "Na6.24Fe4.88P8O28",
+ "precursor_formulas": [
+  "NaH2PO4",
+  "Fe2O3"
+ ],
+ "precursor_elements": [
+  "Fe",
+  "H",
+  "Na",
+  "O",
+  "P"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 960.0,
+ "raw_text": "{\"precursors\":[\"NaH2PO4\",\"Fe2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":960,\"rationale\":\"The synthesis involves solid-state reactions, adapting precursors from closely related materials (Na3Fe2(PO4)3) with a similar phosphate framework and sodium content.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 9.493416403187439,
+ "model": "gpt-4o-mini"
+}

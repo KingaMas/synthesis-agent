@@ -1,0 +1,22 @@
+{
+ "target_formula": "Al2(MoO4)3",
+ "precursor_formulas": [
+  "Al2O3",
+  "MoO3",
+  "NH4NO3"
+ ],
+ "precursor_elements": [
+  "Al",
+  "H",
+  "Mo",
+  "N",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 900.0,
+ "raw_text": "{\n  \"precursors\": [\"Al2O3\", \"MoO3\", \"NH4NO3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 900,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Al2(MoO4)3 due to the stability of the precursors at high temperatures, allowing for effective reaction and formation of the desired compound through solid-state diffusion.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.0189787780400366,
+ "model": "gpt-4o-mini"
+}

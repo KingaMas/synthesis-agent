@@ -1,0 +1,12 @@
+{
+ "target_formula": "Gd0.05Fe1Bi0.95O3",
+ "precursor_formulas": [],
+ "precursor_elements": [],
+ "method_family": "other",
+ "max_heating_temp_C": null,
+ "raw_text": "",
+ "provenance": null,
+ "error": "Max turns (12) exceeded",
+ "latency_s": 0.0,
+ "model": null
+}

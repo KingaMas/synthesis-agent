@@ -1,0 +1,22 @@
+{
+ "target_formula": "Ca0.2Dy1.8Ti2O6.9",
+ "precursor_formulas": [
+  "CaCO3",
+  "Dy2O3",
+  "TiO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "Dy",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1600.0,
+ "raw_text": "{\"precursors\":[\"CaCO3\",\"Dy2O3\",\"TiO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1600,\"rationale\":\"The synthesis method is adapted from Dy2Ti2O7 recipes, utilizing solid-state reaction conditions while substituting CaCO3 for the calcium source.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 11.338838093914092,
+ "model": "gpt-4o-mini"
+}

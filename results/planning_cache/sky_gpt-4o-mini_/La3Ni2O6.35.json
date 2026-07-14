@@ -1,0 +1,19 @@
+{
+ "target_formula": "La3Ni2O6.35",
+ "precursor_formulas": [
+  "La2O3",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "La",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\"precursors\":[\"La2O3\",\"NiO\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1000,\"rationale\":\"Adapted from the synthesis of LaNiO3, which shares similar composition. Solid-state method is used due to the structural similarities.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 28.122846361016855,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,22 @@
+{
+ "target_formula": "Li1Ti0.05Ni0.95O2",
+ "precursor_formulas": [
+  "Li2CO3",
+  "NiO",
+  "TiO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Li",
+  "Ni",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\"precursors\":[\"Li2CO3\",\"NiO\",\"TiO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":800,\"rationale\":\"No published recipes exist for Li1Ti0.05Ni0.95O2, but similar lithium transition metal oxides suggest using lithium carbonate, nickel oxide, and titanium dioxide as precursors, processed under solid-state synthesis.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 20.53726726793684,
+ "model": "gpt-4o-mini"
+}

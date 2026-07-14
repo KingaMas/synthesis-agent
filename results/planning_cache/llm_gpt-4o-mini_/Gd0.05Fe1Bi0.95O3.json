@@ -1,0 +1,22 @@
+{
+ "target_formula": "Gd0.05Fe1Bi0.95O3",
+ "precursor_formulas": [
+  "Gd2O3",
+  "Fe2O3",
+  "Bi2O3",
+  "O2"
+ ],
+ "precursor_elements": [
+  "Bi",
+  "Fe",
+  "Gd",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"Gd2O3\", \"Fe2O3\", \"Bi2O3\", \"O2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Gd0.05Fe1Bi0.95O3, allowing for high-temperature reactions that promote the formation of the desired phase. A calcination temperature of 1000\u00b0C is typically effective for achieving the necessary crystallinity and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.5809705399442464,
+ "model": "gpt-4o-mini"
+}

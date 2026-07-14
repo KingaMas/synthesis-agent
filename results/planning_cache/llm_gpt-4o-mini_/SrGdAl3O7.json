@@ -1,0 +1,22 @@
+{
+ "target_formula": "SrGdAl3O7",
+ "precursor_formulas": [
+  "SrCO3",
+  "Gd2O3",
+  "Al2O3"
+ ],
+ "precursor_elements": [
+  "Al",
+  "C",
+  "Gd",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1300.0,
+ "raw_text": "{\n  \"precursors\": [\"SrCO3\", \"Gd2O3\", \"Al2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1300,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like SrGdAl3O7, allowing for the high-temperature reaction of the precursors to form the desired phase. A maximum heating temperature of 1300\u00b0C is typically required to ensure complete reaction and crystallization.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.5827561169862747,
+ "model": "gpt-4o-mini"
+}

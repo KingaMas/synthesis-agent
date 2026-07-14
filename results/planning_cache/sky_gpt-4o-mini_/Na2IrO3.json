@@ -1,0 +1,20 @@
+{
+ "target_formula": "Na2IrO3",
+ "precursor_formulas": [
+  "Na2CO3",
+  "IrO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ir",
+  "Na",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1051.0,
+ "raw_text": "```json\n{\"precursors\":[\"Na2CO3\",\"IrO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1051,\"rationale\":\"The synthesis method is adapted from Li2IrO3 with a similar solid-state approach, using Na2CO3 as a sodium source and IrO2 as the iridium precursor.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 5.217862212099135,
+ "model": "gpt-4o-mini"
+}

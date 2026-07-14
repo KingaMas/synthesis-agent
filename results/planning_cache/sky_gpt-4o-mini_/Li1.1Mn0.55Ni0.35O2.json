@@ -1,0 +1,23 @@
+{
+ "target_formula": "Li1.1Mn0.55Ni0.35O2",
+ "precursor_formulas": [
+  "Li2CO3",
+  "Ni(OH)2",
+  "MnCO3"
+ ],
+ "precursor_elements": [
+  "C",
+  "H",
+  "Li",
+  "Mn",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 900.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Li2CO3\", \"Ni(OH)2\", \"MnCO3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 900,\n  \"rationale\": \"The recipe is adapted from known solid-state synthesis methods for LiNiO2 and LiCoO2, substituting precursors to match the target composition while maintaining similar processing conditions.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 12.240241243038327,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,22 @@
+{
+ "target_formula": "BaZnSiO4",
+ "precursor_formulas": [
+  "BaCO3",
+  "SiO2",
+  "ZnO"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "O",
+  "Si",
+  "Zn"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"BaCO3\", \"SiO2\", \"ZnO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"Solid-state methods from similar materials suggest using BaCO3, SiO2, and ZnO, with heating up to 1200\u00b0C based on related recipes.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 14.100805393885821,
+ "model": "gpt-4o-mini"
+}

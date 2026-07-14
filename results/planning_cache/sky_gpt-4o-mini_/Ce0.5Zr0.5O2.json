@@ -1,0 +1,19 @@
+{
+ "target_formula": "Ce0.5Zr0.5O2",
+ "precursor_formulas": [
+  "CeO2",
+  "ZrO2"
+ ],
+ "precursor_elements": [
+  "Ce",
+  "O",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 500.0,
+ "raw_text": "{\"precursors\":[\"CeO2\",\"ZrO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":500,\"rationale\":\"The synthesis adapts the known methods for CeZrO4 by using similar precursors, maintaining solid-state synthesis conditions.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 8.854635232128203,
+ "model": "gpt-4o-mini"
+}

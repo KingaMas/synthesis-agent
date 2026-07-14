@@ -1,0 +1,29 @@
+{
+ "target_formula": "K0.435Na0.52Li0.045Ta0.05Nb0.905Sb0.045O3",
+ "precursor_formulas": [
+  "K2CO3",
+  "Na2CO3",
+  "Li2CO3",
+  "Ta2O5",
+  "Nb2O5",
+  "Sb2O5",
+  "O2"
+ ],
+ "precursor_elements": [
+  "C",
+  "K",
+  "Li",
+  "Na",
+  "Nb",
+  "O",
+  "Sb",
+  "Ta"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1100.0,
+ "raw_text": "{\n  \"precursors\": [\"K2CO3\", \"Na2CO3\", \"Li2CO3\", \"Ta2O5\", \"Nb2O5\", \"Sb2O5\", \"O2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1100,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex perovskite materials like K0.435Na0.52Li0.045Ta0.05Nb0.905Sb0.045O3, allowing for the high-temperature reaction of metal oxides and carbonates to achieve the desired stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.0815455850679427,
+ "model": "gpt-4o-mini"
+}

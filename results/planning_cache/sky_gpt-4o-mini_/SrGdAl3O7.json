@@ -1,0 +1,22 @@
+{
+ "target_formula": "SrGdAl3O7",
+ "precursor_formulas": [
+  "SrCO3",
+  "Al2O3",
+  "Gd2O3"
+ ],
+ "precursor_elements": [
+  "Al",
+  "C",
+  "Gd",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1400.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\n    \"SrCO3\",\n    \"Al2O3\",\n    \"Gd2O3\"\n  ],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1400,\n  \"rationale\": \"The chosen precursors are based on adapting recipes from similar materials like CaGdAlO4 and Sr3Gd2(BO3)4, utilizing solid-state synthesis to obtain the desired stoichiometry.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 6.88163338904269,
+ "model": "gpt-4o-mini"
+}

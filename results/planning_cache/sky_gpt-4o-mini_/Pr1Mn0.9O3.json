@@ -1,0 +1,20 @@
+{
+ "target_formula": "Pr1Mn0.9O3",
+ "precursor_formulas": [
+  "Pr6O11",
+  "MnCO3"
+ ],
+ "precursor_elements": [
+  "C",
+  "Mn",
+  "O",
+  "Pr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1260.0,
+ "raw_text": "{\"precursors\":[\"Pr6O11\",\"MnCO3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1260,\"rationale\":\"The synthesis of Pr1Mn0.9O3 can be adapted from published solid-state recipes for PrMnO3 by substituting Pr6O11 and MnCO3 as precursors, maintaining similar conditions.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 8.993931076023728,
+ "model": "gpt-4o-mini"
+}

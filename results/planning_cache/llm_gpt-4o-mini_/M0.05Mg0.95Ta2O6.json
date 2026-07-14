@@ -1,0 +1,21 @@
+{
+ "target_formula": "M0.05Mg0.95Ta2O6",
+ "precursor_formulas": [
+  "MgO",
+  "Ta2O5",
+  "M2O3"
+ ],
+ "precursor_elements": [
+  "M0+",
+  "Mg",
+  "O",
+  "Ta"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"MgO\", \"Ta2O5\", \"M2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like M0.05Mg0.95Ta2O6, allowing for high-temperature reactions that promote the formation of the desired phase. The maximum heating temperature of 1200\u00b0C ensures complete reaction and crystallization of the target material.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 3.231281843036413,
+ "model": "gpt-4o-mini"
+}

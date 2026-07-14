@@ -1,0 +1,20 @@
+{
+ "target_formula": "PrNiO3",
+ "precursor_formulas": [
+  "Pr(NO3)3",
+  "Ni(NO3)3"
+ ],
+ "precursor_elements": [
+  "N",
+  "Ni",
+  "O",
+  "Pr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 500.0,
+ "raw_text": "{\"precursors\":[\"Pr(NO3)3\",\"Ni(NO3)3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":500,\"rationale\":\"The recipe for NdNiO3 was adapted to use Pr(NO3)3 as it is compositionally similar, retaining the solid-state synthesis method and maximum temperature.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 5.998206875054166,
+ "model": "gpt-4o-mini"
+}

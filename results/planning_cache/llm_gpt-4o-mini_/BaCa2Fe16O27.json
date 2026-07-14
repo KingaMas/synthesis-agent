@@ -1,0 +1,22 @@
+{
+ "target_formula": "BaCa2Fe16O27",
+ "precursor_formulas": [
+  "BaCO3",
+  "CaCO3",
+  "Fe2O3"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "Ca",
+  "Fe",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"BaCO3\", \"CaCO3\", \"Fe2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like BaCa2Fe16O27, allowing for the formation of the desired phase through high-temperature reactions between the metal carbonates and iron oxide.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.891894627828151,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,24 @@
+{
+ "target_formula": "Sr3LiTi5Nb3O21",
+ "precursor_formulas": [
+  "SrCO3",
+  "Li2CO3",
+  "TiO2",
+  "Nb2O5"
+ ],
+ "precursor_elements": [
+  "C",
+  "Li",
+  "Nb",
+  "O",
+  "Sr",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1400.0,
+ "raw_text": "{\"precursors\":[\"SrCO3\",\"Li2CO3\",\"TiO2\",\"Nb2O5\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1400,\"rationale\":\"Similar materials suggest a solid-state synthesis approach, and the highest calcination temperatures indicate a maximum of 1400\u00b0C.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 13.26396944699809,
+ "model": "gpt-4o-mini"
+}

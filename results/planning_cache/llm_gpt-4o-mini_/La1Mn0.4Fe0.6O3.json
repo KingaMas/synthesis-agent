@@ -1,0 +1,21 @@
+{
+ "target_formula": "La1Mn0.4Fe0.6O3",
+ "precursor_formulas": [
+  "La2O3",
+  "MnO2",
+  "Fe2O3"
+ ],
+ "precursor_elements": [
+  "Fe",
+  "La",
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"La2O3\", \"MnO2\", \"Fe2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like La1Mn0.4Fe0.6O3, allowing for high-temperature reactions that promote the formation of the desired perovskite structure.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.9946257250849158,
+ "model": "gpt-4o-mini"
+}

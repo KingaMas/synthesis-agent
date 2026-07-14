@@ -1,0 +1,24 @@
+{
+ "target_formula": "SrLiLa3MnO8",
+ "precursor_formulas": [
+  "SrCO3",
+  "Li2CO3",
+  "La2O3",
+  "MnO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "La",
+  "Li",
+  "Mn",
+  "O",
+  "Sr"
+ ],
+ "method_family": "sol-gel",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\"precursors\":[\"SrCO3\",\"Li2CO3\",\"La2O3\",\"MnO2\"],\"method\":\"sol-gel\",\"max_heating_temperature_C\":800,\"rationale\":\"The synthesis recipe for SrLiLa3MnO8 can be adapted from related compounds, utilizing sol-gel methods and similar precursor materials to achieve the desired composition.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 4.160281583899632,
+ "model": "gpt-4o-mini"
+}

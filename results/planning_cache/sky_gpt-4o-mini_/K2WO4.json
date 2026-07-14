@@ -1,0 +1,21 @@
+{
+ "target_formula": "K2WO4",
+ "precursor_formulas": [
+  "K2CO3",
+  "H2WO4"
+ ],
+ "precursor_elements": [
+  "C",
+  "H",
+  "K",
+  "O",
+  "W"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 700.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"K2CO3\", \"H2WO4\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 700,\n  \"rationale\": \"Based on the synthesis of similar potassium compounds like K2TiO3, I adapted the solid-state method utilizing K2CO3 and H2WO4 as precursors for producing K2WO4.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 16.04044710798189,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+ "target_formula": "Al0.5Ga0.5P1O4",
+ "precursor_formulas": [
+  "Al2O3",
+  "Ga2O3",
+  "P2O5"
+ ],
+ "precursor_elements": [
+  "Al",
+  "Ga",
+  "O",
+  "P"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\"precursors\":[\"Al2O3\",\"Ga2O3\",\"P2O5\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1200,\"rationale\":\"Similar aluminum and gallium phosphates suggest a solid-state method for synthesis; the maximum heating temperature is inferred from common sintering temperatures for similar oxides.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 15.866001196904108,
+ "model": "gpt-4o-mini"
+}

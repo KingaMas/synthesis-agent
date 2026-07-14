@@ -1,0 +1,21 @@
+{
+ "target_formula": "MnSiNiO4",
+ "precursor_formulas": [
+  "SiO2",
+  "MnO",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "Mn",
+  "Ni",
+  "O",
+  "Si"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1050.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"SiO2\", \"MnO\", \"NiO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1050,\n  \"rationale\": \"The synthesis method and conditions from similar materials indicate solid-state reactions are appropriate, with NiO added to accommodate the target composition.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 8.513809827156365,
+ "model": "gpt-4o-mini"
+}

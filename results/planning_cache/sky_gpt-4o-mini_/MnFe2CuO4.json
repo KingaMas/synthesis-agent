@@ -1,0 +1,21 @@
+{
+ "target_formula": "MnFe2CuO4",
+ "precursor_formulas": [
+  "MnO2",
+  "Fe2O3",
+  "CuO"
+ ],
+ "precursor_elements": [
+  "Cu",
+  "Fe",
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 900.0,
+ "raw_text": "{\"precursors\":[\"MnO2\",\"Fe2O3\",\"CuO\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":900,\"rationale\":\"Synthesis is adapted from similar materials where nitrates were used; using oxides as starting materials is common in solid-state reactions.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 23.293113816995174,
+ "model": "gpt-4o-mini"
+}

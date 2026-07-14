@@ -1,0 +1,20 @@
+{
+ "target_formula": "La4MgNi19",
+ "precursor_formulas": [
+  "La",
+  "Mg",
+  "Ni"
+ ],
+ "precursor_elements": [
+  "La",
+  "Mg",
+  "Ni"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": null,
+ "raw_text": "{\"precursors\":[\"La\",\"Mg\",\"Ni\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":null,\"rationale\":\"The synthesis method is adapted from a similar alloy, La2MgNi9, which was synthesized using solid-state methods. High heating temperatures are not specified, allowing for flexibility.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 34.56186565104872,
+ "model": "gpt-4o-mini"
+}

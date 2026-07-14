@@ -1,0 +1,21 @@
+{
+ "target_formula": "AMn2O4",
+ "precursor_formulas": [
+  "A2O3",
+  "MnO2",
+  "MnCO3"
+ ],
+ "precursor_elements": [
+  "A0+",
+  "C",
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"A2O3\", \"MnO2\", \"MnCO3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing AMn2O4 due to the need for high temperatures to promote the reaction between the metal oxides and carbonates, ensuring the formation of the desired spinel structure.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.9111794400960207,
+ "model": "gpt-4o-mini"
+}

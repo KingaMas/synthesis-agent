@@ -1,0 +1,21 @@
+{
+ "target_formula": "AGY",
+ "precursor_formulas": [
+  "Ag2O",
+  "Ga2O3",
+  "Y2O3"
+ ],
+ "precursor_elements": [
+  "Ag",
+  "Ga",
+  "O",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"Ag2O\", \"Ga2O3\", \"Y2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state synthesis method is suitable for the formation of AGY due to the need for high-temperature reactions to achieve the desired phase and stoichiometry of the silver, gallium, and yttrium oxides.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.6050247659441084,
+ "model": "gpt-4o-mini"
+}

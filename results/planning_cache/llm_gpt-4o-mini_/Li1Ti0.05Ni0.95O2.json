@@ -1,0 +1,22 @@
+{
+ "target_formula": "Li1Ti0.05Ni0.95O2",
+ "precursor_formulas": [
+  "Li2CO3",
+  "TiO2",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "C",
+  "Li",
+  "Ni",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"Li2CO3\", \"TiO2\", \"NiO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing mixed metal oxides like Li1Ti0.05Ni0.95O2, allowing for the effective diffusion of lithium, titanium, and nickel oxides at elevated temperatures to achieve the desired stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.5175029779784381,
+ "model": "gpt-4o-mini"
+}

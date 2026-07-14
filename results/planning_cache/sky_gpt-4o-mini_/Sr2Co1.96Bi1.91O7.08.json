@@ -1,0 +1,22 @@
+{
+ "target_formula": "Sr2Co1.96Bi1.91O7.08",
+ "precursor_formulas": [
+  "SrCO3",
+  "Co3O4",
+  "Bi2O3"
+ ],
+ "precursor_elements": [
+  "Bi",
+  "C",
+  "Co",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\"precursors\":[\"SrCO3\",\"Co3O4\",\"Bi2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1000,\"rationale\":\"Various similar materials suggest a solid-state synthesis approach is suitable; precursors were selected based on the closest compositions.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 15.90975918690674,
+ "model": "gpt-4o-mini"
+}

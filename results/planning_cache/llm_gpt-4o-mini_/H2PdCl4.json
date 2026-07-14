@@ -1,0 +1,21 @@
+{
+ "target_formula": "H2PdCl4",
+ "precursor_formulas": [
+  "HCl",
+  "PdCl2",
+  "H2O"
+ ],
+ "precursor_elements": [
+  "Cl",
+  "H",
+  "O",
+  "Pd"
+ ],
+ "method_family": "sol-gel",
+ "max_heating_temp_C": 200.0,
+ "raw_text": "{\n  \"precursors\": [\"HCl\", \"PdCl2\", \"H2O\"],\n  \"method\": \"sol-gel\",\n  \"max_heating_temperature_C\": 200,\n  \"rationale\": \"The sol-gel method allows for the controlled synthesis of H2PdCl4 by dissolving palladium(II) chloride in hydrochloric acid and water, facilitating the formation of the desired complex at lower temperatures.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.7102819690480828,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,24 @@
+{
+ "target_formula": "Ca0.5La0.4Sm0.1Mn1O3",
+ "precursor_formulas": [
+  "CaCO3",
+  "La2O3",
+  "Sm2O3",
+  "MnO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "La",
+  "Mn",
+  "O",
+  "Sm"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1350.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"CaCO3\", \"La2O3\", \"Sm2O3\", \"MnO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1350,\n  \"rationale\": \"The recipe uses commercially available precursors based on adapted known solid-state synthesis methods for similar manganese oxides without published recipes.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 21.950641773175448,
+ "model": "gpt-4o-mini"
+}

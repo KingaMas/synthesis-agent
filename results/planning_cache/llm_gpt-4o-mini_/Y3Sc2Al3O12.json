@@ -1,0 +1,21 @@
+{
+ "target_formula": "Y3Sc2Al3O12",
+ "precursor_formulas": [
+  "Y2O3",
+  "Sc2O3",
+  "Al2O3"
+ ],
+ "precursor_elements": [
+  "Al",
+  "O",
+  "Sc",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1600.0,
+ "raw_text": "{\n  \"precursors\": [\"Y2O3\", \"Sc2O3\", \"Al2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1600,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Y3Sc2Al3O12 due to the high melting points of the oxides involved, and a maximum heating temperature of 1600\u00b0C is necessary to ensure complete reaction and formation of the desired garnet structure.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.8646733299829066,
+ "model": "gpt-4o-mini"
+}

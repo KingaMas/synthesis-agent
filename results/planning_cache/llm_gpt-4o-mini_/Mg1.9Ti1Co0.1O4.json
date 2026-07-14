@@ -1,0 +1,21 @@
+{
+ "target_formula": "Mg1.9Ti1Co0.1O4",
+ "precursor_formulas": [
+  "MgO",
+  "TiO2",
+  "Co3O4"
+ ],
+ "precursor_elements": [
+  "Co",
+  "Mg",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"MgO\", \"TiO2\", \"Co3O4\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing mixed metal oxides like Mg1.9Ti1Co0.1O4, allowing for the direct reaction of metal oxides at high temperatures to achieve the desired stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.7063806438818574,
+ "model": "gpt-4o-mini"
+}

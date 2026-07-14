@@ -1,0 +1,19 @@
+{
+ "target_formula": "Ce0.5Zr0.5O2",
+ "precursor_formulas": [
+  "CeO2",
+  "ZrO2"
+ ],
+ "precursor_elements": [
+  "Ce",
+  "O",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"CeO2\", \"ZrO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing mixed oxides like Ce0.5Zr0.5O2, allowing for the formation of a homogeneous solid solution through high-temperature calcination of the oxides. A maximum heating temperature of 1200\u00b0C ensures complete reaction and phase formation.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.0866186048369855,
+ "model": "gpt-4o-mini"
+}

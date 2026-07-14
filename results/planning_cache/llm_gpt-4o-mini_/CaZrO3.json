@@ -1,0 +1,20 @@
+{
+ "target_formula": "CaZrO3",
+ "precursor_formulas": [
+  "CaCO3",
+  "ZrO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "O",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1400.0,
+ "raw_text": "{\n  \"precursors\": [\"CaCO3\", \"ZrO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1400,\n  \"rationale\": \"The solid-state method is suitable for synthesizing CaZrO3 due to the high stability of the oxides involved, and calcination at 1400\u00b0C ensures complete reaction and formation of the desired perovskite structure.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.9220786509104073,
+ "model": "gpt-4o-mini"
+}

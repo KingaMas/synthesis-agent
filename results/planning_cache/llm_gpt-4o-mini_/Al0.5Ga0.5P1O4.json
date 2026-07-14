@@ -1,0 +1,23 @@
+{
+ "target_formula": "Al0.5Ga0.5P1O4",
+ "precursor_formulas": [
+  "Al2O3",
+  "Ga2O3",
+  "P2O5",
+  "SiO2"
+ ],
+ "precursor_elements": [
+  "Al",
+  "Ga",
+  "O",
+  "P",
+  "Si"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"Al2O3\", \"Ga2O3\", \"P2O5\", \"SiO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Al0.5Ga0.5P1O4 due to the need for high temperatures to promote the reaction between the metal oxides and phosphorous oxide, ensuring the formation of the desired compound with the correct stoichiometry.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.124749215086922,
+ "model": "gpt-4o-mini"
+}

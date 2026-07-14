@@ -1,0 +1,22 @@
+{
+ "target_formula": "Sr0.05La0.95Co1O3",
+ "precursor_formulas": [
+  "SrCO3",
+  "La2O3",
+  "Co3O4"
+ ],
+ "precursor_elements": [
+  "C",
+  "Co",
+  "La",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"SrCO3\", \"La2O3\", \"Co3O4\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Sr0.05La0.95Co1O3, allowing for the formation of the desired perovskite structure through high-temperature calcination of the mixed precursors.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.711654179962352,
+ "model": "gpt-4o-mini"
+}

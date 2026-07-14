@@ -1,0 +1,22 @@
+{
+ "target_formula": "AMn2O4",
+ "precursor_formulas": [
+  "Li2CO3",
+  "CaCO3",
+  "MnO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "Li",
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Li2CO3\", \"CaCO3\", \"MnO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The synthesis utilizes principles observed in the preparation of similar materials such as CaMn2O4 and LiMn2O4, adapting the precursors for the target composition AMn2O4.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 16.890980035997927,
+ "model": "gpt-4o-mini"
+}

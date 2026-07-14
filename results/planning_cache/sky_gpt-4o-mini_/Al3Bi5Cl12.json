@@ -1,0 +1,19 @@
+{
+ "target_formula": "Al3Bi5Cl12",
+ "precursor_formulas": [
+  "AlCl3",
+  "BiCl3"
+ ],
+ "precursor_elements": [
+  "Al",
+  "Bi",
+  "Cl"
+ ],
+ "method_family": "sol-gel",
+ "max_heating_temp_C": null,
+ "raw_text": "{\"precursors\":[\"AlCl3\",\"BiCl3\"],\"method\":\"sol-gel\",\"max_heating_temperature_C\":null,\"rationale\":\"The sol-gel method is suitable for synthesizing hybrid organic-inorganic materials. AlCl3 and BiCl3 can be used as precursors to achieve the desired composition.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 22.911586917936802,
+ "model": "gpt-4o-mini"
+}

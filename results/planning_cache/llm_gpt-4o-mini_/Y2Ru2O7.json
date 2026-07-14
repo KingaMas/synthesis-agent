@@ -1,0 +1,19 @@
+{
+ "target_formula": "Y2Ru2O7",
+ "precursor_formulas": [
+  "Y2O3",
+  "RuO2"
+ ],
+ "precursor_elements": [
+  "O",
+  "Ru",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"Y2O3\", \"RuO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"Y2Ru2O7 can be synthesized through a solid-state reaction between yttrium oxide and ruthenium dioxide at high temperatures, which promotes the formation of the desired pyrochlore structure.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.5182038110215217,
+ "model": "gpt-4o-mini"
+}

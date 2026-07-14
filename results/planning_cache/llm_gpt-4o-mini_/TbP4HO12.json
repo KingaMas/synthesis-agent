@@ -1,0 +1,21 @@
+{
+ "target_formula": "TbP4HO12",
+ "precursor_formulas": [
+  "Tb2O3",
+  "P2O5",
+  "H2O"
+ ],
+ "precursor_elements": [
+  "H",
+  "O",
+  "P",
+  "Tb"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"Tb2O3\", \"P2O5\", \"H2O\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like TbP4HO12, allowing for the direct reaction of the metal oxides and phosphorous source at high temperatures to achieve the desired stoichiometry and crystallinity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.3176290180999786,
+ "model": "gpt-4o-mini"
+}

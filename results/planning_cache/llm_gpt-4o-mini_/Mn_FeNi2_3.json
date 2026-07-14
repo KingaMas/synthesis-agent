@@ -1,0 +1,21 @@
+{
+ "target_formula": "Mn(FeNi2)3",
+ "precursor_formulas": [
+  "MnO2",
+  "Fe2O3",
+  "NiO"
+ ],
+ "precursor_elements": [
+  "Fe",
+  "Mn",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"MnO2\", \"Fe2O3\", \"NiO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex metal oxides like Mn(FeNi2)3, allowing for the direct reaction of metal oxides at high temperatures to achieve the desired stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.4885920828673989,
+ "model": "gpt-4o-mini"
+}

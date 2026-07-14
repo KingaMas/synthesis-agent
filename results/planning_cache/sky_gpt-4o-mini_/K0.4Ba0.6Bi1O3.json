@@ -1,0 +1,22 @@
+{
+ "target_formula": "K0.4Ba0.6Bi1O3",
+ "precursor_formulas": [
+  "K2CO3",
+  "BaCO3",
+  "Bi2O3"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "Bi",
+  "C",
+  "K",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 850.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"K2CO3\", \"BaCO3\", \"Bi2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 850,\n  \"rationale\": \"BaBiO3 is closely related and uses solid-state synthesis with similar precursors, making it reasonable to adapt its recipe.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 8.575373989064246,
+ "model": "gpt-4o-mini"
+}

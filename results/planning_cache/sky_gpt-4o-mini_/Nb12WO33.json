@@ -1,0 +1,21 @@
+{
+ "target_formula": "Nb12WO33",
+ "precursor_formulas": [
+  "H40W12N10O41",
+  "NbHO3"
+ ],
+ "precursor_elements": [
+  "H",
+  "N",
+  "Nb",
+  "O",
+  "W"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 499.0,
+ "raw_text": "```json\n{\"precursors\":[\"H40W12N10O41\",\"NbHO3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":499,\"rationale\":\"The proposed synthesis is adapted from Nb2WO8, utilizing similar precursors and conditions due to their closely related compositions.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 20.651087973965332,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,20 @@
+{
+ "target_formula": "Ln2K2Ti3O10",
+ "precursor_formulas": [
+  "K2CO3",
+  "TiO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "K",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"K2CO3\", \"TiO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"Similar materials K2Ti4O9 and K3V5O14 were used as references, with solid-state synthesis being effective for titanates.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 14.922397937159985,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,30 @@
+{
+ "target_formula": "Li1Mn1.475Al0.01Cr0.04Ni0.475O3.95F0.05",
+ "precursor_formulas": [
+  "Li2CO3",
+  "MnO2",
+  "Al2O3",
+  "Cr2O3",
+  "NiO",
+  "NH4F"
+ ],
+ "precursor_elements": [
+  "Al",
+  "C",
+  "Cr",
+  "F",
+  "H",
+  "Li",
+  "Mn",
+  "N",
+  "Ni",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"Li2CO3\", \"MnO2\", \"Al2O3\", \"Cr2O3\", \"NiO\", \"NH4F\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Li1Mn1.475Al0.01Cr0.04Ni0.475O3.95F0.05, allowing for the incorporation of multiple metal ions and fluoride. A maximum heating temperature of 800\u00b0C is chosen to ensure complete reaction and phase formation without decomposition of the precursors.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.9374085878953338,
+ "model": "gpt-4o-mini"
+}

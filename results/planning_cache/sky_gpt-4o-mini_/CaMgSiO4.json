@@ -1,0 +1,22 @@
+{
+ "target_formula": "CaMgSiO4",
+ "precursor_formulas": [
+  "CaCO3",
+  "MgO",
+  "SiO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "Mg",
+  "O",
+  "Si"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "```json\n{\"precursors\":[\"CaCO3\",\"MgO\",\"SiO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1200,\"rationale\":\"The synthesis method is adapted from known recipes for Ca2MgSi2O7, maintaining the solid-state approach and using similar precursors for CaMgSiO4.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 10.788187768077478,
+ "model": "gpt-4o-mini"
+}

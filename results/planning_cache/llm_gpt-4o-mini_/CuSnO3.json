@@ -1,0 +1,19 @@
+{
+ "target_formula": "CuSnO3",
+ "precursor_formulas": [
+  "CuO",
+  "SnO2"
+ ],
+ "precursor_elements": [
+  "Cu",
+  "O",
+  "Sn"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 900.0,
+ "raw_text": "{\n  \"precursors\": [\"CuO\", \"SnO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 900,\n  \"rationale\": \"The solid-state method is suitable for synthesizing CuSnO3 due to the high stability of the metal oxides involved, and a calcination temperature of 900\u00b0C is effective for achieving the desired phase purity and crystallinity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.8284432699438184,
+ "model": "gpt-4o-mini"
+}

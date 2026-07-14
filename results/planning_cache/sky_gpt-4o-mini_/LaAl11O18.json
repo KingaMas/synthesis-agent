@@ -1,0 +1,21 @@
+{
+ "target_formula": "LaAl11O18",
+ "precursor_formulas": [
+  "La2O3",
+  "Al2O3",
+  "TiO2"
+ ],
+ "precursor_elements": [
+  "Al",
+  "La",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1600.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"La2O3\", \"Al2O3\", \"TiO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1600,\n  \"rationale\": \"The synthesis of LaAl11O18 can be adapted from LaTi2Al9O19, using La2O3 and Al2O3 as the primary precursors with TiO2 potentially replaced by Al to match the stoichiometric requirements.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 7.2853439170867205,
+ "model": "gpt-4o-mini"
+}

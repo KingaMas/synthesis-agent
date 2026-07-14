@@ -1,0 +1,25 @@
+{
+ "target_formula": "Tb0.04Eu0.05Y1.9Dy0.01O3",
+ "precursor_formulas": [
+  "Tb2O3",
+  "Eu2O3",
+  "Y2O3",
+  "Dy2O3",
+  "H2O"
+ ],
+ "precursor_elements": [
+  "Dy",
+  "Eu",
+  "H",
+  "O",
+  "Tb",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"Tb2O3\", \"Eu2O3\", \"Y2O3\", \"Dy2O3\", \"H2O\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like Tb0.04Eu0.05Y1.9Dy0.01O3, allowing for the precise control of stoichiometry and phase purity at high temperatures, which is necessary for the formation of the desired compound.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.852298001991585,
+ "model": "gpt-4o-mini"
+}

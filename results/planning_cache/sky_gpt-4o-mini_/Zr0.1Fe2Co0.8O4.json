@@ -1,0 +1,22 @@
+{
+ "target_formula": "Zr0.1Fe2Co0.8O4",
+ "precursor_formulas": [
+  "Co(NO3)2",
+  "Fe(NO3)3",
+  "ZrO2"
+ ],
+ "precursor_elements": [
+  "Co",
+  "Fe",
+  "N",
+  "O",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1400.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Co(NO3)2\", \"Fe(NO3)3\", \"ZrO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1400,\n  \"rationale\": \"The synthesis method was adapted from CoFe2O4 recipes, incorporating ZrO2 as a precursor to match the target composition, maintaining solid-state synthesis conditions.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 10.098846035078168,
+ "model": "gpt-4o-mini"
+}

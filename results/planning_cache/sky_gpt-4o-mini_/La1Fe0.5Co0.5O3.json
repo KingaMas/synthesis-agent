@@ -1,0 +1,19 @@
+{
+ "target_formula": "La1Fe0.5Co0.5O3",
+ "precursor_formulas": [
+  "Fe2O3",
+  "La2O3"
+ ],
+ "precursor_elements": [
+  "Fe",
+  "La",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1600.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Fe2O3\", \"La2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1600,\n  \"rationale\": \"La1Fe0.5Co0.5O3 is similar to LaFeO3, which has established solid-state synthesis methods. We substitute cobalt for nickel using comparable precursor materials.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 10.421809007879347,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,19 @@
+{
+ "target_formula": "Ce2FeO4",
+ "precursor_formulas": [
+  "CeO2",
+  "Fe2O3"
+ ],
+ "precursor_elements": [
+  "Ce",
+  "Fe",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"CeO2\", \"Fe2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Ce2FeO4 due to the high stability of the oxides involved, and a calcination temperature of 1000\u00b0C is effective for achieving the desired phase purity and crystallinity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.607367065967992,
+ "model": "gpt-4o-mini"
+}

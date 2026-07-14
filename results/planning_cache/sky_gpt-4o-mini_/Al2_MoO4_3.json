@@ -1,0 +1,19 @@
+{
+ "target_formula": "Al2(MoO4)3",
+ "precursor_formulas": [
+  "Al2O3",
+  "MoO3"
+ ],
+ "precursor_elements": [
+  "Al",
+  "Mo",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Al2O3\", \"MoO3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The synthesis method is adapted from solid-state reactions of similar materials, combining aluminum oxide with molybdenum oxide at elevated temperatures.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 21.003919560927898,
+ "model": "gpt-4o-mini"
+}

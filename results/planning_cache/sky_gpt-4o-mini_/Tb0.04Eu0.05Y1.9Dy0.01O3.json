@@ -1,0 +1,23 @@
+{
+ "target_formula": "Tb0.04Eu0.05Y1.9Dy0.01O3",
+ "precursor_formulas": [
+  "Tb4O7",
+  "Eu2O3",
+  "Y2O3",
+  "Dy2O3"
+ ],
+ "precursor_elements": [
+  "Dy",
+  "Eu",
+  "O",
+  "Tb",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1350.0,
+ "raw_text": "{\"precursors\":[\"Tb4O7\",\"Eu2O3\",\"Y2O3\",\"Dy2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1350,\"rationale\":\"The synthesis method is adapted from similar rare-earth oxide compositions, utilizing solid-state reactions at high temperatures, conducive for mixed oxide formation.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 8.49546309793368,
+ "model": "gpt-4o-mini"
+}

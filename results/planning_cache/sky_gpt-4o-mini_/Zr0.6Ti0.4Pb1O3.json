@@ -1,0 +1,21 @@
+{
+ "target_formula": "Zr0.6Ti0.4Pb1O3",
+ "precursor_formulas": [
+  "ZrO2",
+  "TiO2",
+  "PbO"
+ ],
+ "precursor_elements": [
+  "O",
+  "Pb",
+  "Ti",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"ZrO2\", \"TiO2\", \"PbO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The synthesis method is based on compositionally similar materials with similar structures. The solid-state method is commonly used for perovskite-related compounds, and the maximum temperature is inferred from known recipes.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 13.20901510794647,
+ "model": "gpt-4o-mini"
+}

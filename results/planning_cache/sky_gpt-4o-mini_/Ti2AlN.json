@@ -1,0 +1,19 @@
+{
+ "target_formula": "Ti2AlN",
+ "precursor_formulas": [
+  "Ti",
+  "AlN"
+ ],
+ "precursor_elements": [
+  "Al",
+  "N",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": null,
+ "raw_text": "{\"precursors\":[\"Ti\",\"AlN\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":null,\"rationale\":\"The synthesis recipe for Ti2AlN was adapted from TiAlN, using commercially available Ti and AlN as precursors, given the absence of direct recipes for Ti2AlN.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 13.51871441397816,
+ "model": "gpt-4o-mini"
+}

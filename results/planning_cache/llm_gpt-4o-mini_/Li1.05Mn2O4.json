@@ -1,0 +1,20 @@
+{
+ "target_formula": "Li1.05Mn2O4",
+ "precursor_formulas": [
+  "Li2CO3",
+  "MnO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Li",
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"Li2CO3\", \"MnO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Li1.05Mn2O4 due to the stability of the precursors at high temperatures, allowing for the formation of the desired spinel structure through solid-state reactions.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.545066897990182,
+ "model": "gpt-4o-mini"
+}

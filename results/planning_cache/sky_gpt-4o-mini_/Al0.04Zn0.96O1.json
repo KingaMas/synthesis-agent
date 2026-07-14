@@ -1,0 +1,19 @@
+{
+ "target_formula": "Al0.04Zn0.96O1",
+ "precursor_formulas": [
+  "Al2O3",
+  "ZnO"
+ ],
+ "precursor_elements": [
+  "Al",
+  "O",
+  "Zn"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 900.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"Al2O3\", \"ZnO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 900,\n  \"rationale\": \"Using Al2O3 and ZnO as precursors aligns with the composition of Al0.04Zn0.96O1. The solid-state method is adapted from similar materials like Zn2GeO4 and Zn2SiO4, which traditionally utilize these precursors.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 18.18969637993723,
+ "model": "gpt-4o-mini"
+}

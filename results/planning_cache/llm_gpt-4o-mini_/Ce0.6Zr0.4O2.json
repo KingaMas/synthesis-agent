@@ -1,0 +1,21 @@
+{
+ "target_formula": "Ce0.6Zr0.4O2",
+ "precursor_formulas": [
+  "CeO2",
+  "ZrO2",
+  "C"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ce",
+  "O",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"CeO2\", \"ZrO2\", \"C\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing mixed oxides like Ce0.6Zr0.4O2, allowing for the formation of a homogeneous phase through high-temperature calcination of the oxides. The addition of carbon can help in reducing any potential impurities and enhancing the formation of the desired phase.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.1016595200635493,
+ "model": "gpt-4o-mini"
+}

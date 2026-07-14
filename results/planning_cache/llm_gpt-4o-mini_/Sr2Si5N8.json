@@ -1,0 +1,21 @@
+{
+ "target_formula": "Sr2Si5N8",
+ "precursor_formulas": [
+  "SrO",
+  "Si3N4",
+  "SiO2"
+ ],
+ "precursor_elements": [
+  "N",
+  "O",
+  "Si",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1500.0,
+ "raw_text": "{\n  \"precursors\": [\"SrO\", \"Si3N4\", \"SiO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1500,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Sr2Si5N8 due to the need for high temperatures to promote the reaction between the alkaline earth metal oxide and silicon nitride, ensuring the formation of the desired nitride compound.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.720947536174208,
+ "model": "gpt-4o-mini"
+}

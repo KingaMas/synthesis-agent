@@ -1,0 +1,24 @@
+{
+ "target_formula": "BaCaB2O5",
+ "precursor_formulas": [
+  "BaCO3",
+  "CaCO3",
+  "B2O3",
+  "MgO"
+ ],
+ "precursor_elements": [
+  "B",
+  "Ba",
+  "C",
+  "Ca",
+  "Mg",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 950.0,
+ "raw_text": "{\"precursors\":[\"BaCO3\",\"CaCO3\",\"B2O3\",\"MgO\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":950,\"rationale\":\"Adapted from recipes for Ba2Mg(BO3)2 and Ba1.99Eu0.01Mg(BO3)2. The conditions are kept similar to the closest matching compositions.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 18.068853745935485,
+ "model": "gpt-4o-mini"
+}

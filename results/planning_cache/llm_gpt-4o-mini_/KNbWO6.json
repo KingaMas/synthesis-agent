@@ -1,0 +1,22 @@
+{
+ "target_formula": "KNbWO6",
+ "precursor_formulas": [
+  "K2CO3",
+  "Nb2O5",
+  "WO3"
+ ],
+ "precursor_elements": [
+  "C",
+  "K",
+  "Nb",
+  "O",
+  "W"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"K2CO3\", \"Nb2O5\", \"WO3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing KNbWO6 due to the need for high-temperature reactions to achieve the desired phase and stoichiometry. The selected precursors are common and readily available, allowing for effective formation of the target compound upon calcination.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.9856866800691932,
+ "model": "gpt-4o-mini"
+}

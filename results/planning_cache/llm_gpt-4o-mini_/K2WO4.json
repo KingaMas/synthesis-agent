@@ -1,0 +1,20 @@
+{
+ "target_formula": "K2WO4",
+ "precursor_formulas": [
+  "K2CO3",
+  "WO3"
+ ],
+ "precursor_elements": [
+  "C",
+  "K",
+  "O",
+  "W"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"K2CO3\", \"WO3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing K2WO4 from potassium carbonate and tungsten trioxide, allowing for the formation of the desired compound through high-temperature reactions that promote solid-state diffusion.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.8043273789808154,
+ "model": "gpt-4o-mini"
+}

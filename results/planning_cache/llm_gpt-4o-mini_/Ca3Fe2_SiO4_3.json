@@ -1,0 +1,22 @@
+{
+ "target_formula": "Ca3Fe2(SiO4)3",
+ "precursor_formulas": [
+  "CaCO3",
+  "Fe2O3",
+  "SiO2"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "Fe",
+  "O",
+  "Si"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1300.0,
+ "raw_text": "{\n  \"precursors\": [\"CaCO3\", \"Fe2O3\", \"SiO2\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1300,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Ca3Fe2(SiO4)3 due to the need for high temperatures to promote the reaction between the oxides and carbonates, leading to the formation of the desired silicate phase.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.7436868909280747,
+ "model": "gpt-4o-mini"
+}

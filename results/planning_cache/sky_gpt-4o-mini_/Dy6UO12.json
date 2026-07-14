@@ -1,0 +1,19 @@
+{
+ "target_formula": "Dy6UO12",
+ "precursor_formulas": [
+  "Dy2O3",
+  "UO2"
+ ],
+ "precursor_elements": [
+  "Dy",
+  "O",
+  "U"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1700.0,
+ "raw_text": "{\"precursors\":[\"Dy2O3\",\"UO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1700,\"rationale\":\"Dy2O3 and UO2 share similar chemical properties to Dy6UO12. A solid-state method with a high calcination temperature is appropriate for this type of mixed oxide.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 9.27085323119536,
+ "model": "gpt-4o-mini"
+}

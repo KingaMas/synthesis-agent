@@ -1,0 +1,22 @@
+{
+ "target_formula": "Ca1V0.5Mo0.5O3",
+ "precursor_formulas": [
+  "CaCO3",
+  "V2O5",
+  "MoO3"
+ ],
+ "precursor_elements": [
+  "C",
+  "Ca",
+  "Mo",
+  "O",
+  "V"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 950.0,
+ "raw_text": "{\"precursors\":[\"CaCO3\",\"V2O5\",\"MoO3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":950,\"rationale\":\"The synthesis method is adapted from related compounds with solid-state processes and uses calcium carbonate as a common precursor for Ca, vanadium pentoxide for V, and molybdenum trioxide for Mo.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 13.213500361191109,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+ "target_formula": "Mg1.9Ti1Co0.1O4",
+ "precursor_formulas": [
+  "MgO",
+  "TiO2",
+  "CoO"
+ ],
+ "precursor_elements": [
+  "Co",
+  "Mg",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1100.0,
+ "raw_text": "```json\n{\"precursors\":[\"MgO\",\"TiO2\",\"CoO\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1100,\"rationale\":\"Similar materials like TiCoO3 suggest using solid-state synthesis with TiO2 and CoO. The high heating temperature is adapted from related compositions.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 13.40923802787438,
+ "model": "gpt-4o-mini"
+}

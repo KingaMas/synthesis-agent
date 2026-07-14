@@ -1,0 +1,22 @@
+{
+ "target_formula": "NaSr4(BO3)3",
+ "precursor_formulas": [
+  "Na2CO3",
+  "SrCO3",
+  "B2O3"
+ ],
+ "precursor_elements": [
+  "B",
+  "C",
+  "Na",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"Na2CO3\", \"SrCO3\", \"B2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing NaSr4(BO3)3 due to the need for high temperatures to promote the reaction between the carbonate and borate precursors, leading to the formation of the desired borate structure.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.7226646970957518,
+ "model": "gpt-4o-mini"
+}

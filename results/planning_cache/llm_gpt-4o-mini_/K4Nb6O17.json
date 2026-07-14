@@ -1,0 +1,22 @@
+{
+ "target_formula": "K4Nb6O17",
+ "precursor_formulas": [
+  "K2CO3",
+  "Nb2O5",
+  "H2O"
+ ],
+ "precursor_elements": [
+  "C",
+  "H",
+  "K",
+  "Nb",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"K2CO3\", \"Nb2O5\", \"H2O\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state synthesis method is suitable for K4Nb6O17 as it allows for the direct reaction of potassium carbonate and niobium pentoxide at elevated temperatures to form the desired compound, ensuring proper stoichiometry and phase purity.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.682414132868871,
+ "model": "gpt-4o-mini"
+}

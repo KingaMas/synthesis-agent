@@ -1,0 +1,23 @@
+{
+ "target_formula": "Dy0.05Fe0.98Cu0.02Bi0.95O3",
+ "precursor_formulas": [
+  "Dy2O3",
+  "Fe2O3",
+  "CuO",
+  "Bi2O3"
+ ],
+ "precursor_elements": [
+  "Bi",
+  "Cu",
+  "Dy",
+  "Fe",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\"precursors\":[\"Dy2O3\",\"Fe2O3\",\"CuO\",\"Bi2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":800,\"rationale\":\"The recipe is based on common oxides of the constituent elements, utilizing a solid-state method for synthesis, which is standard for similar complex oxides.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 10.49923217506148,
+ "model": "gpt-4o-mini"
+}

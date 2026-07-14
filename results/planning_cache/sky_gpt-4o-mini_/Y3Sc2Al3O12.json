@@ -1,0 +1,21 @@
+{
+ "target_formula": "Y3Sc2Al3O12",
+ "precursor_formulas": [
+  "Y2O3",
+  "Sc2O3",
+  "Al2O3"
+ ],
+ "precursor_elements": [
+  "Al",
+  "O",
+  "Sc",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1500.0,
+ "raw_text": "{\"precursors\":[\"Y2O3\",\"Sc2O3\",\"Al2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1500,\"rationale\":\"The synthesis method is adapted from similar materials like Y4Al2O9 and YAlO3, with precursors chosen based on the target composition of Y3Sc2Al3O12.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 9.234396629966795,
+ "model": "gpt-4o-mini"
+}

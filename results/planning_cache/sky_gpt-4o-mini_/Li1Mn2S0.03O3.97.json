@@ -1,0 +1,22 @@
+{
+ "target_formula": "Li1Mn2S0.03O3.97",
+ "precursor_formulas": [
+  "LiOH",
+  "MnO2",
+  "S"
+ ],
+ "precursor_elements": [
+  "H",
+  "Li",
+  "Mn",
+  "O",
+  "S"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 750.0,
+ "raw_text": "{\"precursors\":[\"LiOH\",\"MnO2\",\"S\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":750,\"rationale\":\"The synthesis method is adapted from similar materials with solid-state methods using LiOH and MnO2 as precursors, while sulfur is included to account for the S0.03 component.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 13.090952944941819,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+ "target_formula": "Mn1Co1.5Cu0.5O4",
+ "precursor_formulas": [
+  "MnO2",
+  "Co3O4",
+  "CuO"
+ ],
+ "precursor_elements": [
+  "Co",
+  "Cu",
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 920.0,
+ "raw_text": "{\"precursors\":[\"MnO2\",\"Co3O4\",\"CuO\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":920,\"rationale\":\"The synthesis is adapted from known solid-state reactions involving transition metal oxides, maintaining a similar method and conditions for the final compound.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 6.326361715095118,
+ "model": "gpt-4o-mini"
+}

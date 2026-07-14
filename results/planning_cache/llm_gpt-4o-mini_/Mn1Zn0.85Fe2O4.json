@@ -1,0 +1,21 @@
+{
+ "target_formula": "Mn1Zn0.85Fe2O4",
+ "precursor_formulas": [
+  "MnO2",
+  "ZnO",
+  "Fe2O3"
+ ],
+ "precursor_elements": [
+  "Fe",
+  "Mn",
+  "O",
+  "Zn"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"MnO2\", \"ZnO\", \"Fe2O3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing mixed metal oxides like Mn1Zn0.85Fe2O4, allowing for the formation of the desired spinel structure through high-temperature calcination of the metal oxides.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.783113480079919,
+ "model": "gpt-4o-mini"
+}

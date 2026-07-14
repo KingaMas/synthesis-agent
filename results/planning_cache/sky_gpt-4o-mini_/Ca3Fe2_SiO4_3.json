@@ -1,0 +1,21 @@
+{
+ "target_formula": "Ca3Fe2(SiO4)3",
+ "precursor_formulas": [
+  "CaO",
+  "Fe2O3",
+  "SiO2"
+ ],
+ "precursor_elements": [
+  "Ca",
+  "Fe",
+  "O",
+  "Si"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\"precursors\":[\"CaO\",\"Fe2O3\",\"SiO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1200,\"rationale\":\"The synthesis method is adapted from related calcium iron silicates, employing solid-state reactions of readily available precursors at high temperatures.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 27.796403906075284,
+ "model": "gpt-4o-mini"
+}

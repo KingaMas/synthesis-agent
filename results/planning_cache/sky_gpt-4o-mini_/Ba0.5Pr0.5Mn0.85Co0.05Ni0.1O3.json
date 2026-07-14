@@ -1,0 +1,22 @@
+{
+ "target_formula": "Ba0.5Pr0.5Mn0.85Co0.05Ni0.1O3",
+ "precursor_formulas": [
+  "Ba(NO3)2",
+  "Mn(NO3)2\u00b74H2O",
+  "Co(NO3)2\u00b76H2O",
+  "Pr(NO3)3\u00b76H2O",
+  "Nd(NO3)3\u00b76H2O"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "N",
+  "O"
+ ],
+ "method_family": "sol-gel",
+ "max_heating_temp_C": 1500.0,
+ "raw_text": "{\n  \"precursors\": [\n    \"Ba(NO3)2\",\n    \"Mn(NO3)2\u00b74H2O\",\n    \"Co(NO3)2\u00b76H2O\",\n    \"Pr(NO3)3\u00b76H2O\",\n    \"Nd(NO3)3\u00b76H2O\"\n  ],\n  \"method\": \"sol-gel\",\n  \"max_heating_temperature_C\": 1500,\n  \"rationale\": \"The target material is adapted from a closely related recipe for BaNdMnCoO5, substituting precursor elements while maintaining a sol-gel method and the maximum heating temperature for synthesis.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 6.537698475876823,
+ "model": "gpt-4o-mini"
+}

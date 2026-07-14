@@ -1,0 +1,22 @@
+{
+ "target_formula": "Mn1.5Ni0.5H2O2",
+ "precursor_formulas": [
+  "MnO2",
+  "NiO",
+  "H2O",
+  "H2O2"
+ ],
+ "precursor_elements": [
+  "H",
+  "Mn",
+  "Ni",
+  "O"
+ ],
+ "method_family": "sol-gel",
+ "max_heating_temp_C": 845.0,
+ "raw_text": "```json\n{\"precursors\":[\"MnO2\",\"NiO\",\"H2O\",\"H2O2\"],\"method\":\"sol-gel\",\"max_heating_temperature_C\":845,\"rationale\":\"The synthesis method is adapted from sol-gel recipes for Mn-containing hydroxides, substituting appropriate precursors for Ni and adjusting ratios based on composition similarity.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 4.770593659952283,
+ "model": "gpt-4o-mini"
+}

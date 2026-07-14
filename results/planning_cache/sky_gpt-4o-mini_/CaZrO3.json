@@ -1,0 +1,19 @@
+{
+ "target_formula": "CaZrO3",
+ "precursor_formulas": [
+  "CaO",
+  "ZrO2"
+ ],
+ "precursor_elements": [
+  "Ca",
+  "O",
+  "Zr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1500.0,
+ "raw_text": "```json\n{\"precursors\":[\"CaO\",\"ZrO2\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1500,\"rationale\":\"The synthesis method was adapted from ZrO2 recipes, using CaO and ZrO2 as precursors. The high heating temperature allows for complete solid-state reaction to form CaZrO3.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 10.38092900509946,
+ "model": "gpt-4o-mini"
+}

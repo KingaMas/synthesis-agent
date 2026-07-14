@@ -1,0 +1,22 @@
+{
+ "target_formula": "Ba1Nb0.5Co0.5O3",
+ "precursor_formulas": [
+  "BaCO3",
+  "CoCO3",
+  "Nb2O5"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "Co",
+  "Nb",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1230.0,
+ "raw_text": "```json\n{\"precursors\":[\"BaCO3\",\"CoCO3\",\"Nb2O5\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1230,\"rationale\":\"The synthesis of Ba1Nb0.5Co0.5O3 is adapted from a similar material, Ba3Nb2CoO9, using equivalent precursors for the target composition, with a solid-state method at a maximum temperature of 1230\u00b0C.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 8.900402606930584,
+ "model": "gpt-4o-mini"
+}

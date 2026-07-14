@@ -1,0 +1,20 @@
+{
+ "target_formula": "Mn(FeNi2)3",
+ "precursor_formulas": [
+  "Mn",
+  "Fe",
+  "Ni"
+ ],
+ "precursor_elements": [
+  "Fe",
+  "Mn",
+  "Ni"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 999.0,
+ "raw_text": "```json\n{\"precursors\":[\"Mn\",\"Fe\",\"Ni\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":999,\"rationale\":\"The synthesis method is adapted from solid-state processes used for manganese-based compounds, utilizing commercially available precursors that match the required stoichiometry for Mn(FeNi2)3.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 14.256259615998715,
+ "model": "gpt-4o-mini"
+}

@@ -1,0 +1,22 @@
+{
+ "target_formula": "Ba0.85Ti1Pb0.15O3",
+ "precursor_formulas": [
+  "BaCO3",
+  "TiO2",
+  "PbO"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "O",
+  "Pb",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\n  \"precursors\": [\"BaCO3\", \"TiO2\", \"PbO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1200,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex perovskite materials like Ba0.85Ti1Pb0.15O3, allowing for high-temperature reactions that promote the formation of the desired phase. The maximum heating temperature of 1200\u00b0C ensures complete reaction and crystallization of the target compound.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.1284283350687474,
+ "model": "gpt-4o-mini"
+}

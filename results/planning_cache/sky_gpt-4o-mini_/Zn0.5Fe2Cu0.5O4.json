@@ -1,0 +1,22 @@
+{
+ "target_formula": "Zn0.5Fe2Cu0.5O4",
+ "precursor_formulas": [
+  "Fe(NO3)3",
+  "Cu(NO3)2",
+  "Zn(NO3)2"
+ ],
+ "precursor_elements": [
+  "Cu",
+  "Fe",
+  "N",
+  "O",
+  "Zn"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 900.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\n    \"Fe(NO3)3\",\n    \"Cu(NO3)2\",\n    \"Zn(NO3)2\"\n  ],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 900,\n  \"rationale\": \"The synthesis combines approaches from known recipes for ZnFe2O4 and Fe2CuO4, utilizing nitrates as precursors and solid-state methods, allowing the incorporation of Zn, Cu, and Fe in the desired composition.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 15.284825352951884,
+ "model": "gpt-4o-mini"
+}

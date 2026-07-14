@@ -1,0 +1,21 @@
+{
+ "target_formula": "Ti2AlN",
+ "precursor_formulas": [
+  "TiO2",
+  "AlN",
+  "Ti"
+ ],
+ "precursor_elements": [
+  "Al",
+  "N",
+  "O",
+  "Ti"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1500.0,
+ "raw_text": "{\n  \"precursors\": [\"TiO2\", \"AlN\", \"Ti\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1500,\n  \"rationale\": \"The solid-state synthesis method is suitable for Ti2AlN as it allows for the direct reaction of titanium dioxide, aluminum nitride, and titanium metal at high temperatures to form the desired MAX phase compound.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.247099578846246,
+ "model": "gpt-4o-mini"
+}

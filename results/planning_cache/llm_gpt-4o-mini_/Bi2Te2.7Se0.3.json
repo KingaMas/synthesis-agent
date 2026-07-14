@@ -1,0 +1,21 @@
+{
+ "target_formula": "Bi2Te2.7Se0.3",
+ "precursor_formulas": [
+  "Bi2O3",
+  "Te",
+  "Se"
+ ],
+ "precursor_elements": [
+  "Bi",
+  "O",
+  "Se",
+  "Te"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 600.0,
+ "raw_text": "{\n  \"precursors\": [\"Bi2O3\", \"Te\", \"Se\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 600,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Bi2Te2.7Se0.3 due to the need for high-temperature reactions to achieve the desired stoichiometry and phase purity. The maximum heating temperature of 600\u00b0C allows for effective diffusion and reaction of the precursors.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.4147354010492563,
+ "model": "gpt-4o-mini"
+}

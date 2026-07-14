@@ -1,0 +1,24 @@
+{
+ "target_formula": "K0.13Y0.13Nb2Pb0.74O6",
+ "precursor_formulas": [
+  "K2CO3",
+  "Y2O3",
+  "Nb2O5",
+  "PbO"
+ ],
+ "precursor_elements": [
+  "C",
+  "K",
+  "Nb",
+  "O",
+  "Pb",
+  "Y"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"K2CO3\", \"Y2O3\", \"Nb2O5\", \"PbO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex oxides like K0.13Y0.13Nb2Pb0.74O6, allowing for the formation of the desired phases through high-temperature reactions between the metal oxides and carbonates.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.9318729841616005,
+ "model": "gpt-4o-mini"
+}

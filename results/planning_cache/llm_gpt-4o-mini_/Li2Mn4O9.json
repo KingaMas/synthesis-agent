@@ -1,0 +1,22 @@
+{
+ "target_formula": "Li2Mn4O9",
+ "precursor_formulas": [
+  "Li2CO3",
+  "MnO2",
+  "LiOH"
+ ],
+ "precursor_elements": [
+  "C",
+  "H",
+  "Li",
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"Li2CO3\", \"MnO2\", \"LiOH\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing Li2Mn4O9 due to the need for high-temperature reactions to achieve the desired phase and stoichiometry, with lithium carbonate and manganese dioxide serving as the primary sources of lithium and manganese.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 1.76241220603697,
+ "model": "gpt-4o-mini"
+}

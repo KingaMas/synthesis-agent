@@ -1,0 +1,22 @@
+{
+ "target_formula": "Sr0.2La0.8Mn0.95Cu0.05O3",
+ "precursor_formulas": [
+  "SrCO3",
+  "MnO2",
+  "CuO"
+ ],
+ "precursor_elements": [
+  "C",
+  "Cu",
+  "Mn",
+  "O",
+  "Sr"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1500.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\"SrCO3\", \"MnO2\", \"CuO\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1500,\n  \"rationale\": \"The synthesis recipe is adapted from known SrMnO3 methods, utilizing solid-state reactions with commercially available precursors, while the CuO is included for the copper substitution.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 15.670035439077765,
+ "model": "gpt-4o-mini"
+}

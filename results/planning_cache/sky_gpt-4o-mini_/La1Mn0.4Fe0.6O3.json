@@ -1,0 +1,18 @@
+{
+ "target_formula": "La1Mn0.4Fe0.6O3",
+ "precursor_formulas": [
+  "La(NO3)3\u00b76H2O",
+  "Mn2O3"
+ ],
+ "precursor_elements": [
+  "Mn",
+  "O"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1100.0,
+ "raw_text": "```json\n{\"precursors\":[\"La(NO3)3\u00b76H2O\",\"Mn2O3\"],\"method\":\"solid-state\",\"max_heating_temperature_C\":1100,\"rationale\":\"La1Mn0.4Fe0.6O3 is similar to LaMnO3, which has a solid-state synthesis method using lanthanum nitrate and manganese oxide. The heating temperature is derived from the highest known temperature for LaMnO3 synthesis.\"}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 17.116023676935583,
+ "model": "gpt-4o-mini"
+}

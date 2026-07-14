@@ -1,0 +1,26 @@
+{
+ "target_formula": "Na2V0.96Fe1.96P3O12",
+ "precursor_formulas": [
+  "Na2CO3",
+  "Fe2O3",
+  "NH4H2PO4",
+  "V2O5"
+ ],
+ "precursor_elements": [
+  "C",
+  "Fe",
+  "H",
+  "N",
+  "Na",
+  "O",
+  "P",
+  "V"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 960.0,
+ "raw_text": "```json\n{\n  \"precursors\": [\n    \"Na2CO3\",\n    \"Fe2O3\",\n    \"NH4H2PO4\",\n    \"V2O5\"\n  ],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 960,\n  \"rationale\": \"The synthesis recipe is adapted from solid-state methods of similar phosphate materials like Li3Fe2(PO4)3 and Na3PO4, incorporating appropriate precursors for vanadium and adjusting stoichiometry.\"\n}\n```",
+ "provenance": null,
+ "error": null,
+ "latency_s": 16.79855729895644,
+ "model": "gpt-4o-mini"
+}

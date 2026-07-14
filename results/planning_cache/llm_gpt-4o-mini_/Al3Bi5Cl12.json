@@ -1,0 +1,21 @@
+{
+ "target_formula": "Al3Bi5Cl12",
+ "precursor_formulas": [
+  "AlCl3",
+  "BiCl3",
+  "Bi",
+  "Al"
+ ],
+ "precursor_elements": [
+  "Al",
+  "Bi",
+  "Cl"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 800.0,
+ "raw_text": "{\n  \"precursors\": [\"AlCl3\", \"BiCl3\", \"Bi\", \"Al\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 800,\n  \"rationale\": \"The solid-state method is suitable for synthesizing complex halides like Al3Bi5Cl12, allowing for the direct reaction of metal chlorides and elemental metals at elevated temperatures to promote the formation of the desired compound.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.128763208165765,
+ "model": "gpt-4o-mini"
+}

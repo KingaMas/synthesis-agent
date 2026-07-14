@@ -1,0 +1,24 @@
+{
+ "target_formula": "Ba1Zn1.1Fe16Co0.9O27",
+ "precursor_formulas": [
+  "BaCO3",
+  "ZnO",
+  "Fe2O3",
+  "Co3O4"
+ ],
+ "precursor_elements": [
+  "Ba",
+  "C",
+  "Co",
+  "Fe",
+  "O",
+  "Zn"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1200.0,
+ "raw_text": "{\"precursors\": [\"BaCO3\", \"ZnO\", \"Fe2O3\", \"Co3O4\"], \"method\": \"solid-state\", \"max_heating_temperature_C\": 1200, \"rationale\": \"The synthesis method for Ba1Zn1.1Fe16Co0.9O27 was adapted from similar materials, particularly from BaZnFe6O11, focusing on solid-state synthesis at 1200\u00b0C based on successfully reported recipes for materials with analogous compositions.\"}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 16.141941469162703,
+ "model": "gpt-4o-mini"
+}

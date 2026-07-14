@@ -1,0 +1,22 @@
+{
+ "target_formula": "YbVO4",
+ "precursor_formulas": [
+  "Yb2O3",
+  "V2O5",
+  "NH4VO3"
+ ],
+ "precursor_elements": [
+  "H",
+  "N",
+  "O",
+  "V",
+  "Yb"
+ ],
+ "method_family": "solid-state",
+ "max_heating_temp_C": 1000.0,
+ "raw_text": "{\n  \"precursors\": [\"Yb2O3\", \"V2O5\", \"NH4VO3\"],\n  \"method\": \"solid-state\",\n  \"max_heating_temperature_C\": 1000,\n  \"rationale\": \"The solid-state method is suitable for synthesizing YbVO4 due to the high stability of the oxides involved, and the calcination temperature of 1000\u00b0C ensures complete reaction and formation of the desired phase.\"\n}",
+ "provenance": null,
+ "error": null,
+ "latency_s": 2.3484683230053633,
+ "model": "gpt-4o-mini"
+}

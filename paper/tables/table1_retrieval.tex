@@ -1,0 +1,12 @@
+\begin{tabular}{lcccc}
+\toprule
+Retriever & SRO@5 & MCR@5 & NDCG@5 & ms/query \\
+\midrule
+MAGPIE (SKY) & 0.325 [0.306, 0.347] & 0.502 & 0.718 & 34 \\
+Random & 0.136 [0.128, 0.145] & 0.494 & 0.641 & 0 \\
+Element Jaccard & 0.534 [0.509, 0.560] & 0.568 & 0.842 & 12 \\
+Stoich Vector & 0.485 [0.463, 0.512] & 0.610 & 0.847 & 247 \\
+TF-IDF & 0.363 [0.347, 0.383] & 0.578 & 0.824 & 59 \\
+Hybrid (MAGPIE+Stoich RRF) & 0.413 [0.394, 0.433] & 0.564 & 0.808 & 318 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,282 @@
+\documentclass[10pt]{article}
+
+% Draft for Digital Discovery (RSC). Written in a generic article class for
+% portability; swap in the RSC template at submission time (Overleaf has it
+% as "Royal Society of Chemistry Article Template").
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\title{SKY: an evaluation-first look at retrieval and agentic strategies
+for LLM-based inorganic synthesis recipe prediction}
+
+\author{%
+  Kinga Mastej$^{1}$ \and Hyunsoo Park$^{1}$ \\[4pt]
+  \normalsize $^{1}$Department of Materials, Imperial College London, UK \\
+  \normalsize \todo{confirm author order, affiliations, and any additional authors}%
+}
+\date{\today\ --- draft, not for distribution}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Large language model (LLM) agents promise to accelerate materials synthesis
+planning, but claims of their utility are rarely tested against strong
+non-LLM baselines under leakage-controlled protocols. We present SKY, an
+LLM agent for inorganic synthesis recipe recommendation built on
+composition- and structure-based similarity search over the Materials
+Project, together with two benchmarks that evaluate each of its components
+against deliberately simple alternatives. In a leave-one-out retrieval
+benchmark over 7{,}498 text-mined synthesis recipes, learned composition
+embeddings (Magpie) are outperformed by element-overlap baselines for
+recipe transferability; a scale-free rank-fusion hybrid narrows but does
+not close the gap. In a synthesis planning benchmark on 100 held-out target
+materials, the full SKY agent achieves the best precursor-set F1 (0.50 vs.\
+0.45 for the strongest retrieval baseline, Wilcoxon $p<0.005$), yet a
+zero-cost rule baseline matches all methods on precursor element overlap,
+every method predicts the synthesis method family at chance level, and
+heating-temperature errors exceed \SI{300}{\celsius} across the board. Our
+results support a measured view of agentic synthesis planning: grounding an
+LLM in retrieval tools yields a real but modest gain on the hardest
+sub-task, while several sub-tasks are not yet solved by any strategy we
+tested. We release all code, data splits, and cached model outputs for
+reproduction. \todo{finalise numbers after o3/open-model reruns}
+\end{abstract}
+
+\section{Introduction}
+
+Predicting how to synthesise a target inorganic material remains a
+bottleneck in computational materials discovery: high-throughput screening
+proposes candidates far faster than laboratories can devise recipes for
+them~\cite{jain2013materials,szymanski2023alab}. Text-mined synthesis
+databases~\cite{kononova2019text} and, more recently, LLM-based
+agents~\cite{bran2024chemcrow,boiko2023coscientist} suggest a route to
+automated synthesis planning, and a rapidly growing literature applies
+LLMs to precursor selection and recipe
+generation~\cite{iclr2026benchmark,msp_llm2026,prein2025ranking}.
+
+However, recent systematic evaluations urge caution: retrieval augmentation
+helps LLM synthesis prediction, but multi-step agentic workflows can hurt
+as often as they help~\cite{iclr2026benchmark}. Positive results are also
+frequently reported without leakage-controlled splits or strong non-LLM
+baselines, making it difficult to attribute gains to the LLM rather than to
+the retrieval corpus it queries.
+
+This paper makes three contributions. First, we describe SKY, a
+tool-grounded LLM agent for synthesis recommendation whose retrieval
+backbone is similarity search over Materials Project compositions and
+structures (Section~\ref{sec:system}). Second, we introduce a two-level
+evaluation: a \emph{retrieval benchmark} measuring whether similar
+materials have transferable recipes, and a \emph{planning benchmark}
+measuring end-to-end recipe prediction against held-out ground truth, with
+a corpus-level leakage guard and statistically tested comparisons
+(Section~\ref{sec:benchmarks}). Third, we report an honest accounting of
+where the agentic approach helps and where it does not
+(Section~\ref{sec:results}), including negative results --- chance-level
+method-family prediction and large temperature errors --- that align with
+independent findings~\cite{iclr2026benchmark} and delineate open problems.
+
+\section{Related work}
+
+\paragraph{Text-mined synthesis knowledge.} Our recipe corpus derives from
+the text-mined solid-state and sol-gel synthesis dataset of Kononova
+\emph{et al.}~\cite{kononova2019text}, which underpins most data-driven
+synthesis prediction work, including precursor recommendation via
+element substitution~\cite{he2023precursor} and ranking-based
+planning~\cite{prein2025ranking}. \todo{verify he2023precursor citation}
+
+\paragraph{LLM agents for chemistry and materials.} ChemCrow~\cite{bran2024chemcrow}
+and Coscientist~\cite{boiko2023coscientist} established the
+tool-augmented-agent pattern for chemistry; A-Lab~\cite{szymanski2023alab}
+closed the loop with robotic synthesis. Materials-specific agents now span
+literature mining, property prediction, and synthesis
+planning~\cite{msp_llm2026}. SKY follows the same architectural pattern but
+is deliberately narrow: similarity search plus recipe lookup, which makes
+component-wise evaluation tractable. SKY originated at the 2025 LLM
+Hackathon for Applications in Materials Science and
+Chemistry~\cite{hackathon2025outcomes}.
+
+\paragraph{Benchmarking LLM synthesis prediction.} Closest to our planning
+benchmark, a recent study evaluates augmentation strategies for
+solid-state synthesis prediction on 674 literature targets and finds
+retrieval augmentation the only consistently helpful
+strategy~\cite{iclr2026benchmark}. Our benchmark is smaller (100 targets)
+but complements theirs in three ways: we stratify method families to test
+method prediction at parity, we include non-LLM baselines (rule-based and
+retrieval-only) that calibrate the difficulty floor of each metric, and we
+evaluate temperature prediction with unit-normalised ground truth.
+
+\section{The SKY system}
+\label{sec:system}
+
+SKY couples an LLM (OpenAI Agents SDK tool loop) to four families of tools:
+(i)~\emph{similarity search} over precomputed Materials Project embeddings
+--- Magpie composition features~\cite{ward2016magpie} and MACE structure
+descriptors~\cite{batatia2022mace} --- indexed with exact $k$-NN in
+standardised feature space; (ii)~\emph{recipe lookup} against the
+text-mined corpus~\cite{kononova2019text}, indexed by reduced formula;
+(iii)~\emph{parameter extraction} from recipe text (temperatures, times,
+atmospheres, method keywords); and (iv)~a \emph{recursive best-guess
+search} that explores neighbours-of-neighbours when the target has no
+direct recipe, pruning by retrieval confidence.
+
+Retrieval confidence is $c = \exp(-d/\sigma)$ for scaled distance $d$. We
+calibrate $\sigma$ by minimising expected calibration error against
+recipe-transfer relevance labels, obtaining $\sigma=0.5$ (ECE 0.17 vs.\
+0.41 for the uncalibrated $\sigma=3$; Figure~\ref{fig:calibration}), and
+recalibrate the recursive-search thresholds to the new confidence scale by
+grid search with a parsimony rule (Section~S\todo{X}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.72\linewidth]{figures/fig4_calibration.png}
+  \caption{Reliability diagram for retrieval confidence
+  $c=\exp(-d/\sigma)$. The calibrated bandwidth $\sigma=0.5$ reduces ECE
+  from 0.41 to 0.17. \todo{regenerate with final axis labels}}
+  \label{fig:calibration}
+\end{figure}
+
+\section{Benchmarks}
+\label{sec:benchmarks}
+
+\subsection{Retrieval benchmark}
+Leave-one-out evaluation over the 7{,}498 unique reduced formulas in the
+recipe corpus: for each of 400 stratified query materials we retrieve $k$
+neighbours and score \emph{synthesis recipe overlap} (SRO@$k$: mean Jaccard
+similarity of precursor element sets), \emph{method consistency rate}
+(MCR@$k$), and NDCG@$k$ with SRO gains. Baselines: random, element-set
+Jaccard, stoichiometric-vector cosine, formula TF--IDF, and a
+reciprocal-rank-fusion hybrid of Magpie and stoichiometric retrieval.
+Wall-clock latency per query is reported for computational-efficiency
+comparison.
+
+\subsection{Planning benchmark}
+100 held-out target materials, stratified 50/50 across the two method
+families present in the corpus (solid-state, sol-gel), each with parseable
+precursor ground truth. \textbf{Leakage guard:} held-out formulas are
+removed from every retrieval corpus and recipe store, so no method can see
+a held-out recipe; the embedding index itself carries no recipe
+information. Methods predict precursors, method family, and maximum
+heating temperature; we score precursor element Jaccard, precursor formula
+F1 (reduced-formula sets), method accuracy, and temperature MAE (ground
+truth converted to \si{\celsius}; $\sim$68\% coverage). Predictions are
+requested as structured JSON. All aggregates carry bootstrap 95\% CIs;
+method pairs are compared with Wilcoxon signed-rank tests.
+
+We compare five methods: a fitted \emph{rule baseline} (per-element most
+frequent precursor, majority method, per-family median temperature);
+\emph{retrieval-only} predictors that copy the top-1 neighbour's recipe
+(element-Jaccard and Magpie variants); a \emph{direct LLM} (single
+structured-output call, no tools); and the full \emph{SKY agent}
+(gpt-4o-mini tool loop with leakage-aware tools). \todo{add o3 and one
+open-weights model}
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Recipe transferability of similarity search}
+
+\begin{table}[t]
+  \centering
+  \caption{Retrieval benchmark (Table 1): recipe transferability of
+  retrieved neighbours at $k=5$, $n=400$ queries, corpus 7{,}498
+  materials. SRO reported as mean [95\% CI].}
+  \label{tab:retrieval}
+  \input{tables/table1_retrieval}
+\end{table}
+
+Table~\ref{tab:retrieval} shows that element-overlap baselines outperform
+learned Magpie embeddings for recipe transferability (SRO@5 0.53 vs.\
+0.33): materials sharing precursor chemistry are found more reliably by
+element sets than by dense composition features, which distribute
+attention across property-relevant but synthesis-irrelevant dimensions.
+The rank-fusion hybrid narrows the gap (SRO@5 0.41) but element-set
+retrieval remains the strongest backbone, and we adopt it for the
+planning benchmark's retrieval predictor accordingly. Structure-mode
+(MACE) retrieval is evaluated in the ablation (Section~S\todo{X});
+unlike element-set baselines it extends to CIF inputs.
+
+\subsection{End-to-end synthesis planning}
+
+\begin{table}[t]
+  \centering
+  \caption{Planning benchmark (Table 2): recipe prediction on 100
+  held-out targets. Temperature MAE in \si{\celsius} (number of scored
+  cases in parentheses); Fail = prediction failures.}
+  \label{tab:planning}
+  \input{tables/table2_planning}
+\end{table}
+
+Three findings stand out in Table~\ref{tab:planning}. First, \textbf{the
+SKY agent achieves the best precursor formula F1} (0.497 [0.44, 0.55]),
+significantly above the strongest retrieval baseline (0.448; Wilcoxon
+$p=0.005$, Cohen's $d=0.29$): retrieving several neighbours and letting
+the LLM adapt their recipes beats copying any single neighbour, and beats
+the ungrounded LLM (0.433). Second, \textbf{cheap baselines set a high
+floor on lenient metrics}: on precursor \emph{element} overlap the rule
+baseline (0.821) is indistinguishable from the agent (0.813) --- element
+identity is nearly determined by the target composition, so only the
+compound-level F1 discriminates methods. Third, \textbf{two sub-tasks are
+unsolved by all methods}: method-family accuracy is at chance
+($\approx$0.5 on the balanced set) for every method including the agent,
+and temperature MAE is $\ge$\SI{310}{\celsius} throughout. Magpie-based
+retrieval fails outright on 42/100 targets, echoing its Table~1 weakness.
+
+Our modest agent-over-LLM gain, alongside chance-level method prediction,
+is consistent with the finding of ref.~\citenum{iclr2026benchmark} that
+retrieval is the reliably useful augmentation while added agentic
+machinery often contributes little.
+
+\section{Discussion and limitations}
+
+\paragraph{What the agent buys.} The agent's advantage concentrates
+exactly where reasoning over retrieved evidence can help: choosing
+\emph{which} compounds to adapt from \emph{which} neighbours. Where the
+answer is nearly determined by composition (element overlap) or barely
+inferable from composition alone (method family, temperature), the agent
+neither helps nor hurts.
+
+\paragraph{Limitations.} (i)~The corpus covers only solid-state and
+sol-gel routes, inherited from the text-mining pipeline's biases
+\cite{kononova2019text}; (ii)~results are for a single closed model
+(gpt-4o-mini) at $n=100$ \todo{address with o3 + open-model reruns and
+$n=400$}; (iii)~formula-level F1 penalises hydrate/anhydrous mismatches
+identically for all methods but understates chemical validity; (iv)~no
+experimental validation is attempted --- predictions are judged against
+literature ground truth only; (v)~structure-mode retrieval requires the
+MACE embedding index, which we \todo{regenerate and evaluate}.
+
+\section{Conclusions}
+
+Tool-grounded LLM agents deliver a real but narrow improvement in
+inorganic synthesis planning: better precursor selection, no better method
+or temperature prediction. Rigorous baselines and leakage control shrink
+--- but do not eliminate --- the apparent gains of agentic approaches. We
+argue such evaluation-first reporting is a prerequisite for trustworthy
+progress in LLM-driven synthesis planning, and release the full framework
+to support it.
+
+\section*{Data and code availability}
+Code, benchmarks, data splits, cached LLM outputs, and this manuscript are
+available at \url{https://github.com/KingaMas/synthesis-agent}.
+\todo{archive a release on Zenodo and add DOI}
+
+\section*{Author contributions}
+\todo{fill in CRediT roles with Hyunsoo}
+
+\section*{Conflicts of interest}
+There are no conflicts to declare.
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

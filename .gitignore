@@ -28,3 +28,4 @@ openai-agents-python/
 CLAUDE.md
 AGENTS.md
 test_recursive.py
+.claude/

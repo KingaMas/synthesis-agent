@@ -210,6 +210,32 @@ def get_material_properties(material_ids: List[str]) -> str:
         }, indent=2)
 
 
+# Module-level cache: the 41k-recipe gz is loaded at most once per process
+_RECIPE_STORE = None
+
+
+def _get_recipe_store():
+    global _RECIPE_STORE
+    if _RECIPE_STORE is None:
+        from src.evaluation.predictors import RecipeStore
+        _RECIPE_STORE = RecipeStore()
+    return _RECIPE_STORE
+
+
+def _summarize_recipe(recipe: dict) -> dict:
+    """Compact recipe view for LLM context (full dicts are very large)."""
+    from src.evaluation.planning import extract_max_heating_temp_C
+    return {
+        "targets": recipe.get("targets_formula_s"),
+        "precursors": recipe.get("precursors_formula_s"),
+        "synthesis_type": recipe.get("synthesis_type"),
+        "max_heating_temperature_C": extract_max_heating_temp_C(recipe),
+        "reaction_string": recipe.get("reaction_string"),
+        "paragraph": (recipe.get("paragraph_string") or "")[:600],
+        "doi": recipe.get("doi"),
+    }
+
+
 @function_tool
 def get_synthesis_recipes(target_formula: str, similar_formulas: Optional[List[str]] = None) -> str:
     """
@@ -256,51 +282,28 @@ def get_synthesis_recipes(target_formula: str, similar_formulas: Optional[List[s
                     "error": "Synthesis recipes file not found and MP_API_KEY not set"
                 }, indent=2)
         
-        # Load compressed synthesis data
-        all_recipes = loadfn(recipes_file)
-        
-        # Search for recipes matching target formula
-        target_comp = Composition(target_formula)
-        matched_recipes = []
-        
-        # Check both exact and reduced formula matches
-        for recipe in all_recipes:
-            if 'target_formula' in recipe:
-                try:
-                    recipe_comp = Composition(recipe['target_formula'])
-                    if (recipe_comp.reduced_formula == target_comp.reduced_formula or 
-                        recipe_comp.formula == target_comp.formula):
-                        matched_recipes.append(recipe)
-                except:
-                    continue
-        
-        # Also check similar formulas if provided
+        # Look up recipes by reduced target formula (recipes in the corpus
+        # store targets under targets_formula_s, not a target_formula key)
+        store = _get_recipe_store()
+        matched_recipes = [
+            _summarize_recipe(r) for r in store.lookup(target_formula)[:5]
+        ]
+
         similar_recipes = []
         if similar_formulas:
             for formula in similar_formulas:
-                try:
-                    sim_comp = Composition(formula)
-                    for recipe in all_recipes:
-                        if 'target_formula' in recipe:
-                            try:
-                                recipe_comp = Composition(recipe['target_formula'])
-                                if recipe_comp.reduced_formula == sim_comp.reduced_formula:
-                                    similar_recipes.append({
-                                        "formula": formula,
-                                        "recipe": recipe
-                                    })
-                            except:
-                                continue
-                except:
-                    continue
-        
+                for recipe in store.lookup(formula)[:1]:
+                    similar_recipes.append(
+                        {"formula": formula, "recipe": _summarize_recipe(recipe)}
+                    )
+
         results = {
             "target_formula": target_formula,
             "exact_matches": len(matched_recipes),
-            "recipes": matched_recipes[:5],  # Limit to 5 recipes
-            "similar_materials_recipes": similar_recipes[:3]  # Limit to 3 similar
+            "recipes": matched_recipes,
+            "similar_materials_recipes": similar_recipes[:3]
         }
-        
+
         return json.dumps(results, indent=2, default=str)
         
     except Exception as e:
@@ -310,16 +313,11 @@ def get_synthesis_recipes(target_formula: str, similar_formulas: Optional[List[s
         }, indent=2)
 
 
-@function_tool
-def analyze_synthesis_parameters(synthesis_text: str) -> str:
-    """
-    Extract and analyze key synthesis parameters from a synthesis description.
-    
-    Args:
-        synthesis_text: Text description of synthesis procedure
-    
-    Returns:
-        JSON string with extracted parameters and analysis
+def analyze_synthesis_parameters_impl(synthesis_text: str) -> str:
+    """Plain-function body of analyze_synthesis_parameters.
+
+    Kept separate from the @function_tool wrapper so benchmark code
+    (src/evaluation) can call the regex extraction directly.
     """
     import re
     
@@ -393,6 +391,20 @@ def analyze_synthesis_parameters(synthesis_text: str) -> str:
 
 
 @function_tool
+def analyze_synthesis_parameters(synthesis_text: str) -> str:
+    """
+    Extract and analyze key synthesis parameters from a synthesis description.
+
+    Args:
+        synthesis_text: Text description of synthesis procedure
+
+    Returns:
+        JSON string with extracted parameters and analysis
+    """
+    return analyze_synthesis_parameters_impl(synthesis_text)
+
+
+@function_tool
 def generate_synthesis_html_report(
     synthesis_output: str,
     material_formula: str,
@@ -449,19 +461,20 @@ def generate_synthesis_html_report(
 def recursive_synthesis_search(
     target_formula: str,
     max_depth: int = 3,
-    min_confidence: float = 0.7,
+    min_confidence: float = 0.05,
     n_initial_neighbors: int = 30
 ) -> str:
     """
     Perform recursive best-guess search for synthesis recipes.
-    
+
     This advanced algorithm recursively explores similar materials when direct recipes
     are not available, using confidence scores to guide the search.
-    
+
     Args:
         target_formula: Target material composition (e.g., "LiFe2O4")
         max_depth: Maximum recursion depth (default 3)
-        min_confidence: Minimum confidence threshold (default 0.7)
+        min_confidence: Minimum confidence threshold (default 0.05, calibrated
+            for the sigma=0.5 confidence scale; see scripts/calibrate_recursive.py)
         n_initial_neighbors: Initial neighbors to explore (default 30)
     
     Returns:

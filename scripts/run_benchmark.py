@@ -128,6 +128,18 @@ def main():
         all_results[name] = benchmark.evaluate(ret, name)
 
     # ------------------------------------------------------------------ #
+    # Hybrid: reciprocal-rank fusion of MAGPIE and Stoich Vector
+    # ------------------------------------------------------------------ #
+    from src.evaluation.baselines import HybridRRFRetriever
+    name = "Hybrid (MAGPIE+Stoich RRF)"
+    print(f"\n{'=' * 60}")
+    print(f"Running {name} ...")
+    hybrid = HybridRRFRetriever(
+        [sky, StoichiometricVectorRetriever(corpus=full_corpus)]
+    )
+    all_results[name] = benchmark.evaluate(hybrid, name)
+
+    # ------------------------------------------------------------------ #
     # Print Table 1
     # ------------------------------------------------------------------ #
     for k in args.k:
@@ -165,6 +177,7 @@ def main():
             "corpus_size": len(full_corpus),
             "per_k": per_k,
             "mrr": {"mean": mrr_mean, "ci_lo": mrr_lo, "ci_hi": mrr_hi},
+            "timing": res.latency_stats(),
         }
 
     with open(args.output, "w") as f:

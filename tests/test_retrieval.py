@@ -136,3 +136,25 @@ class TestMockAgent:
         result = mock_agent.get_synthesis_recipes_by_formula("XYZ999")
         assert isinstance(result, list)
         assert result == []
+
+
+# ---------------------------------------------------------------------------
+# Wall-clock timing (extension B)
+# ---------------------------------------------------------------------------
+
+class TestBenchmarkTiming:
+    def test_latency_recorded_per_query(self, tiny_test_cases):
+        from src.evaluation.baselines import ElementJaccardRetriever
+        from src.evaluation.benchmark import RetrievalBenchmark
+
+        bench = RetrievalBenchmark(
+            test_cases=tiny_test_cases, k_values=(1, 3), verbose=False
+        )
+        results = bench.evaluate(
+            ElementJaccardRetriever(corpus=tiny_test_cases), "jaccard"
+        )
+        assert len(results.per_query_latency) == len(tiny_test_cases)
+        assert all(t >= 0.0 for t in results.per_query_latency)
+        stats = results.latency_stats()
+        assert stats["total_s"] >= stats["mean_s"]
+        assert set(stats) == {"mean_s", "median_s", "p95_s", "total_s"}

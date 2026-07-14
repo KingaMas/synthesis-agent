@@ -14,6 +14,7 @@ FormulaTFIDFRetriever    — TF-IDF over tokenized formula strings.
 
 from __future__ import annotations
 
+import math
 import random
 import re
 from collections import defaultdict
@@ -193,4 +194,35 @@ class FormulaTFIDFRetriever:
                 for tok, cnt in tf.items()}
 
 
-import math  # noqa: E402 — needed by FormulaTFIDFRetriever._cosine
+class HybridRRFRetriever:
+    """Reciprocal-rank fusion of two or more component retrievers.
+
+    Scale-free hybrid: each component contributes 1/(rrf_k + rank) per
+    candidate, so retrievers with incomparable score scales (embedding
+    distance vs cosine vs Jaccard) compose without renormalization.
+    """
+
+    def __init__(
+        self,
+        retrievers: list,
+        rrf_k: int = 60,
+        fetch_factor: int = 3,
+    ):
+        self.retrievers = retrievers
+        self.rrf_k = rrf_k
+        self.fetch_factor = fetch_factor
+
+    def retrieve(self, query: TestCase, k: int) -> list[TestCase]:
+        scores: dict[str, float] = defaultdict(float)
+        by_formula: dict[str, TestCase] = {}
+
+        for retriever in self.retrievers:
+            candidates = retriever.retrieve(query, k=k * self.fetch_factor)
+            for rank, tc in enumerate(candidates, start=1):
+                if tc.reduced_formula == query.reduced_formula:
+                    continue
+                scores[tc.reduced_formula] += 1.0 / (self.rrf_k + rank)
+                by_formula.setdefault(tc.reduced_formula, tc)
+
+        ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+        return [by_formula[formula] for formula, _ in ranked[:k]]

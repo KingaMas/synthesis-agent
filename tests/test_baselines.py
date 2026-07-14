@@ -80,6 +80,45 @@ class TestStoichiometricVectorRetriever:
         assert all(r.reduced_formula != query.reduced_formula for r in results)
 
 
+class TestHybridRRFRetriever:
+    def test_excludes_query_and_dedupes(self, tiny_test_cases):
+        from src.evaluation.baselines import (
+            ElementJaccardRetriever,
+            HybridRRFRetriever,
+            StoichiometricVectorRetriever,
+        )
+        if len(tiny_test_cases) < 3:
+            pytest.skip("Need at least 3 test cases")
+        hybrid = HybridRRFRetriever([
+            ElementJaccardRetriever(corpus=tiny_test_cases),
+            StoichiometricVectorRetriever(corpus=tiny_test_cases),
+        ])
+        query = tiny_test_cases[0]
+        results = hybrid.retrieve(query, k=5)
+        formulas = [r.reduced_formula for r in results]
+        assert query.reduced_formula not in formulas
+        assert len(formulas) == len(set(formulas))
+
+    def test_consensus_ranks_above_single_source(self, tiny_test_cases):
+        from src.evaluation.baselines import HybridRRFRetriever
+
+        if len(tiny_test_cases) < 3:
+            pytest.skip("Need at least 3 test cases")
+        a, b, c = tiny_test_cases[0], tiny_test_cases[1], tiny_test_cases[2]
+
+        class FixedRetriever:
+            def __init__(self, ranking):
+                self.ranking = ranking
+
+            def retrieve(self, query, k):
+                return self.ranking[:k]
+
+        # b is found by both components; c by only one
+        hybrid = HybridRRFRetriever([FixedRetriever([b, c]), FixedRetriever([b])])
+        results = hybrid.retrieve(a, k=2)
+        assert results[0].reduced_formula == b.reduced_formula
+
+
 class TestFormulaTFIDFRetriever:
     def test_basic_retrieval(self, tiny_test_cases):
         from src.evaluation.baselines import FormulaTFIDFRetriever

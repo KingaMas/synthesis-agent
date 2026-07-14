@@ -19,6 +19,7 @@ MRR     Mean Reciprocal Rank — position of first neighbor with SRO >= 0.3.
 from __future__ import annotations
 
 import math
+import time
 from dataclasses import dataclass, field
 from typing import Callable, Optional, Protocol
 
@@ -125,6 +126,20 @@ class BenchmarkResults:
     per_query_ndcg: dict[int, list[float]] = field(default_factory=dict)
     per_query_mrr: list[float] = field(default_factory=list)
 
+    # Wall-clock efficiency (per retrieve() call; index build excluded)
+    per_query_latency: list[float] = field(default_factory=list)
+
+    def latency_stats(self) -> dict[str, float]:
+        if not self.per_query_latency:
+            return {"mean_s": 0.0, "median_s": 0.0, "p95_s": 0.0, "total_s": 0.0}
+        arr = np.array(self.per_query_latency)
+        return {
+            "mean_s": float(arr.mean()),
+            "median_s": float(np.median(arr)),
+            "p95_s": float(np.percentile(arr, 95)),
+            "total_s": float(arr.sum()),
+        }
+
     def summary_table(self) -> str:
         """Return a compact ASCII table for quick inspection."""
         lines = [
@@ -139,6 +154,11 @@ class BenchmarkResults:
                 f"{self.ndcg.get(k, float('nan')):>8.4f}"
             )
         lines.append(f"MRR (threshold=0.3): {self.mean_mrr:.4f}")
+        lat = self.latency_stats()
+        lines.append(
+            f"Latency per query: mean {lat['mean_s'] * 1000:.1f} ms, "
+            f"p95 {lat['p95_s'] * 1000:.1f} ms"
+        )
         return "\n".join(lines)
 
 
@@ -194,7 +214,9 @@ class RetrievalBenchmark:
             if self.verbose and i % 100 == 0:
                 print(f"  [{retriever_name}] {i}/{len(self.test_cases)}")
 
+            start = time.perf_counter()
             neighbors = retriever.retrieve(query, k=self._max_k)
+            results.per_query_latency.append(time.perf_counter() - start)
 
             for k in self.k_values:
                 results.per_query_sro[k].append(sro_at_k(query, neighbors, k))

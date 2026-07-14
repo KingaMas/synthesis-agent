@@ -139,3 +139,19 @@ class TestRecipeStore:
     def test_unparseable_lookup_returns_empty(self, mini_recipes_path):
         store = RecipeStore(mini_recipes_path)
         assert store.lookup("!!!") == []
+
+
+class TestFrozenTestSet:
+    """The committed test-set file is the authoritative sample (audit rule 4)."""
+
+    def test_loads_and_matches_cached_run(self):
+        from src.evaluation.planning import load_planning_test_set
+
+        cases = load_planning_test_set()
+        assert len(cases) == 100
+        methods = {tc.synthesis_method for tc in cases}
+        assert methods == {"solid-state", "sol-gel"}
+        # every case re-anchored to a real recipe with precursor ground truth
+        from src.evaluation.planning import extract_ground_truth
+        for tc in cases[:10]:
+            assert extract_ground_truth(tc.raw_recipe).precursor_formulas

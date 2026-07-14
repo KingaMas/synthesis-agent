@@ -102,6 +102,38 @@ def wilcoxon_table(
 
 
 # ---------------------------------------------------------------------------
+# Holm–Bonferroni correction
+# ---------------------------------------------------------------------------
+
+def holm_correction(pvalues: dict, alpha: float = 0.05) -> dict:
+    """Holm–Bonferroni step-down correction over a family of tests.
+
+    Args:
+        pvalues: Mapping test-key -> raw p-value. The family is ALL entries
+                 passed in a single call; callers must group tests into the
+                 family they intend to correct over.
+        alpha:   Family-wise error rate.
+
+    Returns:
+        Mapping test-key -> {p_raw, p_holm, significant} where p_holm is the
+        Holm-adjusted p-value (monotone, capped at 1).
+    """
+    items = sorted(pvalues.items(), key=lambda kv: kv[1])
+    m = len(items)
+    out: dict = {}
+    running_max = 0.0
+    for i, (key, p) in enumerate(items):
+        adj = min(1.0, (m - i) * p)
+        running_max = max(running_max, adj)  # enforce monotonicity
+        out[key] = {
+            "p_raw": float(p),
+            "p_holm": float(running_max),
+            "significant": bool(running_max < alpha),
+        }
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Cohen's d effect size
 # ---------------------------------------------------------------------------
 

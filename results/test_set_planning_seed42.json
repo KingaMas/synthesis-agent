@@ -1,0 +1,1206 @@
+{
+ "_meta": {
+  "seed": 42,
+  "n_cases": 100,
+  "built_with": "pymatgen per uv.lock at commit 393e5e4",
+  "note": "authoritative test set; seeds alone do not reproduce this sample across pymatgen versions"
+ },
+ "cases": [
+  {
+   "reduced_formula": "La4MgNi19",
+   "formula": "La4MgNi19",
+   "doi": "10.1016/j.jpowsour.2015.09.058",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "LaNi5",
+    "LaMgNi4"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "Sr2Co1.96Bi1.91O7.08",
+   "formula": "Bi1.91Sr2Co1.96O7.08",
+   "doi": "10.1016/j.matlet.2018.01.101",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Sr(NO3)2",
+    "Bi(NO3)3",
+    "Co(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "Mn1Co1.5Cu0.5O4",
+   "formula": "MnCu0.5Co1.5O4",
+   "doi": "10.1016/j.ijhydene.2017.05.074",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Cu(NO3)2",
+    "Co(NO3)2",
+    "Mn(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 750.0
+  },
+  {
+   "reduced_formula": "Al3Bi5Cl12",
+   "formula": "Bi5(AlCl4)3",
+   "doi": "10.1016/j.pmatsci.2014.02.002",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Bi",
+    "AlCl3",
+    "BiCl3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Li1Ti0.05Ni0.95O2",
+   "formula": "LiNi0.95Ti0.05O2",
+   "doi": "10.1149/1.1614797",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "LiHO",
+    "Ni(HO)2",
+    "TiO2"
+   ],
+   "gt_max_heating_temp_C": 750.0
+  },
+  {
+   "reduced_formula": "La3Ni2O6.35",
+   "formula": "La3Ni2O6.35",
+   "doi": "10.1016/j.materresbull.2006.01.028",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Ni(HO)2",
+    "La2O3"
+   ],
+   "gt_max_heating_temp_C": 1250.0
+  },
+  {
+   "reduced_formula": "CuSnO3",
+   "formula": "SnO2 CuO",
+   "doi": "10.1016/j.cattod.2017.09.018",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "SnO2",
+    "CuO"
+   ],
+   "gt_max_heating_temp_C": 500.0
+  },
+  {
+   "reduced_formula": "M0.05Li1Mn1.5Ni0.45O4",
+   "formula": "LiNi0.45M0.05Mn1.5O4",
+   "doi": "10.1007/s10008-017-3545-z",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "LiNO3",
+    "MnH6(CO)4",
+    "Cu(NO3)2",
+    "Ni(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 900.0
+  },
+  {
+   "reduced_formula": "CaZrO3",
+   "formula": "CaZrO3",
+   "doi": "10.1016/j.solidstatesciences.2014.06.002",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "CaO",
+    "ZrO2"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "K0.435Na0.52Li0.045Ta0.05Nb0.905Sb0.045O3",
+   "formula": "Na0.52K0.435Li0.045Nb0.905Ta0.05Sb0.045O3",
+   "doi": "10.1007/s10854-018-8993-4",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Ta2O5",
+    "Li2CO3",
+    "Na2CO3",
+    "Nb2O5",
+    "K2CO3",
+    "Sb2O3"
+   ],
+   "gt_max_heating_temp_C": 1090.0
+  },
+  {
+   "reduced_formula": "Li1Mn2S0.03O3.97",
+   "formula": "LiMn2O3.97S0.03",
+   "doi": "10.1016/S0013-4686(00)00629-0",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "MnH6(CO)4",
+    "Li2S",
+    "LiH3(CO)2"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "La1Fe0.5Co0.5O3",
+   "formula": "LaCo0.5Fe0.5O3",
+   "doi": "10.1016/j.ijhydene.2016.07.207",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "La(NO3)3",
+    "Fe(NO3)3",
+    "Co(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 110.0
+  },
+  {
+   "reduced_formula": "La1Mn0.4Fe0.6O3",
+   "formula": "LaMn0.4Fe0.6O3",
+   "doi": "10.1007/s11244-012-9867-2",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "La(NO3)3",
+    "H3N",
+    "Mn(NO3)2",
+    "Fe(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 750.0
+  },
+  {
+   "reduced_formula": "Tb0.04Eu0.05Y1.9Dy0.01O3",
+   "formula": "(Y0.95Dy0.005Eu0.025Tb0.020)2O3",
+   "doi": "10.1016/j.jlumin.2013.07.058",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Dy2O3",
+    "Tb2O3",
+    "Eu2O3",
+    "Y2O3"
+   ],
+   "gt_max_heating_temp_C": 1200.0
+  },
+  {
+   "reduced_formula": "K0.4Ba0.6Bi1O3",
+   "formula": "Ba0.6K0.4BiO3",
+   "doi": "10.1016/j.elecom.2005.09.012",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "BaCO3",
+    "Bi2O3",
+    "KO2"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Bi2Te2.7Se0.3",
+   "formula": "Bi2Te2.7Se0.3",
+   "doi": "10.1039/C5TC01731A",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Bi",
+    "Te",
+    "Se"
+   ],
+   "gt_max_heating_temp_C": 1149.85
+  },
+  {
+   "reduced_formula": "Mn(FeNi2)3",
+   "formula": "Ni60Fe30Mn10",
+   "doi": "10.1016/j.jelechem.2013.01.039",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Fe",
+    "Mn",
+    "Ni"
+   ],
+   "gt_max_heating_temp_C": 1120.0
+  },
+  {
+   "reduced_formula": "Sr0.2La0.8Mn0.95Cu0.05O3",
+   "formula": "La0.8Sr0.2Mn0.95Cu0.05O3",
+   "doi": "10.1016/j.apcatb.2011.08.039",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Sr(NO3)2",
+    "Mn(NO3)2",
+    "La(NO3)3",
+    "Cu(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 110.0
+  },
+  {
+   "reduced_formula": "KSrTa3(BiO6)2",
+   "formula": "KSrBi2Ta3O12",
+   "doi": "10.1016/j.ssc.2008.12.044",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "SrCO3",
+    "Ta2O5",
+    "Bi2O3",
+    "K2CO3"
+   ],
+   "gt_max_heating_temp_C": 1100.0
+  },
+  {
+   "reduced_formula": "CeAlO3",
+   "formula": "CeAlO3",
+   "doi": "10.1016/j.jssc.2004.04.056",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "CeO2",
+    "Al2O3"
+   ],
+   "gt_max_heating_temp_C": 1474.85
+  },
+  {
+   "reduced_formula": "AGY",
+   "formula": "YAG",
+   "doi": "10.1016/j.radmeas.2007.10.039",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Al(NO3)3",
+    "Y(NO3)3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Ce2FeO4",
+   "formula": "FeCe2O4",
+   "doi": "10.1016/j.jiec.2017.12.011",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Fe",
+    "Ce(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 110.0
+  },
+  {
+   "reduced_formula": "SrLiLa3MnO8",
+   "formula": "La3SrLiMnO8",
+   "doi": "10.1021/ja012023z",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "SrCO3",
+    "La2O3",
+    "Li2CO3",
+    "MnO2"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "Ca1V0.5Mo0.5O3",
+   "formula": "Ca(V0.5Mo0.5)O3",
+   "doi": "10.1016/j.jpowsour.2008.12.035",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "VH4NO3",
+    "CaCO3",
+    "Mo7H24(NO4)6"
+   ],
+   "gt_max_heating_temp_C": 900.0
+  },
+  {
+   "reduced_formula": "Ba3CaIr2O9",
+   "formula": "Ba3CaIr2O9",
+   "doi": "10.1016/j.jssc.2008.10.034",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Ir",
+    "CaCO3",
+    "BaCO3"
+   ],
+   "gt_max_heating_temp_C": 1100.0
+  },
+  {
+   "reduced_formula": "Sr1Ti0.995O3",
+   "formula": "SrTi0.995O3",
+   "doi": "10.1007/s10854-018-9250-6",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "SrCO3",
+    "TiO2"
+   ],
+   "gt_max_heating_temp_C": 1500.0
+  },
+  {
+   "reduced_formula": "Pr1Mn0.9O3",
+   "formula": "PrMn0.9O3",
+   "doi": "10.1021/acs.inorgchem.6b00815",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "MnH6(CO)4",
+    "PrH9(CO)6"
+   ],
+   "gt_max_heating_temp_C": 700.0
+  },
+  {
+   "reduced_formula": "Li2Mn4O9",
+   "formula": "Li2Mn4O9",
+   "doi": "10.1016/j.synthmet.2009.12.025",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "MnH6(CO)4",
+    "LiH6(CO)4"
+   ],
+   "gt_max_heating_temp_C": 300.0
+  },
+  {
+   "reduced_formula": "Ba0.5Pr0.5Mn0.85Co0.05Ni0.1O3",
+   "formula": "Pr0.5Ba0.5Mn0.85Co0.05Ni0.1O3",
+   "doi": "10.1039/c8ta05105d",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Pr(NO3)3",
+    "Mn(NO3)2",
+    "Ni(NO3)2",
+    "Ba(NO3)2",
+    "Co(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 950.0
+  },
+  {
+   "reduced_formula": "Mg(CoO2)2",
+   "formula": "MgCo2O4",
+   "doi": "10.1007/s10854-017-6388-6",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Co(NO3)2",
+    "Mg(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 400.0
+  },
+  {
+   "reduced_formula": "M0.05Mg0.95Ta2O6",
+   "formula": "(Mg0.95M0.05)Ta2O6",
+   "doi": "10.1016/j.matlet.2012.02.066",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "MgO",
+    "Ta2O5",
+    "ZnO"
+   ],
+   "gt_max_heating_temp_C": 1575.0
+  },
+  {
+   "reduced_formula": "Y3Sc2Al3O12",
+   "formula": "Y3Sc2Al3O12",
+   "doi": "10.1016/S0925-3467(02)00271-9",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Sc2O3",
+    "Al(NO3)3",
+    "Y2O3"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "K2WO4",
+   "formula": "K2WO4",
+   "doi": "10.1016/j.jcrysgro.2006.04.039",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "W2O3",
+    "K2CO3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "H2PdCl4",
+   "formula": "H2PdCl4",
+   "doi": "10.1039/c5nr07502e",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "HCl",
+    "PdCl2"
+   ],
+   "gt_max_heating_temp_C": 90.0
+  },
+  {
+   "reduced_formula": "LaAl11O18",
+   "formula": "LaAl11O18",
+   "doi": "10.1016/j.catcom.2017.04.013",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "La2O3",
+    "Al2O3"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "BaCa2Fe16O27",
+   "formula": "BaCa2Fe16O27",
+   "doi": "10.1016/j.jmmm.2007.10.032",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Fe(NO3)2",
+    "Ba(HO)2",
+    "Ca(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 1050.0
+  },
+  {
+   "reduced_formula": "LaCuNiO3",
+   "formula": "Cu@LaNiO3",
+   "doi": "10.1016/j.apcatb.2017.02.064",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "LaNiO3",
+    "Cu(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 550.0
+  },
+  {
+   "reduced_formula": "CaMgSiO4",
+   "formula": "CaMgSiO4",
+   "doi": "10.1149/1.3271108",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "MgO",
+    "CaCO3",
+    "Eu2O3",
+    "SiH2O3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Sr0.05La0.95Co1O3",
+   "formula": "La0.95Sr0.05CoO3",
+   "doi": "10.1016/j.jcrysgro.2005.09.021",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Co",
+    "La2O3",
+    "SrCO3"
+   ],
+   "gt_max_heating_temp_C": 999.85
+  },
+  {
+   "reduced_formula": "BaZnSiO4",
+   "formula": "BaZnSiO4",
+   "doi": "10.1021/cm000063g",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "ZnO",
+    "SiO2",
+    "BaCO3",
+    "Eu2O3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Y2Ru2O7",
+   "formula": "Y2Ru2O7",
+   "doi": "10.1103/PhysRevB.91.224101",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Y2O3",
+    "RuO2"
+   ],
+   "gt_max_heating_temp_C": 1200.0
+  },
+  {
+   "reduced_formula": "Ce0.6Zr0.4O2",
+   "formula": "Ce0.6Zr0.4O2",
+   "doi": "10.1016/j.apcatb.2007.06.011",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Ce(NO3)3",
+    "ZrH2N4O13"
+   ],
+   "gt_max_heating_temp_C": 900.0
+  },
+  {
+   "reduced_formula": "Ca3Fe2(SiO4)3",
+   "formula": "Ca3Fe2Si3O12",
+   "doi": "10.1016/s0022-3697(98)00311-4",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "SiO2",
+    "CaCO3",
+    "Fe2O3"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "KNbWO6",
+   "formula": "KNbWO6",
+   "doi": "10.1016/S0022-3697(01)00006-3",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Nb2O5",
+    "WO3",
+    "K2CO3"
+   ],
+   "gt_max_heating_temp_C": 499.85
+  },
+  {
+   "reduced_formula": "SrGdAl3O7",
+   "formula": "GdSrAl3O7",
+   "doi": "10.1007/s10853-014-8176-5",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Sr(NO3)2",
+    "Gd1H2N3.6O11.8",
+    "Eu1H2N3.6O11.8",
+    "Al(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 550.0
+  },
+  {
+   "reduced_formula": "Mn1.5Ni0.5H2O2",
+   "formula": "(Ni0.5Mn1.5)(OH)2",
+   "doi": "10.1016/j.jpowsour.2010.03.067",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "MnH6(CO)4",
+    "H5NO",
+    "NiH6(CO)4"
+   ],
+   "gt_max_heating_temp_C": 60.0
+  },
+  {
+   "reduced_formula": "LiTiMnO4",
+   "formula": "LiMnTiO4",
+   "doi": "10.1016/j.solidstatesciences.2008.03.020",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "TiO2",
+    "Li2CO3",
+    "MnH2CO4"
+   ],
+   "gt_max_heating_temp_C": 499.85
+  },
+  {
+   "reduced_formula": "La0.64Ti0.92Nb0.08O2.99",
+   "formula": "La0.64(Ti0.92Nb0.08)O2.99",
+   "doi": "10.1021/cm070321a",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "TiO2",
+    "Nb2O5",
+    "La2O3"
+   ],
+   "gt_max_heating_temp_C": 1350.0
+  },
+  {
+   "reduced_formula": "Li1Mn1.475Al0.01Cr0.04Ni0.475O3.95F0.05",
+   "formula": "LiNi0.475Al0.01Cr0.04Mn1.475O3.95F0.05",
+   "doi": "10.1016/j.electacta.2012.05.096",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Al(NO3)3",
+    "NiH9(CO)6",
+    "MnH21(CO)14",
+    "LiF",
+    "LiH3(CO)2",
+    "Cr(NO3)6"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "YbVO4",
+   "formula": "YbVO4",
+   "doi": "10.1016/j.jcrysgro.2009.06.033",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "V2O5",
+    "Yb2O3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Ba0.85Ti1Pb0.15O3",
+   "formula": "(Ba0.85Pb0.15)TiO3",
+   "doi": "10.1016/j.mseb.2009.08.003",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Pb3O4",
+    "TiO2",
+    "BaCO3"
+   ],
+   "gt_max_heating_temp_C": 1180.0
+  },
+  {
+   "reduced_formula": "Al2(MoO4)3",
+   "formula": "Al2Mo3O12",
+   "doi": "10.1007/s10853-014-8498-3",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Al2O3",
+    "MoO3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Nb12WO33",
+   "formula": "WNb12O33",
+   "doi": "10.1039/C7TA01784G",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "H6C2O",
+    "Nb(CO2)5",
+    "H8W(NO2)2"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "Sr3LiTi5Nb3O21",
+   "formula": "Sr3LiNb3Ti5O21",
+   "doi": "10.1007/s10854-010-0246-0",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "SrCO3",
+    "Li2CO3",
+    "Nb2O5",
+    "TiO2"
+   ],
+   "gt_max_heating_temp_C": 1100.0
+  },
+  {
+   "reduced_formula": "Al0.04Zn0.96O1",
+   "formula": "Al0.04Zn0.96O",
+   "doi": "10.1016/j.apsusc.2015.12.106",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Al2O3",
+    "ZnO"
+   ],
+   "gt_max_heating_temp_C": 1170.0
+  },
+  {
+   "reduced_formula": "Ba1Zn1.1Fe16Co0.9O27",
+   "formula": "Ba1Co0.9Zn1.1Fe16O27",
+   "doi": "10.1016/j.jmmm.2011.02.034",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "NO3",
+    "Fe(NO3)3",
+    "Ba(NO3)2",
+    "Zn(NO3)2",
+    "Co(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 1200.0
+  },
+  {
+   "reduced_formula": "Na2V0.96Fe1.96P3O12",
+   "formula": "Na2Fe1.96V0.96(PO4)3",
+   "doi": "10.1039/c7ta06693g",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Na2CO3",
+    "Fe(CO2)2",
+    "V2O3",
+    "PH6NO4"
+   ],
+   "gt_max_heating_temp_C": 350.0
+  },
+  {
+   "reduced_formula": "V2Te2O9",
+   "formula": "V2Te2O9",
+   "doi": "10.1111/j.1551-2916.2009.03269.x",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "V2O5",
+    "TeO2"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "BaCaB2O5",
+   "formula": "Ba2Ca2(B2O5)2",
+   "doi": "10.1016/j.solidstatesciences.2014.12.002",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Ba(NO3)2",
+    "CaO",
+    "B(HO)3"
+   ],
+   "gt_max_heating_temp_C": 500.0
+  },
+  {
+   "reduced_formula": "NaSr4(BO3)3",
+   "formula": "NaSr4(BO3)3",
+   "doi": "10.1016/j.jlumin.2015.08.071",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "B(HO)3",
+    "Sr(NO3)2",
+    "NaNO3",
+    "Pb(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 750.0
+  },
+  {
+   "reduced_formula": "Ti2AlN",
+   "formula": "Ti2AlN",
+   "doi": "10.1111/j.1744-7402.2010.02549.x",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "AlN",
+    "Ti"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "MnFe2NiO4",
+   "formula": "MnNiFe2O4",
+   "doi": "10.1016/j.jmmm.2015.09.018",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Mn(NO3)2",
+    "Fe(NO3)3",
+    "Ni(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 900.0
+  },
+  {
+   "reduced_formula": "K0.075Na0.425Ti1Bi0.5O3",
+   "formula": "(Na0.85K0.15)0.5Bi0.5TiO3",
+   "doi": "10.1016/j.materresbull.2011.02.014",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Bi2O3",
+    "Na2CO3",
+    "K2CO3",
+    "TiO2"
+   ],
+   "gt_max_heating_temp_C": 1170.0
+  },
+  {
+   "reduced_formula": "TbP4HO12",
+   "formula": "Tb[H(PO3)4]",
+   "doi": "10.1039/C5DT02648B",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Tb4O7",
+    "P(HO)3"
+   ],
+   "gt_max_heating_temp_C": 380.0
+  },
+  {
+   "reduced_formula": "Gd0.05Fe1Bi0.95O3",
+   "formula": "Bi0.95Gd0.05FeO3",
+   "doi": "10.1007/s10854-017-6567-5",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Fe(NO3)3",
+    "Bi(NO3)3",
+    "Gd(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "Sr2ZnTeO6",
+   "formula": "Sr2ZnTeO6",
+   "doi": "10.1111/jace.12209",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "SrCO3",
+    "ZnO",
+    "TeO2"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "Ba2Sc2O5",
+   "formula": "Ba2Sc2O5",
+   "doi": "10.1016/j.ssi.2005.03.029",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "BaCO3",
+    "Sc2O3"
+   ],
+   "gt_max_heating_temp_C": 1600.0
+  },
+  {
+   "reduced_formula": "Sr4Pd3",
+   "formula": "Sr4Pd3",
+   "doi": "10.1016/j.powtec.2017.12.028",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "H3N",
+    "Pd",
+    "Sr(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 700.0
+  },
+  {
+   "reduced_formula": "MnSiNiO4",
+   "formula": "(MnNi)SiO4",
+   "doi": "10.1016/j.gca.2006.11.019",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Si(NiO2)2",
+    "MnO",
+    "SiO2"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Zn0.5Fe2Cu0.5O4",
+   "formula": "Cu0.5Zn0.5Fe2O4",
+   "doi": "10.1016/j.jmmm.2017.12.109",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Fe(NO3)3",
+    "Cu(NO3)2",
+    "Zn(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 700.0
+  },
+  {
+   "reduced_formula": "Ca0.5La0.4Sm0.1Mn1O3",
+   "formula": "La0.4Sm0.1Ca0.5MnO3",
+   "doi": "10.1016/j.jmmm.2015.01.039",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Sm2O3",
+    "La2O3",
+    "MnO2",
+    "CaCO3"
+   ],
+   "gt_max_heating_temp_C": 1200.0
+  },
+  {
+   "reduced_formula": "Dy0.05Fe0.98Cu0.02Bi0.95O3",
+   "formula": "Bi0.95Dy0.05Fe0.98Cu0.02O3",
+   "doi": "10.1007/s10854-014-2369-1",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Dy(NO3)3",
+    "Bi(NO3)3",
+    "Cu(NO3)2",
+    "Fe(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "Na2IrO3",
+   "formula": "Na2IrO3",
+   "doi": "10.1016/j.materresbull.2014.01.021",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Ir",
+    "Na2CO3"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "Mn1Zn0.85Fe2O4",
+   "formula": "MnZn0.85Fe2O4",
+   "doi": "10.1016/j.matlet.2006.03.064",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "H3N",
+    "Fe(NO3)3",
+    "Mn(NO3)7",
+    "Zn(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 135.0
+  },
+  {
+   "reduced_formula": "Ce0.5Zr0.5O2",
+   "formula": "Ce0.5Zr0.5O2",
+   "doi": "10.1016/j.ijhydene.2015.07.121",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Ce(NO3)3",
+    "ZrN2O7"
+   ],
+   "gt_max_heating_temp_C": 700.0
+  },
+  {
+   "reduced_formula": "LiTi2",
+   "formula": "LiTi 2",
+   "doi": "10.1016/j.electacta.2018.05.096",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "LiH3(CO)2",
+    "H6C2O",
+    "TiH36(C4O)4"
+   ],
+   "gt_max_heating_temp_C": 750.0
+  },
+  {
+   "reduced_formula": "BaFe6CoO11",
+   "formula": "Ba2Co2Fe12O22",
+   "doi": "10.1016/j.jssc.2004.06.051",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "BaCO3",
+    "Co(HO)2",
+    "FeHO2"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "Sr2Si5N8",
+   "formula": "Sr2Si5N8",
+   "doi": "10.1038/srep45832",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Si3N4",
+    "Sr3N2"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Zr0.6Ti0.4Pb1O3",
+   "formula": "Pb(Zr0.60Ti0.40)O3",
+   "doi": "10.1016/j.jnoncrysol.2010.05.067",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "ZrO2",
+    "PbO",
+    "TiO2"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Mg1.9Ti1Co0.1O4",
+   "formula": "(Mg0.95Co0.05)2TiO4",
+   "doi": "10.1016/j.matchemphys.2009.10.050",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "MgO",
+    "CoO",
+    "TiO2"
+   ],
+   "gt_max_heating_temp_C": 1389.85
+  },
+  {
+   "reduced_formula": "K0.13Y0.13Nb2Pb0.74O6",
+   "formula": "Pb0.74K0.13Y0.13Nb2O6",
+   "doi": "10.1016/j.jpcs.2009.06.018",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "PbO",
+    "Nb2O5",
+    "Y2O3",
+    "K2CO3"
+   ],
+   "gt_max_heating_temp_C": 1225.0
+  },
+  {
+   "reduced_formula": "K4Nb6O17",
+   "formula": "K4Nb6O17",
+   "doi": "10.1039/C4SC01829J",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "K2CO3",
+    "Nb2O5"
+   ],
+   "gt_max_heating_temp_C": 899.85
+  },
+  {
+   "reduced_formula": "PrNiO3",
+   "formula": "PrNiO3",
+   "doi": "10.1016/j.materresbull.2012.04.078",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Pr(NO3)3",
+    "Ni(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 900.0
+  },
+  {
+   "reduced_formula": "Ba1Ce0.7Y0.2Zr0.1O2.9",
+   "formula": "BaZr0.1Ce0.7Y0.2O2.9",
+   "doi": "10.1016/j.ijhydene.2012.05.040",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Ce(NO3)3",
+    "ZrO2",
+    "Y2O3",
+    "H3N",
+    "H5NO",
+    "Ba(NO3)2"
+   ],
+   "gt_max_heating_temp_C": 1200.0
+  },
+  {
+   "reduced_formula": "AMn2O4",
+   "formula": "AMn2O4",
+   "doi": "10.1039/b203520k",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Mn2O3",
+    "MgCO3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Al0.5Ga0.5P1O4",
+   "formula": "Al0.5Ga0.5PO4",
+   "doi": "10.1016/j.cattod.2007.06.083",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "GaPO4",
+    "AlPO4"
+   ],
+   "gt_max_heating_temp_C": 800.0
+  },
+  {
+   "reduced_formula": "Li1.05Mn2O4",
+   "formula": "Li1.05Mn2O4",
+   "doi": "10.1016/j.electacta.2011.12.091",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Li2CO3",
+    "MnO2"
+   ],
+   "gt_max_heating_temp_C": 550.0
+  },
+  {
+   "reduced_formula": "Zr0.1Fe2Co0.8O4",
+   "formula": "Co0.8Zr0.1Fe2O4",
+   "doi": "10.1016/j.solener.2015.04.007",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Fe(NO3)3",
+    "Co(NO3)2",
+    "Zr(NO3)4"
+   ],
+   "gt_max_heating_temp_C": 650.0
+  },
+  {
+   "reduced_formula": "Ba1Nb0.5Co0.5O3",
+   "formula": "BaCo0.5Nb0.5O3",
+   "doi": "10.1016/j.matlet.2006.12.071",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Co(NO3)3",
+    "Ba(NO3)2",
+    "Nb(NO3)5"
+   ],
+   "gt_max_heating_temp_C": 500.0
+  },
+  {
+   "reduced_formula": "Ca0.2Dy1.8Ti2O6.9",
+   "formula": "(Dy0.9Ca0.1)2Ti2O6.9",
+   "doi": "10.1016/j.ssi.2010.06.040",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "TiO2",
+    "CaO",
+    "Dy2O3"
+   ],
+   "gt_max_heating_temp_C": 1600.0
+  },
+  {
+   "reduced_formula": "Li1.1Mn0.55Ni0.35O2",
+   "formula": "Li[Li0.1Ni0.35Mn0.55]O2",
+   "doi": "10.1149/1.1559063",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "LiH3(CO)2",
+    "NiH6(CO)4",
+    "MnH6(CO)4"
+   ],
+   "gt_max_heating_temp_C": 1000.0
+  },
+  {
+   "reduced_formula": "MnFe2CuO4",
+   "formula": "MnCuFe2O4",
+   "doi": "10.1016/j.jmmm.2015.09.018",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Mn(NO3)2",
+    "Cu(NO3)2",
+    "Fe(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 900.0
+  },
+  {
+   "reduced_formula": "Sr3Nb2CuO9",
+   "formula": "Sr3CuNb2O9",
+   "doi": "10.1016/j.matdes.2015.07.062",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "CuO",
+    "Nb2O5",
+    "SrCO3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Dy6UO12",
+   "formula": "Dy6UO12",
+   "doi": "10.1016/j.ceramint.2012.02.044",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "Dy2O3",
+    "UO2"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Na6.24Fe4.88P8O28",
+   "formula": "Na6.24Fe4.88(P2O7)4",
+   "doi": "10.1039/C7CP02483E",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "PH3O4",
+    "NaHO",
+    "Fe(NO3)3"
+   ],
+   "gt_max_heating_temp_C": 600.0
+  },
+  {
+   "reduced_formula": "Ba3Nb1Mo1O8.5",
+   "formula": "Ba3MoNbO8.5",
+   "doi": "10.1021/cm9708022",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "BaCO3",
+    "Nb2O5",
+    "MoO3"
+   ],
+   "gt_max_heating_temp_C": 1100.0
+  },
+  {
+   "reduced_formula": "Sb2S3",
+   "formula": "Sb2S3",
+   "doi": "10.1039/b918220a",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Sb",
+    "S"
+   ],
+   "gt_max_heating_temp_C": 400.0
+  },
+  {
+   "reduced_formula": "ScTaO4",
+   "formula": "ScTaO4",
+   "doi": "10.1103/PhysRevB.88.174112",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Ta2O5",
+    "Sc2O3"
+   ],
+   "gt_max_heating_temp_C": 900.0
+  },
+  {
+   "reduced_formula": "La0.8Fe0.8Cu0.2Pb0.2O3",
+   "formula": "La0.8Pb0.2Fe0.8Cu0.2O3",
+   "doi": "10.1016/j.snb.2009.05.040",
+   "synthesis_method": "sol-gel",
+   "gt_precursor_formulas": [
+    "La(NO3)3",
+    "Cu(NO3)2",
+    "Pb(NO3)2",
+    "Fe(NO3)3"
+   ],
+   "gt_max_heating_temp_C": null
+  },
+  {
+   "reduced_formula": "Ln2K2Ti3O10",
+   "formula": "K2Ln2Ti3O10",
+   "doi": "10.1016/S0025-5408(03)00032-1",
+   "synthesis_method": "solid-state",
+   "gt_precursor_formulas": [
+    "Pr6O11",
+    "K2CO3",
+    "TiO2"
+   ],
+   "gt_max_heating_temp_C": 400.0
+  }
+ ]
+}

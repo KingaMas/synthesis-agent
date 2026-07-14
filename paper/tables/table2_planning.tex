@@ -1,11 +1,12 @@
 \begin{tabular}{lccccc}
 \toprule
-Method & Precursor Jaccard & Precursor F1 & Method acc. & Temp.\ MAE (\si{\celsius}) & Fail \\
+Method & Precursor Jaccard & Precursor F1 & Method acc. & Temp.\ MAE$^{a}$ (\si{\celsius}) & Cov. \\
 \midrule
-Rule baseline & 0.821 [0.787, 0.856] & 0.444 [0.360, 0.537] & 0.50 & 320 (84) & 0 \\
-Retrieval (element Jaccard) & 0.754 [0.716, 0.788] & 0.448 [0.374, 0.522] & 0.59 & 320 (67) & 0 \\
-Retrieval (Magpie) & 0.370 [0.303, 0.440] & 0.233 [0.174, 0.299] & 0.29 & 316 (45) & 42 \\
-Direct LLM & 0.811 [0.777, 0.844] & 0.433 [0.352, 0.517] & 0.51 & 310 (84) & 0 \\
-SKY agent & 0.813 [0.770, 0.855] & 0.497 [0.411, 0.583] & 0.53 & 345 (80) & 2 \\
+Rule baseline & 0.821 [0.787, 0.856] & 0.444 [0.360, 0.537] & 0.50 & 317 & 0.84 \\
+Retrieval (element Jaccard) & 0.754 [0.716, 0.788] & 0.448 [0.374, 0.522] & 0.59 & 344 & 0.67 \\
+Retrieval (Magpie) & 0.370 [0.303, 0.440] & 0.233 [0.174, 0.299] & 0.29 & 324 & 0.45 \\
+Direct LLM & 0.811 [0.777, 0.844] & 0.433 [0.352, 0.517] & 0.51 & 340 & 0.84 \\
+SKY agent & 0.813 [0.770, 0.855] & 0.497 [0.411, 0.583] & 0.53 & 383 & 0.80 \\
 \bottomrule
+\multicolumn{6}{l}{\footnotesize $^a$MAE on the common subset ($n=41$) where all methods produced a scoreable temperature.}
 \end{tabular}

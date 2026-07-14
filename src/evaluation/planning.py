@@ -23,6 +23,7 @@ temp_abs_error    |predicted - true| max heating temperature in °C.
 
 from __future__ import annotations
 
+import json
 import random
 import time
 from dataclasses import dataclass, field
@@ -251,6 +252,91 @@ def build_planning_test_set(
 
     rng.shuffle(test_cases)
     return test_cases
+
+
+def load_planning_test_set(
+    path: Optional[Path] = None,
+    recipes_path: Optional[Path] = None,
+    verify_against_builder: bool = False,
+) -> list[TestCase]:
+    """Load the committed, authoritative planning test set.
+
+    The test set is a FILE, not a seed: build_planning_test_set() draws
+    from the pool of pymatgen-parseable formulas, so a pymatgen upgrade
+    reshuffles the entire seeded sample (verified: only 17/100 targets
+    recovered under pymatgen 2026.5.4 vs the lockfile version). All
+    evaluation must load this file.
+
+    Each case is re-anchored to its corpus recipe by (reduced formula,
+    DOI); raises if any case cannot be recovered.
+
+    Args:
+        path: Test-set JSON (default results/test_set_planning_seed42.json).
+        recipes_path: Override recipe corpus path.
+        verify_against_builder: If True, additionally assert that
+            build_planning_test_set() reproduces the file exactly (only
+            meaningful under the pinned environment; fails loudly on drift).
+    """
+    from src import PROJECT_ROOT
+
+    if path is None:
+        path = PROJECT_ROOT / "results" / "test_set_planning_seed42.json"
+    spec = json.loads(Path(path).read_text())
+    meta, records = spec["_meta"], spec["cases"]
+
+    by_key: dict[tuple[str, str], dict] = {}
+    for recipe in load_recipes(recipes_path):
+        target = (recipe.get("target") or {}).get("material_string", "") or ""
+        if not target:
+            continue
+        try:
+            reduced = Composition(target).reduced_formula
+        except Exception:
+            continue
+        key = (reduced, recipe.get("doi") or "")
+        by_key.setdefault(key, recipe)
+
+    cases: list[TestCase] = []
+    missing: list[str] = []
+    for rec in records:
+        recipe = by_key.get((rec["reduced_formula"], rec["doi"] or ""))
+        if recipe is None:
+            missing.append(rec["reduced_formula"])
+            continue
+        comp = Composition(rec["reduced_formula"])
+        cases.append(
+            TestCase(
+                material_id="",
+                formula=rec["formula"],
+                reduced_formula=rec["reduced_formula"],
+                elements=sorted(str(el) for el in comp.elements),
+                synthesis_method=rec["synthesis_method"],
+                precursor_elements=_extract_precursor_elements(recipe),
+                raw_recipe=recipe,
+            )
+        )
+    if missing:
+        raise RuntimeError(
+            f"{len(missing)} test cases could not be re-anchored to the recipe "
+            f"corpus (e.g. {missing[:3]}). The corpus file or formula parsing "
+            f"has changed; do NOT silently rebuild the test set."
+        )
+
+    if verify_against_builder:
+        rebuilt = build_planning_test_set(
+            recipes_path, n_cases=meta["n_cases"], seed=meta["seed"]
+        )
+        rebuilt_f = sorted(tc.reduced_formula for tc in rebuilt)
+        file_f = sorted(tc.reduced_formula for tc in cases)
+        if rebuilt_f != file_f:
+            diff = len(set(rebuilt_f) ^ set(file_f)) // 2
+            raise RuntimeError(
+                f"build_planning_test_set(seed={meta['seed']}) no longer "
+                f"reproduces the committed test set ({diff} cases differ). "
+                f"Environment has drifted from the pinned lockfile."
+            )
+
+    return cases
 
 
 def split_heldout(

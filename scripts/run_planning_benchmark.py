@@ -52,11 +52,8 @@ def main():
                         help="Model for the SKY agent method (default: gpt-4o-mini)")
     parser.add_argument("--llm-model", default="gpt-4o-mini",
                         help="Model for direct LLM prompting (default: gpt-4o-mini)")
-    parser.add_argument("--n-cases", type=int, default=100,
-                        help="Held-out test set size (default: 100)")
     parser.add_argument("--max-cases", type=int, default=None,
                         help="Truncate test set for smoke runs")
-    parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--cache-dir", type=Path,
                         default=Path("results/planning_cache"),
                         help="LLM response cache directory")
@@ -70,8 +67,8 @@ def main():
 
     from src.evaluation.planning import (
         PlanningBenchmark,
-        build_planning_test_set,
         format_planning_table,
+        load_planning_test_set,
         split_heldout,
     )
     from src.evaluation.predictors import (
@@ -79,14 +76,16 @@ def main():
         RetrievalPredictor,
         RulePredictor,
     )
-    from src.evaluation.statistics import wilcoxon_table
+    from src.evaluation.statistics import holm_correction, wilcoxon_table
     from src.evaluation.test_set_builder import build_retrieval_corpus
 
     # ------------------------------------------------------------------ #
     # Held-out test set + leakage-filtered training corpus
     # ------------------------------------------------------------------ #
-    print("Building held-out planning test set ...")
-    test_cases = build_planning_test_set(n_cases=args.n_cases, seed=args.seed)
+    # The test set is a committed FILE, not a seed: the seeded builder's
+    # candidate pool depends on the installed pymatgen version.
+    print("Loading committed held-out planning test set ...")
+    test_cases = load_planning_test_set()
     if args.max_cases:
         test_cases = test_cases[: args.max_cases]
     by_method: dict[str, int] = {}
@@ -194,20 +193,49 @@ def main():
     args.output.parent.mkdir(parents=True, exist_ok=True)
     serializable = {
         name: {"model": getattr(predictors[name], "inner", predictors[name]).__dict__.get("model"),
-               **res.aggregate()}
+               **res.aggregate(),
+               "per_case": res.per_case}
         for name, res in all_results.items()
     }
+
+    # Pairwise Wilcoxon per metric, Holm-corrected over each metric's family
     pairwise = {}
     for metric in ("element_jaccard", "formula_f1", "method_accuracy"):
         scores = {n: r.per_case[metric] for n, r in all_results.items()}
+        raw = {f"{a}|{b}": v for (a, b), v in wilcoxon_table(scores).items()}
+        holm = holm_correction({k: v["p_value"] for k, v in raw.items()})
         pairwise[metric] = {
-            f"{a}|{b}": v for (a, b), v in wilcoxon_table(scores).items()
+            k: {**v, "p_holm": holm[k]["p_holm"],
+                "significant_holm": holm[k]["significant"]}
+            for k, v in raw.items()
         }
     serializable["_pairwise"] = pairwise
+
+    # Temperature MAE on the COMMON subset: cases where every evaluated
+    # method produced a scoreable temperature error. Per-method MAEs on
+    # different subsets are not comparable.
+    per_case_temp = {n: r.per_case["temp_abs_err"] for n, r in all_results.items()}
+    n_total = len(test_cases)
+    common_idx = [
+        i for i in range(n_total)
+        if all(errs[i] is not None for errs in per_case_temp.values())
+    ]
+    serializable["_temperature_common_subset"] = {
+        "n_common": len(common_idx),
+        "mae": {
+            name: (float(sum(errs[i] for i in common_idx) / len(common_idx))
+                   if common_idx else None)
+            for name, errs in per_case_temp.items()
+        },
+        "coverage": {
+            name: sum(e is not None for e in errs) / n_total
+            for name, errs in per_case_temp.items()
+        },
+    }
     if rubric_scores:
         serializable["_rubric"] = rubric_scores
     serializable["_config"] = {
-        "seed": args.seed,
+        "test_set_file": "results/test_set_planning_seed42.json",
         "n_cases": len(test_cases),
         "sky_model": args.sky_model,
         "llm_model": args.llm_model,

@@ -136,3 +136,29 @@ class TestFormulaTFIDFRetriever:
         query = tiny_test_cases[0]
         results = ret.retrieve(query, k=5)
         assert all(r.reduced_formula != query.reduced_formula for r in results)
+
+
+class TestFormRerank:
+    def test_precursor_form_classes(self):
+        from src.evaluation.form_rerank import precursor_form
+        assert precursor_form("BaCO3") == "carbonate"
+        assert precursor_form("Fe(NO3)3") == "nitrate"
+        assert precursor_form("TiO2") == "oxide"
+        assert precursor_form("Ba(OH)2") == "hydroxide"
+        assert precursor_form("CH3COOLi") == "organic"
+        assert precursor_form("FeCl3") == "halide"
+        assert precursor_form("Fe") == "element"
+
+    def test_reranker_implements_protocol(self, tiny_test_cases):
+        from src.evaluation.baselines import ElementJaccardRetriever
+        from src.evaluation.form_rerank import (
+            FormCooccurrenceModel,
+            FormRerankRetriever,
+        )
+        base = ElementJaccardRetriever(corpus=tiny_test_cases)
+        model = FormCooccurrenceModel(tiny_test_cases)
+        rr = FormRerankRetriever(base, model, mode="max_route")
+        query = tiny_test_cases[0]
+        results = rr.retrieve(query, k=3)
+        assert len(results) <= 3
+        assert all(r.reduced_formula != query.reduced_formula for r in results)

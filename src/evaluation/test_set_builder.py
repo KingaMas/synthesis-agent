@@ -202,6 +202,63 @@ def build_temporal_split(
     return train, test
 
 
+def load_temporal_split(
+    path: Optional[Path] = None,
+    recipes_path: Optional[Path] = None,
+) -> tuple[list[TestCase], list[TestCase]]:
+    """Load the committed temporal split (results/temporal_split_2016.json).
+
+    Cases are re-anchored to corpus recipes by (reduced formula, DOI);
+    raises if any case cannot be recovered.
+    """
+    import json as _json
+
+    from src import PROJECT_ROOT
+
+    if path is None:
+        path = PROJECT_ROOT / "results" / "temporal_split_2016.json"
+    spec = _json.loads(Path(path).read_text())
+
+    by_key: dict[tuple[str, str], dict] = {}
+    for recipe in load_recipes(recipes_path):
+        target = (recipe.get("target") or {}).get("material_string", "") or ""
+        if not target:
+            continue
+        try:
+            reduced = Composition(target).reduced_formula
+        except Exception:
+            continue
+        by_key.setdefault((reduced, recipe.get("doi") or ""), recipe)
+
+    def _anchor(records: list[dict], side: str) -> list[TestCase]:
+        cases, missing = [], []
+        for rec in records:
+            recipe = by_key.get((rec["reduced_formula"], rec["doi"] or ""))
+            if recipe is None:
+                missing.append(rec["reduced_formula"])
+                continue
+            comp = Composition(rec["reduced_formula"])
+            cases.append(
+                TestCase(
+                    material_id="",
+                    formula=rec["formula"],
+                    reduced_formula=rec["reduced_formula"],
+                    elements=sorted(str(el) for el in comp.elements),
+                    synthesis_method=rec["synthesis_method"],
+                    precursor_elements=_extract_precursor_elements(recipe),
+                    raw_recipe=recipe,
+                )
+            )
+        if missing:
+            raise RuntimeError(
+                f"{len(missing)} {side} cases could not be re-anchored "
+                f"(e.g. {missing[:3]}); do NOT silently rebuild the split."
+            )
+        return cases
+
+    return _anchor(spec["train"], "train"), _anchor(spec["test"], "test")
+
+
 def load_retrieval_test_set(
     path: Optional[Path] = None,
     recipes_path: Optional[Path] = None,

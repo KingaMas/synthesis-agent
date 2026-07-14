@@ -68,8 +68,8 @@ class RecursiveSynthesisSearch:
         synthesis_agent: Optional[SynthesisAgent] = None,
         mpr: Optional[MPRester] = None,
         max_depth: int = 3,
-        min_confidence: float = 0.7,
-        confidence_decay: float = 0.85,
+        min_confidence: float = 0.05,
+        confidence_decay: float = 0.1,
         max_neighbors_per_level: int = 10,
         verbose: bool = True
     ):
@@ -84,6 +84,11 @@ class RecursiveSynthesisSearch:
             confidence_decay: How much to reduce confidence threshold per level
             max_neighbors_per_level: Max neighbors to explore at each level
             verbose: Print search progress
+
+        Threshold defaults are calibrated for the sigma=0.5 confidence scale
+        (confidence = exp(-distance/0.5)); see scripts/calibrate_recursive.py.
+        A neighbor at scaled distance 1.0 scores ~0.135, so thresholds tuned
+        for the earlier sigma=3 scale (0.7/0.85) would prune nearly all nodes.
         """
         self.agent = synthesis_agent or SynthesisAgent()
         self.mpr = mpr or MPRester(api_key=os.getenv("MP_API_KEY"))

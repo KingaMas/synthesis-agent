@@ -97,3 +97,81 @@ class TestStatisticsUtils:
         assert key in results
         assert "p_value" in results[key]
         assert 0.0 <= results[key]["p_value"] <= 1.0
+
+
+class TestRecursiveGridSearch:
+    def _make_search_api(self, confidences, formula="BaTiO3"):
+        """Stub SearchAPI whose neighbors carry fixed confidences."""
+        from src.schema import Neighbor
+
+        class StubSearchAPI:
+            def query_with_exclusion(self, comp, exclude_ids, n_neighbors):
+                return [
+                    Neighbor(
+                        neighbor_index=i,
+                        material_id=f"mp-{i}",
+                        formula=formula,
+                        distance=1.0,
+                        confidence=c,
+                    )
+                    for i, c in enumerate(confidences[:n_neighbors])
+                ]
+
+        return StubSearchAPI()
+
+    def test_picks_permissive_threshold_on_low_confidences(self, tiny_test_cases):
+        """With realistic sigma=0.5 confidences (all < 0.2), only thresholds
+        below 0.2 reach any neighbor — the repaired search must pick one.
+        (BaTiO3 is in the fixture corpus, so reachable neighbors have SRO > 0.)"""
+        from src.evaluation.confidence_calibration import (
+            grid_search_recursive_params,
+        )
+
+        api = self._make_search_api([0.18, 0.15, 0.12])
+        best = grid_search_recursive_params(
+            tiny_test_cases, api, corpus=tiny_test_cases, verbose=False
+        )
+        assert best["min_confidence"] < 0.2
+        assert best["confidence_decay"] < 0.2
+        assert best["coverage"] > 0.0
+        assert best["score"] > 0.0
+
+    def test_score_uses_ground_truth_sro(self, tiny_test_cases):
+        """Score must reflect precursor overlap, not raw confidence."""
+        from src.evaluation.confidence_calibration import (
+            grid_search_recursive_params,
+        )
+
+        # SrTiO3 is NOT in the fixture corpus; 0.9 clears every threshold
+        api = self._make_search_api([0.9], formula="SrTiO3")
+        best = grid_search_recursive_params(
+            tiny_test_cases, api, corpus=tiny_test_cases, verbose=False
+        )
+        # SrTiO3 is not in the fixture corpus, so neighbor precursors are
+        # empty and SRO with any non-empty query set is 0 — score must be 0,
+        # not the 0.9 confidence.
+        assert best["score"] == 0.0
+
+    def test_recursive_defaults_explore_at_scale(self):
+        """Regression: with sigma=0.5-scale confidences (0.15-0.35), the new
+        defaults must let the search explore at least one child."""
+        import inspect
+
+        from src.recursive_synthesis import RecursiveSynthesisSearch
+
+        sig = inspect.signature(RecursiveSynthesisSearch.__init__)
+        min_confidence = sig.parameters["min_confidence"].default
+        confidence_decay = sig.parameters["confidence_decay"].default
+
+        # Depth-1 reachability rule from _recursive_search: a neighbor's
+        # recipes are reachable iff conf >= 1.0*decay AND conf >= min_confidence
+        realistic_confidences = [0.35, 0.25, 0.15]
+        reachable = [
+            c
+            for c in realistic_confidences
+            if c >= confidence_decay and c >= min_confidence
+        ]
+        assert reachable, (
+            f"defaults (min_confidence={min_confidence}, "
+            f"decay={confidence_decay}) prune every realistic neighbor"
+        )

@@ -49,7 +49,10 @@ def main():
     )
     args = parser.parse_args()
 
-    from src.evaluation.test_set_builder import build_test_set, build_retrieval_corpus
+    from src.evaluation.test_set_builder import (
+        build_retrieval_corpus,
+        load_retrieval_test_set,
+    )
     from src.evaluation.benchmark import RetrievalBenchmark
     from src.evaluation.baselines import (
         RandomRetriever,
@@ -65,8 +68,9 @@ def main():
     # ------------------------------------------------------------------ #
     # Build test queries (stratified sample)
     # ------------------------------------------------------------------ #
-    print("Building test set (query cases) ...")
-    test_cases = build_test_set()
+    # Committed FILE, not a seed (audit rule 4)
+    print("Loading committed retrieval test set ...")
+    test_cases = load_retrieval_test_set()
     if args.max_cases:
         test_cases = test_cases[: args.max_cases]
     print(f"  {len(test_cases)} query cases")
@@ -94,6 +98,8 @@ def main():
     benchmark = RetrievalBenchmark(
         test_cases=test_cases,
         k_values=args.k,
+        corpus=full_corpus,
+        compute_oracle=True,
         verbose=True,
     )
     all_results = {}
@@ -166,7 +172,9 @@ def main():
             mean_sro, lo_sro, hi_sro = bootstrap_ci(res.per_query_sro.get(k, []))
             mean_mcr, lo_mcr, hi_mcr = bootstrap_ci(res.per_query_mcr.get(k, []))
             mean_ndcg, lo_ndcg, hi_ndcg = bootstrap_ci(res.per_query_ndcg.get(k, []))
+            mean_f, lo_f, hi_f = bootstrap_ci(res.per_query_formula_sro.get(k, []))
             per_k[str(k)] = {
+                "formula_sro": {"mean": mean_f, "ci_lo": lo_f, "ci_hi": hi_f},
                 "sro": {"mean": mean_sro, "ci_lo": lo_sro, "ci_hi": hi_sro},
                 "mcr": {"mean": mean_mcr, "ci_lo": lo_mcr, "ci_hi": hi_mcr},
                 "ndcg": {"mean": mean_ndcg, "ci_lo": lo_ndcg, "ci_hi": hi_ndcg},
@@ -178,6 +186,7 @@ def main():
             "per_k": per_k,
             "mrr": {"mean": mrr_mean, "ci_lo": mrr_lo, "ci_hi": mrr_hi},
             "timing": res.latency_stats(),
+            "oracle": {"mean": res.mean_oracle, "mean_regret": res.mean_regret},
         }
 
     with open(args.output, "w") as f:

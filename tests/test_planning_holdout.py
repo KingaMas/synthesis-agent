@@ -155,3 +155,45 @@ class TestFrozenTestSet:
         from src.evaluation.planning import extract_ground_truth
         for tc in cases[:10]:
             assert extract_ground_truth(tc.raw_recipe).precursor_formulas
+
+
+class TestTemporalSplit:
+    def test_split_by_earliest_year(self, tmp_path, mini_recipes_path):
+        import gzip, json as _json
+        from src.evaluation.test_set_builder import build_temporal_split
+
+        # Rewrite the mini corpus with distinct DOIs, then assign years
+        with gzip.open(mini_recipes_path, "rt") as fh:
+            recipes = _json.load(fh)
+        for i, r in enumerate(recipes):
+            r["doi"] = f"10.0000/test{i}"
+        corpus_path = tmp_path / "dated_recipes.json.gz"
+        with gzip.open(corpus_path, "wt") as fh:
+            _json.dump(recipes, fh)
+
+        # BaTiO3 has recipes 0 (2015) and 8 (2021) -> earliest 2015 -> train
+        years = {f"10.0000/test{i}": 2015 if i < 5 else 2021
+                 for i in range(len(recipes))}
+        years["10.0000/test3"] = None  # NaFeO2 undated -> dropped
+        years_path = tmp_path / "years.json"
+        years_path.write_text(_json.dumps(years))
+
+        train, test = build_temporal_split(
+            corpus_path, years_path, cutoff_year=2019
+        )
+        train_f = {tc.reduced_formula for tc in train}
+        test_f = {tc.reduced_formula for tc in test}
+        assert not (train_f & test_f)
+        assert "BaTiO3" in train_f          # earliest recipe predates cutoff
+        assert "NaFeO2" not in train_f | test_f  # undated dropped
+        assert test_f                        # post-cutoff materials exist
+        assert all(f not in train_f for f in test_f)
+
+
+class TestFrozenRetrievalTestSet:
+    def test_loads_400_cases(self):
+        from src.evaluation.test_set_builder import load_retrieval_test_set
+
+        cases = load_retrieval_test_set()
+        assert len(cases) == 400
+        assert len({tc.reduced_formula for tc in cases}) == 400

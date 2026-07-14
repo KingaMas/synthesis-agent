@@ -1,0 +1,2410 @@
+{
+ "_meta": {
+  "seed": 42,
+  "max_per_method": 200,
+  "built_with": "pymatgen per uv.lock at commit ec771f7",
+  "note": "authoritative retrieval test set; seeds alone do not reproduce across pymatgen versions"
+ },
+ "cases": [
+  {
+   "reduced_formula": "DyMnCrO5",
+   "formula": "DyCrMnO5",
+   "doi": "10.1016/j.jssc.2008.11.023",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.8Sr0.2Ru1O3",
+   "formula": "Ba0.8Sr0.2RuO3",
+   "doi": "10.1103/PhysRevB.76.165105",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Gd6WO12",
+   "formula": "Gd6WO12",
+   "doi": "10.1016/j.ssi.2014.04.012",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1.3Ca0.7Si1O4",
+   "formula": "(Ba0.65Ca0.35)2SiO4",
+   "doi": "10.1016/j.jssc.2007.06.001",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Gd2.25Y0.75Al5O12",
+   "formula": "(Gd0.75Y0.25)3Al5O12",
+   "doi": "10.1149/2.0241612jss",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiFeSiO4",
+   "formula": "LiFeSiO4",
+   "doi": "10.1016/j.ssi.2008.03.023",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Tb0.0073Lu0.35933Al2.1Si9.9N15O1",
+   "formula": "Lu0.35933Tb0.0073Si9.9Al2.1ON15",
+   "doi": "10.1111/j.1551-2916.2009.03274.x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "ACa3P3CNO8",
+   "formula": "NACP [Ca3(PO4)2]",
+   "doi": "10.1016/j.msec.2016.11.020",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "ZnNiO",
+   "formula": "ZnNiO",
+   "doi": "10.1016/j.mseb.2015.05.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.72Ca0.28Nb2O6",
+   "formula": "Ca0.28Ba0.72Nb2O6",
+   "doi": "10.1016/S0022-0248(02)00868-0",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "BaSr6Mn4O15",
+   "formula": "BaSr6Mn4O15",
+   "doi": "10.1016/j.jssc.2007.08.012",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1.15Mn0.525Al0.1Ni0.225O2",
+   "formula": "Li[Li0.15Ni0.225Al0.1Mn0.525]O2",
+   "doi": "10.1016/S0378-7753(03)00171-X",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Y1.75Fe0.25O3",
+   "formula": "Y1.75Fe0.25O3",
+   "doi": "10.1007/s10854-011-0573-9",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "MRe(PbO3)2",
+   "formula": "Pb2MReO6",
+   "doi": "10.1021/acs.chemmater.5b01442",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ce2(WO4)3",
+   "formula": "Ce2(WO4)3",
+   "doi": "10.1016/j.ceramint.2010.02.026",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ce0.9Gd0.2O2",
+   "formula": "Ce0.9Gd0.2O2",
+   "doi": "10.1039/C5FD00035A",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Gd0.1Fe0.95Sn0.05Bi0.9O3",
+   "formula": "Bi0.90Gd0.10Fe0.95Sn0.05O3",
+   "doi": "10.1038/srep42493",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba2IrO4",
+   "formula": "Ba2IrO4",
+   "doi": "10.1103/PhysRevB.83.155118",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "CaMoO3",
+   "formula": "CaMoO3",
+   "doi": "10.1016/j.jssc.2008.05.012",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li0.66Ni0.34O1",
+   "formula": "Li0.66Ni0.34O",
+   "doi": "10.1016/j.electacta.2012.03.123",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Y0.16Zr0.84O2",
+   "formula": "Zr0.84Y0.16O2",
+   "doi": "10.1016/j.cattod.2010.11.029",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sm1Co1O2.982",
+   "formula": "SmCoO2.982",
+   "doi": "10.1039/c5ta03655k",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "MZnGa2CSO4",
+   "formula": "SCM ZnGa2O4",
+   "doi": "10.1016/j.jeurceramsoc.2006.04.153",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.33Nd0.67Mn1O3",
+   "formula": "Nd0.67Sr0.33MnO3",
+   "doi": "10.1016/j.jmmm.2016.01.096",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sn1Se0.5S0.5",
+   "formula": "SnS0.5Se0.5",
+   "doi": "10.1007/s10854-017-7979-y",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ce0.75Zr0.25O2",
+   "formula": "Ce0.75Zr0.25O2",
+   "doi": "10.1016/j.actamat.2016.04.060",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li5La3Nb2O12",
+   "formula": "Li5La3Nb2O12",
+   "doi": "10.1016/j.ssi.2015.09.015",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr0.17La0.83Mn1O3",
+   "formula": "La0.83Sr0.17MnO3",
+   "doi": "10.1016/S0300-9440(03)00138-3",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr1.98Eu0.02Si1O4",
+   "formula": "(Sr0.99Eu0.01)2SiO4",
+   "doi": "10.1016/j.jlumin.2013.11.023",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca6.3Mn3Al1.3Ga4.4O18",
+   "formula": "Ca6.3Mn3Ga4.4Al1.3O18",
+   "doi": "10.1016/j.jssc.2005.07.028",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1.5Al0.5Ge1.5P1O4",
+   "formula": "Li1.5Al0.5Ge1.5(PO4)",
+   "doi": "10.1016/j.ssi.2014.07.013",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca0.1La0.9Fe1O3",
+   "formula": "La0.9Ca0.1FeO3",
+   "doi": "10.1016/j.apcata.2014.08.028",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "K0.09Na0.41Ti1Bi0.5O3",
+   "formula": "(Na0.82K0.18)0.5Bi0.5TiO3",
+   "doi": "10.1111/j.1551-2916.2009.03450.x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mn0.6Zn0.4Fe2O4",
+   "formula": "Mn0.6Zn0.4Fe2O4",
+   "doi": "10.1007/s10973-013-3281-2",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CdAg2(PS3)2",
+   "formula": "Ag2Cd(P2S6)",
+   "doi": "10.1021/acs.inorgchem.6b01016",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "K0.15La0.85Mn1O3",
+   "formula": "La0.85K0.15MnO3",
+   "doi": "10.1007/s10854-012-1025-x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1.03Mn1.97O4",
+   "formula": "Li1.03Mn1.97O4",
+   "doi": "10.1016/S1388-2481(02)00368-5",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "NaGaO2",
+   "formula": "NaGaO2",
+   "doi": "10.1016/j.tsf.2007.07.207",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La0.08Fe0.9Bi0.92Se0.1O3",
+   "formula": "Bi0.92La0.08Fe0.90Se0.10O3",
+   "doi": "10.1039/C7TA01847A",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr1Fe1O2.91",
+   "formula": "SrFeO2.91",
+   "doi": "10.1007/s00339-014-8975-1",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "LaGdO3",
+   "formula": "LaGdO3",
+   "doi": "10.1016/s0038-1098(98)00434-7",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "V2Bi4O11",
+   "formula": "Bi4V2O11",
+   "doi": "10.1039/b003644g",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "M0.5Ti2Bi1.5O7",
+   "formula": "Bi1.5M0.5Ti2O7",
+   "doi": "10.1016/j.ssi.2018.01.022",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CaLaMnMoO6",
+   "formula": "CaLaMnMoO6",
+   "doi": "10.1016/j.jssc.2006.03.049",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li6Ca1B3O8.5",
+   "formula": "Li6CaB3O8.5",
+   "doi": "10.1016/j.jlumin.2011.05.039",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba1.1Sr0.9Cu1O3",
+   "formula": "Ba1.1Sr0.9CuO3",
+   "doi": "10.1021/cm960378p",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "V4Cr2O13",
+   "formula": "Cr2V4O13",
+   "doi": "10.1016/j.jssc.2010.09.015",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "V55FeN",
+   "formula": "FeV55N",
+   "doi": "10.1007/s11837-018-2890-4",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ti3AlC",
+   "formula": "Ti3AlC",
+   "doi": "10.1111/j.1551-2916.2009.03249.x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li6Y(BO3)3",
+   "formula": "Li6Y(BO3)3",
+   "doi": "10.1039/C5TA09436D",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "TiNbBi5WO15",
+   "formula": "Bi5TiWNbO15",
+   "doi": "10.1016/s0955-2219(03)00429-1",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Na0.5V1O2",
+   "formula": "Na0.5VO2",
+   "doi": "10.1039/c4ta06467d",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Pr2MnNiO6",
+   "formula": "Pr2NiMnO6",
+   "doi": "10.1007/s10008-016-3364-7",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.2Nd0.8Co1O3",
+   "formula": "Nd0.8Sr0.2CoO3",
+   "doi": "10.1016/j.snb.2006.04.008",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li14Zn(GeO4)4",
+   "formula": "Li14Zn(GeO4)4",
+   "doi": "10.1016/j.jeurceramsoc.2005.03.171",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca1La0.9Er0.1Ga3O7",
+   "formula": "CaEr0.1La0.9Ga3O7",
+   "doi": "10.1016/j.jlumin.2018.02.017",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Zr0.4728Ti0.5122Ga0.06Pb0.94O3",
+   "formula": "Pb0.94 Ga0.06 (Zr0.48Ti0.52)0.985O3",
+   "doi": "10.1007/s10854-017-7016-1",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CrFeNiO4",
+   "formula": "NiFeCrO4",
+   "doi": "10.1016/j.jnucmat.2016.08.034",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1Ce0.8Nd0.2O2.9",
+   "formula": "BaCe0.8Nd0.2O2.9",
+   "doi": "10.1002/ejic.200800589",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiFeBO3",
+   "formula": "LiFeBO3",
+   "doi": "10.1039/c2jm16436a",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba3Co2C0.6O7.8",
+   "formula": "Ba3Co2O6(CO3)0.6",
+   "doi": "10.1016/j.solidstatesciences.2017.07.007",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Y2Ti0.4Sn1.6O7",
+   "formula": "Y2Ti0.4Sn1.6O7",
+   "doi": "10.1039/C0CP01274B",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiNbZnO4",
+   "formula": "LiZnNbO4",
+   "doi": "10.1007/s10854-012-0868-5",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "GdAl3(BO3)4",
+   "formula": "GdAl3(BO3)4",
+   "doi": "10.1149/2.009111esl",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ce0.68Zr0.32O2",
+   "formula": "Ce0.68Zr0.32O2",
+   "doi": "10.1016/j.apcata.2008.10.051",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "KNaAl2As2O9",
+   "formula": "NaKAl2O[AsO4]2",
+   "doi": "10.1016/j.materresbull.2010.07.009",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.9La0.1In0.5Sn0.5O2.8",
+   "formula": "Ba0.9La0.1Sn0.5In0.5O2.8",
+   "doi": "10.1016/j.ssi.2017.05.010",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Y1Fe0.95Pd0.05O3",
+   "formula": "YFe0.95Pd0.05O3",
+   "doi": "10.1021/cm300571y",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.4Pr0.6Fe0.8Co0.2O3",
+   "formula": "Pr0.6Sr0.4Fe0.8Co0.2O3",
+   "doi": "10.1016/j.jpowsour.2010.08.015",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Zn0.49Fe2Co0.02Ni0.49O4",
+   "formula": "Ni0.49Zn0.49Co0.02Fe2O4",
+   "doi": "10.1016/j.matlet.2010.08.056",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr2YMn2O7",
+   "formula": "YSr2Mn2O7",
+   "doi": "10.1021/acs.inorgchem.7b01525",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mg(CoO2)2",
+   "formula": "MgCo2O4",
+   "doi": "10.1007/s10854-017-6388-6",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "R3Ca3Ti7Nb2O26.5",
+   "formula": "Ca3R3Ti7Nb2O26.5",
+   "doi": "10.1016/j.matlet.2003.12.007",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "RSr2RuO6",
+   "formula": "Sr2 RRuO6",
+   "doi": "10.1016/j.jssc.2003.10.015",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1Mn0.27Co0.08Ni0.65O2",
+   "formula": "LiNi0.65Co0.08Mn0.27O2",
+   "doi": "10.1149/2.0951607jes",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "BaPuO3",
+   "formula": "BaPuO3",
+   "doi": "10.1016/j.jnucmat.2011.04.057",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca0.6Sm0.4Mn1O3",
+   "formula": "Sm0.4Ca0.6MnO3",
+   "doi": "10.1038/s41598-017-03451-z",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba2SnO4",
+   "formula": "Ba2SnO4",
+   "doi": "10.1016/j.jeurceramsoc.2015.11.001",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca1Mg0.7Al0.6Si1.7O6",
+   "formula": "CaMg0.7Al0.6Si1.7O6",
+   "doi": "10.1016/j.jeurceramsoc.2007.01.018",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LaMgAlO",
+   "formula": "LaAlMgO",
+   "doi": "10.1016/j.catcom.2017.03.010",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca0.08Fe2Ni0.92O4",
+   "formula": "Ni0.92Ca0.08Fe2O4",
+   "doi": "10.1016/j.jmmm.2014.06.054",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CaSi6N8O",
+   "formula": "CaSi6N8O",
+   "doi": "10.1016/j.optmat.2010.12.025",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Er0.2Sc1.8O3",
+   "formula": "Sc1.8Er0.2O3",
+   "doi": "10.1149/1.1843091",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ce0.55Zr0.25Co0.2O2",
+   "formula": "(Ce0.55Co0.20)Zr0.25O2",
+   "doi": "10.1016/j.actamat.2016.04.060",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li0.5Fe2.4Co0.1O4",
+   "formula": "Li0.5Co0.1Fe2.4O4",
+   "doi": "10.1016/j.vibspec.2010.11.001",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "BaTi(HO2)2",
+   "formula": "Ba(OH)2TiO2",
+   "doi": "10.1021/acsnano.6b03800",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba4.5La9Ti18O54",
+   "formula": "Ba4.5La9Ti18O54",
+   "doi": "10.1007/s10854-014-1779-4",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "KNbWO6",
+   "formula": "KNbWO6",
+   "doi": "10.1016/S0022-3697(01)00006-3",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ce0.8Pr0.2O2",
+   "formula": "Ce0.8Pr0.2O2",
+   "doi": "10.1016/j.ijhydene.2011.05.177",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Eu2MgH6",
+   "formula": "Eu2MgH6",
+   "doi": "10.1016/s0925-8388(01)01217-8",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mg2NiH4",
+   "formula": "Mg2NiH4",
+   "doi": "10.1016/j.tca.2011.06.006",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mn1.6Al0.6Si0.2Ni0.6O4",
+   "formula": "Ni0.6Si0.2Al0.6Mn1.6O4",
+   "doi": "10.1016/j.ceramint.2011.03.061",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "NiAgO",
+   "formula": "NiAgO",
+   "doi": "10.1016/j.catcom.2012.10.023",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "YbVO3",
+   "formula": "YbVO3",
+   "doi": "10.1039/b206752h",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CaFe4O7",
+   "formula": "CaFe4O7",
+   "doi": "10.1021/cg049887r",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mn3V6(FeO6)4",
+   "formula": "Mn3Fe4(VO4)6",
+   "doi": "10.1021/ic9909274",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "VBi(PbO3)2",
+   "formula": "Pb2BiVO6",
+   "doi": "10.1007/s10854-017-7581-3",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Pr1Mn0.9O3",
+   "formula": "PrMn0.9O3",
+   "doi": "10.1021/acs.inorgchem.6b00815",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li2CoPO4F",
+   "formula": "Li2CoPO4F",
+   "doi": "10.1016/j.jpowsour.2010.09.037",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Rb2Li5(BO2)7",
+   "formula": "Li5Rb2B7O14",
+   "doi": "10.1039/c2ce06742k",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Nd0.2Y1.8O3",
+   "formula": "Y1.8Nd0.2O3",
+   "doi": "10.1016/s0169-4332(98)00902-7",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Zn(GaO2)2",
+   "formula": "ZnGa2O4",
+   "doi": "10.1039/C5TA01697E",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Y0.01Fe1Bi0.99O3",
+   "formula": "Bi0.99Y0.01FeO3",
+   "doi": "10.1007/s10853-014-8752-8",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.25La0.75Cr0.5Fe0.5O3",
+   "formula": "La0.75Sr0.25Cr0.5Fe0.5O3",
+   "doi": "10.1016/j.ssi.2015.11.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1Mn1.8Al0.1Cu0.1O4",
+   "formula": "LiAl0.1Cu0.1Mn1.8O4",
+   "doi": "10.1016/j.jelechem.2017.03.031",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1Na1Eu0.3Y0.7B2O6",
+   "formula": "NaBaY0.7Eu0.3(BO3)2",
+   "doi": "10.1016/j.dyepig.2017.04.008",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1.172Mn0.539Co0.135Ni0.135O2",
+   "formula": "Li1.172Ni0.135Co0.135Mn0.539O2",
+   "doi": "10.1016/j.electacta.2016.06.069",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.9Ca0.1Y1Co2O5.5",
+   "formula": "Y(Ba0.9Ca0.1)Co2O5.5",
+   "doi": "10.1021/cm401394x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1Mn1.4Ni0.55Mo0.05O4",
+   "formula": "LiMn1.4Ni0.55Mo0.05O4",
+   "doi": "10.1016/j.jpowsour.2013.09.031",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr2Ca2Cu3Bi1.6Pb1O10",
+   "formula": "(Bi0.8Pb0.5)2Sr2Ca2Cu3O10",
+   "doi": "10.1016/S0921-5107(03)00143-0",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr0.35Pr0.65Mn1O3",
+   "formula": "Pr0.65Sr0.35MnO3",
+   "doi": "10.1016/j.ijrefrig.2013.07.006",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "BaMgTiFe2O7",
+   "formula": "MgFe2O4 @ BaTiO3",
+   "doi": "10.1021/acs.jpcc.6b12461",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1Ce0.9Sm0.1O2.95",
+   "formula": "BaCe0.9Sm0.1O2.95",
+   "doi": "10.1021/ic8010025",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mg1Mn0.25Al1.75O4",
+   "formula": "MgMn0.25Al1.75O4",
+   "doi": "10.1016/s0926-3373(03)00104-8",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ti67.68Fe28.32Sn4",
+   "formula": "Ti67.68Fe28.32Sn4",
+   "doi": "10.1016/j.actamat.2015.07.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "NaLaTiO4",
+   "formula": "NaLaTiO4",
+   "doi": "10.1016/j.jssc.2006.06.019",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na2GdP(O2F)2",
+   "formula": "Na2GdF2PO4",
+   "doi": "10.1149/1.3409562",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Cr0.2Fe1.8Ni1O4",
+   "formula": "NiFe1.8Cr0.2O4",
+   "doi": "10.1016/j.jnucmat.2016.08.034",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.22Sr0.11La0.67Mn1O3",
+   "formula": "La0.67Ba0.22Sr0.11MnO3",
+   "doi": "10.1016/j.ssc.2017.10.003",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "NaOsO3",
+   "formula": "NaOsO3",
+   "doi": "10.1016/j.jssc.2009.12.007",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Cs2V4O11",
+   "formula": "Cs2V4O11",
+   "doi": "10.1021/ja992541y",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li0.87Co1O2",
+   "formula": "Li0.87CoO2",
+   "doi": "10.1103/PhysRevB.85.035120",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "K1La0.95Eu0.05Nb2O7",
+   "formula": "KLa0.95Eu0.05Nb2O7",
+   "doi": "10.1021/ja7114772",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sm0.03Gd2.97Ga5O12",
+   "formula": "Sm0.03Gd2.97Ga5O12",
+   "doi": "10.1016/j.jcrysgro.2011.07.023",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La1Fe0.5Co0.5O3",
+   "formula": "LaCo0.5Fe0.5O3",
+   "doi": "10.1016/j.ijhydene.2016.07.207",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CaTa2Bi2O9",
+   "formula": "CaBi2Ta2O9",
+   "doi": "10.1016/j.optcom.2014.03.072",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca0.99Sm0.01Al2O4",
+   "formula": "Ca0.99Sm0.01Al2O4",
+   "doi": "10.1016/j.radmeas.2008.01.024",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Mn3(PO4)2",
+   "formula": "Mn3(PO4)2",
+   "doi": "10.1016/s0169-4332(99)00261-5",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca1Sm0.03Gd0.97Al1O4",
+   "formula": "CaGd0.97Sm0.03AlO4",
+   "doi": "10.1016/j.optmat.2017.04.046",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiFe2P3O10",
+   "formula": "LiFe2P3O10",
+   "doi": "10.1016/j.electacta.2009.04.050",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1Co1H0.86O2.66",
+   "formula": "BaCoO1.80(OH)0.86",
+   "doi": "10.1039/c8dt01326h",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Lu5GaS9",
+   "formula": "Lu5GaS9",
+   "doi": "10.1039/c7dt02545a",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba1.8Eu0.2Si1O4",
+   "formula": "Ba1.8Eu0.2SiO4",
+   "doi": "10.1016/j.dyepig.2017.03.065",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sm0.1Fe1Bi0.9O3",
+   "formula": "(Bi0.90Sm0.10)FeO3",
+   "doi": "10.1016/j.jeurceramsoc.2015.12.019",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na0.5Zr1Bi0.5O3",
+   "formula": "(Na0.5Bi0.5)ZrO3",
+   "doi": "10.1016/j.jpcs.2007.03.023",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ti0.5Nb1Co0.5O4",
+   "formula": "Co0.5Ti0.5NbO4",
+   "doi": "10.1016/j.ceramint.2017.06.025",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "In1Ag1.75Sb5.75Se11",
+   "formula": "Ag1.75InSb5.75Se11",
+   "doi": "10.1016/j.jssc.2014.06.026",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LaClO",
+   "formula": "LaOCl",
+   "doi": "10.1016/s0926-860x(00)00598-6",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Yb0.25Co4Sb12",
+   "formula": "Yb0.25Co4Sb12",
+   "doi": "10.1007/s10853-017-0772-8",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr0.2La0.8Mn0.9Cu0.1O3",
+   "formula": "La0.8Sr0.2Mn0.9Cu0.1O3",
+   "doi": "10.1039/C1EE01792F",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La0.9Er0.1Al1O3",
+   "formula": "Er0.1La0.9AlO3",
+   "doi": "10.1016/j.jssc.2012.01.028",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Fe3P",
+   "formula": "Fe3P",
+   "doi": "10.1016/j.msea.2007.06.030",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.4Pr0.6Fe1O3",
+   "formula": "Pr0.6Sr0.4FeO3",
+   "doi": "10.1016/j.ssc.2012.12.003",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1Mn1.475Al0.01Cr0.04Ni0.475O3.95F0.05",
+   "formula": "LiNi0.475Al0.01Cr0.04Mn1.475O3.95F0.05",
+   "doi": "10.1016/j.electacta.2012.05.096",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca1Mg0.8Al0.4Si1.8O6",
+   "formula": "CaMg0.8Al0.4Si1.8O6",
+   "doi": "10.1016/j.jeurceramsoc.2007.01.018",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La0.05Ni0.95",
+   "formula": "Ni0.95La0.05",
+   "doi": "10.1149/2.005403jes",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "BaMn2Ru4O11",
+   "formula": "BaMn2Ru4O11",
+   "doi": "10.1016/j.jssc.2005.11.014",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La0.8Ce0.2Mn0.6Cu0.4O3",
+   "formula": "La0.8Ce0.2Cu0.4Mn0.6O3",
+   "doi": "10.1016/j.cattod.2007.06.004",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "In1Bi24O37.5",
+   "formula": "Bi24InO37.5",
+   "doi": "10.1016/j.mssp.2017.06.005",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "MxV2O5",
+   "formula": "MxV2O5",
+   "doi": "10.1016/j.jssc.2009.03.017",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca0.95Sm0.05Ti1O3",
+   "formula": "Ca0.95Sm0.05TiO3",
+   "doi": "10.1021/cm060386y",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1Ni0.86O2.36",
+   "formula": "BaNi0.86O2.36",
+   "doi": "10.1021/ic9709279",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ti41Fe5Sn4",
+   "formula": "Ti82Fe10Sn8",
+   "doi": "10.1016/j.actamat.2015.07.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.15Ti0.3Fe0.7Ni0.15Bi0.7O3",
+   "formula": "(Bi0.7Ni0.15Ba0.15)(Fe0.7Ti0.3)O3",
+   "doi": "10.1007/s10854-016-5084-2",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ni3Sn4",
+   "formula": "Ni3Sn4",
+   "doi": "10.1039/C4TA01380H",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Y1.94Tm0.06O3",
+   "formula": "Y1.94Tm0.06O3",
+   "doi": "10.1039/a904710g",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr1.02Ti1O3.02",
+   "formula": "Sr1.02TiO3.02",
+   "doi": "10.1016/j.materresbull.2008.06.002",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Cu7SiS5I",
+   "formula": "Cu7SiS5I",
+   "doi": "10.1016/j.jcrysgro.2007.05.029",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li5AlO4",
+   "formula": "Li5AlO4",
+   "doi": "10.1039/C3TA11338H",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiBi3S5",
+   "formula": "LiBi3S5",
+   "doi": "10.1016/j.jssc.2016.03.010",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Zr0.1Fe2Co0.8O4",
+   "formula": "Co0.8Zr0.1Fe2O4",
+   "doi": "10.1016/j.solener.2015.04.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "K2TiF6",
+   "formula": "K2TiF6",
+   "doi": "10.1021/jp401391y",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.51Sr0.34Ti1Bi0.1O3",
+   "formula": "(Ba0.6Sr0.4)0.85Bi0.1TiO3",
+   "doi": "10.1016/j.mseb.2017.10.004",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li6.22La3Zr2Al0.26O12",
+   "formula": "Li6.22La3Zr2Al0.26O12",
+   "doi": "10.1039/C6NR04162K",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ti16Nb",
+   "formula": "Ti16Nb",
+   "doi": "10.1016/j.jmbbm.2018.07.018",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li0.05Al0.1Ni0.85O1",
+   "formula": "Li0.05Al0.10Ni0.85O",
+   "doi": "10.1016/j.matchemphys.2009.01.004",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca13Al14O34",
+   "formula": "Ca12Al14O33 CaO",
+   "doi": "10.1016/j.ijhydene.2016.03.125",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "SrGd2O4",
+   "formula": "SrGd2O4",
+   "doi": "10.1016/j.materresbull.2017.05.052",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca0.5La0.5Mn0.98Bi0.02O3",
+   "formula": "La0.5Ca0.5Mn0.98Bi0.02O3",
+   "doi": "10.1016/j.jmmm.2016.02.036",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "BaSr2LiTa3Ti5O21",
+   "formula": "BaSr2LiTa3Ti5O21",
+   "doi": "10.1007/s10854-010-0246-0",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca1Mn0.5Fe0.5O3",
+   "formula": "CaFe0.5Mn0.5O3",
+   "doi": "10.1103/PhysRevB.94.104429",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li2Mn0.5Ni0.5Sn1O4",
+   "formula": "Li2Ni0.5Mn0.5SnO4",
+   "doi": "10.1021/acs.inorgchem.5b01246",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sm1.5Re1Bi12.5O24.5",
+   "formula": "Bi12.5Sm1.5ReO24.5",
+   "doi": "10.1016/j.tca.2013.08.021",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "MSrNdRuO6",
+   "formula": "SrNdMRuO6",
+   "doi": "10.1016/j.jssc.2012.09.007",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Th(MoO4)2",
+   "formula": "ThMo2O8",
+   "doi": "10.1002/chem.201503839",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mn0.73Zn0.21Fe2.06O4",
+   "formula": "(Mn0.73Zn0.21Fe0.06)Fe2O4",
+   "doi": "10.1016/s0955-2219(01)00145-5",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr2Fe1.5Mo0.5O6",
+   "formula": "Sr2Fe1.5Mo0.5O6",
+   "doi": "10.1016/j.ssi.2013.03.005",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca0.4Nd0.6Mn1O3",
+   "formula": "Nd0.6Ca0.4MnO3",
+   "doi": "10.1016/j.ssc.2010.02.027",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ta0.5Ti1Ga0.5O4",
+   "formula": "Ga0.5Ta0.5TiO4",
+   "doi": "10.1007/s10854-015-3295-6",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1.23Mn0.47Fe0.2Ni0.1O2",
+   "formula": "Li(Li0.23Mn0.47Fe0.2Ni0.1)O2",
+   "doi": "10.1016/j.jpowsour.2012.12.107",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Al2FeO4",
+   "formula": "FeAl2O4",
+   "doi": "10.1016/S0304-8853(03)00215-4",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba3Fe24Co2O41",
+   "formula": "Ba3Co2Fe24O41",
+   "doi": "10.1016/S0304-8853(00)00344-9",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Zn0.5Fe2Cu0.2Ni0.3O4",
+   "formula": "Ni0.3Cu0.2Zn0.5Fe2O4",
+   "doi": "10.1016/j.jmmm.2016.09.029",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sb2Te3",
+   "formula": "Sb2Te3",
+   "doi": "10.1103/PhysRevB.95.075102",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "CaMgO",
+   "formula": "CaMgO",
+   "doi": "10.1016/j.enconman.2014.04.049",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sm10Pd21",
+   "formula": "Sm10Pd21",
+   "doi": "10.1016/s0921-5107(99)00108-7",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "H6PbCNCl3",
+   "formula": "CH3NH3PbCl3",
+   "doi": "10.1021/acsnano.6b01540",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "K0.5Na0.5Cl1",
+   "formula": "(K0.5Na0.5)Cl",
+   "doi": "10.1016/j.jlumin.2012.10.033",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La1Co0.5Ni0.5O3",
+   "formula": "LaNi0.5Co0.5O3",
+   "doi": "10.1149/2.012406jes",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.2La0.8Fe0.2Co0.8O3",
+   "formula": "La0.8Sr0.2Co0.8Fe0.2O3",
+   "doi": "10.1016/j.ijhydene.2012.01.058",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sm0.02Y0.98V1O4",
+   "formula": "Y0.98Sm0.02VO4",
+   "doi": "10.1016/j.jlumin.2008.10.001",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "SrAl2O4",
+   "formula": "SrAl2O4",
+   "doi": "10.1039/C5CP01095K",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Nb2Te3O11",
+   "formula": "Te3Nb2O11",
+   "doi": "10.1016/s0022-3093(98)00811-4",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li0.2Mg0.8Fe2O4",
+   "formula": "Mg0.8Li0.2Fe2O4",
+   "doi": "10.1016/j.jpcs.2017.04.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "A1Ba5Ta9.5Fe0.5O30",
+   "formula": "Ba5AFe0.5Ta9.5O30",
+   "doi": "10.1007/s10854-013-1335-7",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sm2PdO4",
+   "formula": "Sm2PdO4",
+   "doi": "10.1016/s0921-5107(99)00108-7",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li0.1Zn0.85Co0.05O1",
+   "formula": "Zn0.85Co0.05Li0.10O",
+   "doi": "10.1016/j.jcrysgro.2008.03.038",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Mg0.8Cu0.2O1",
+   "formula": "Mg0.8Cu0.2O",
+   "doi": "10.1016/j.ijhydene.2008.12.006",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CrCoCuNi",
+   "formula": "CoCrCuNi",
+   "doi": "10.1038/s41598-017-03644-6",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na0.5Mn0.5Nb0.5O3",
+   "formula": "(Na0.5)(Mn0.5Nb0.5)O3",
+   "doi": "10.1016/j.ssi.2005.03.013",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1Mn0.2Co0.1Ni0.7O2",
+   "formula": "LiMn0.2Co0.1Ni0.7O2",
+   "doi": "10.1016/s0378-7753(03)00177-0",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "BaFeO3",
+   "formula": "BaFeO3",
+   "doi": "10.1016/j.ijhydene.2016.11.005",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.4La0.6Fe1O3",
+   "formula": "La0.6Sr0.4FeO3",
+   "doi": "10.1016/j.cattod.2014.12.021",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.2La0.8Mn1O3.15",
+   "formula": "La0.8Sr0.2MnO3.15",
+   "doi": "10.1038/srep19511",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Al0.15Fe0.85",
+   "formula": "Fe0.85Al0.15",
+   "doi": "10.1016/j.molliq.2017.04.046",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.4La0.6Mn0.1Fe0.85Pd0.05O3",
+   "formula": "La0.6Sr0.4Fe0.85Pd0.05Mn0.1O3",
+   "doi": "10.1002/chem.201200536",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li3VO4",
+   "formula": "Li3VO4",
+   "doi": "10.1002/aenm.201200833",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li0.99Mn1.98O4",
+   "formula": "Li0.99Mn1.98O4",
+   "doi": "10.1016/j.jpcs.2005.09.001",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Fe0.87Sn0.13Sb2Se4",
+   "formula": "Fe0.87Sn0.13Sb2Se4",
+   "doi": "10.1021/acs.inorgchem.5b01753",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Rb3H(SO4)2",
+   "formula": "Rb3H(SO4)2",
+   "doi": "10.1016/j.ssi.2008.02.016",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1Y0.1Zr0.9O2.95",
+   "formula": "BaZr0.9Y0.1O2.95",
+   "doi": "10.1016/j.ceramint.2013.03.060",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "VCu2BiO6",
+   "formula": "BiCu2VO6",
+   "doi": "10.1016/j.matlet.2010.10.063",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Y1Mn1.8Fe0.2O5",
+   "formula": "YMn1.8Fe0.2O5",
+   "doi": "10.1016/j.jmmm.2006.02.067",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li3AlSiO5",
+   "formula": "Li3AlSiO5",
+   "doi": "10.1039/C5CP06884C",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca0.85La0.1Ti4Cu3O12",
+   "formula": "La0.1Ca0.85Cu3Ti4O12",
+   "doi": "10.1007/s10854-016-5244-4",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LnLi(WO4)2",
+   "formula": "LiLnW2O8",
+   "doi": "10.1016/j.jssc.2011.05.046",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ti68.39Fe28.61Sn3",
+   "formula": "Ti68.39Fe28.61Sn3",
+   "doi": "10.1016/j.actamat.2015.07.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Nd3GaO6",
+   "formula": "Nd3O2GaO4",
+   "doi": "10.1021/cm050537h",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La1Mg0.1Ga0.9O2.95",
+   "formula": "LaGa0.9Mg0.1O2.95",
+   "doi": "10.1021/cm050597n",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mn0.15Fe0.85Bi0.95Pb0.05O3",
+   "formula": "Bi0.95Pb0.05Fe0.85Mn0.15O3",
+   "doi": "10.1016/j.jnoncrysol.2018.05.040",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La3Ti3FeBi2O15",
+   "formula": "Bi2La3Ti3FeO15",
+   "doi": "10.1007/s10854-015-3771-z",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba0.5Pr0.5Mn0.85Co0.05Ni0.1O3",
+   "formula": "Pr0.5Ba0.5Mn0.85Co0.05Ni0.1O3",
+   "doi": "10.1039/c8ta05105d",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr3V2O8",
+   "formula": "Sr3V2O8",
+   "doi": "10.1149/2.0231710jss",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba11Ti27Fe1O66.5",
+   "formula": "Ba11FeTi27O66.5",
+   "doi": "10.1002/ejic.200300945",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr2.95Mn0.05Ga1O4F1",
+   "formula": "Sr2.95Mn0.05GaO4F",
+   "doi": "10.1016/j.materresbull.2018.02.046",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "HoTiCuBiO6",
+   "formula": "BiHoCuTiO6",
+   "doi": "10.1007/s10854-018-8667-2",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na0.83Co1O2",
+   "formula": "Na0.83CoO2",
+   "doi": "10.1103/PhysRevB.79.115101",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La1Mn0.9Fe0.1O3",
+   "formula": "LaMn0.9Fe0.1O3",
+   "doi": "10.1016/j.ssc.2013.06.009",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La9.83Al1.5Si4.5O26",
+   "formula": "La9.83Si4.5Al1.5O26",
+   "doi": "10.1016/j.vacuum.2009.03.020",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr2.975Mn0.025Al1O4F1",
+   "formula": "Sr2.975Mn0.025AlO4F",
+   "doi": "10.1016/j.materresbull.2018.02.046",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li2Mn4O9",
+   "formula": "Li2Mn4O9",
+   "doi": "10.1016/j.synthmet.2009.12.025",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Fe2.4Co0.6O4",
+   "formula": "Co0.6Fe2.4O4",
+   "doi": "10.1039/c5cp02972d",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr3Tb(PO4)3",
+   "formula": "Sr3Tb(PO4)3",
+   "doi": "10.1016/j.optmat.2010.07.008",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr0.2La0.8Mn1.1O3",
+   "formula": "La0.8Sr0.2Mn1.1O3",
+   "doi": "10.1016/j.ssi.2005.07.013",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ti0.8Nb1.2Bi3O9",
+   "formula": "Bi3Nb1.2Ti0.8O9",
+   "doi": "10.1016/j.jeurceramsoc.2005.07.056",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "BaPrO3",
+   "formula": "BaPrO3",
+   "doi": "10.1039/b820976f",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La3Ta0.5Al5.5O14",
+   "formula": "La3Al5.5Ta0.5O14",
+   "doi": "10.1016/j.jcrysgro.2007.08.002",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ln0.05Al1.95Zn1O4",
+   "formula": "ZnAl1.95Ln0.05O4",
+   "doi": "10.1039/C2AY25535A",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li4NbO4F",
+   "formula": "Li4NbO4F",
+   "doi": "10.1016/j.jssc.2009.02.015",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na0.75Mn0.85Al0.15O2",
+   "formula": "Na0.75Al0.15Mn0.85O2",
+   "doi": "10.1021/cm0484394",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Y5Al87Ni8",
+   "formula": "Al87Y5Ni8",
+   "doi": "10.1016/j.jnoncrysol.2008.01.020",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "YMnFeO5",
+   "formula": "YMnFeO5",
+   "doi": "10.1021/cm049239v",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.7La0.3Ti1O3",
+   "formula": "La0.3Sr0.7TiO3",
+   "doi": "10.1016/j.ijhydene.2010.05.043",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ti51.5Fe48.5",
+   "formula": "Ti51.5Fe48.5",
+   "doi": "10.1016/j.actamat.2015.07.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1.02Mn2O4",
+   "formula": "Li1.02Mn2O4",
+   "doi": "10.1016/S0378-7753(03)00226-X",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Al6Ge2O13",
+   "formula": "Al6Ge2O13",
+   "doi": "10.1016/j.optmat.2017.10.038",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "R0.6Sr0.4Mn1O3",
+   "formula": "R0.6Sr0.4MnO3",
+   "doi": "10.1016/j.jmmm.2015.05.078",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Y1.95Fe0.05O3",
+   "formula": "Y1.95Fe0.05O3",
+   "doi": "10.1007/s10854-011-0573-9",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ln0.002Ca1La3.998Si3O13",
+   "formula": "CaLa3.998Ln0.002(SiO4)3O",
+   "doi": "10.1016/j.jlumin.2014.12.038",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "RbYP2O7",
+   "formula": "RbYP2O7",
+   "doi": "10.1016/j.jlumin.2016.02.040",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba(P2Au)2",
+   "formula": "BaAu2P4",
+   "doi": "10.1021/ic400584w",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La0.18Ti1Pb0.82O3",
+   "formula": "Pb0.82La0.18TiO3",
+   "doi": "10.1016/j.jeurceramsoc.2005.03.239",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "VCrO",
+   "formula": "VCrO",
+   "doi": "10.1007/s10562-013-1058-7",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Y1Mn0.1Fe0.9O3",
+   "formula": "YFe0.9Mn0.1O3",
+   "doi": "10.1016/j.ceramint.2017.09.021",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Fe1.95Co1Bi0.05O4",
+   "formula": "CoFe1.95Bi0.05O4",
+   "doi": "10.1007/s10854-016-5860-z",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.4Pr0.6Mn1O3",
+   "formula": "Pr0.6Sr0.4MnO3",
+   "doi": "10.1016/s0925-8388(01)01797-2",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca3Y2(SiO4)3",
+   "formula": "Ca3Y2Si3O12",
+   "doi": "10.1016/j.jlumin.2009.12.031",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ti4Fe",
+   "formula": "Ti80Fe20",
+   "doi": "10.1016/j.actamat.2015.07.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Mn2.1Cu0.4Ni0.5O4",
+   "formula": "Cu0.4Ni0.5Mn2.1O4",
+   "doi": "10.1016/j.mseb.2012.11.003",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La0.05Eu0.05Fe0.95Co0.05Bi0.9O3",
+   "formula": "Bi0.9Eu0.05La0.05Fe0.95Co0.05O3",
+   "doi": "10.1016/j.matlet.2012.02.082",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr2ZnGe2O7",
+   "formula": "Sr2ZnGe2O7",
+   "doi": "10.1021/acs.inorgchem.5b00937",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "CdS",
+   "formula": "CdS",
+   "doi": "10.1007/s11663-010-9420-2",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ti69.8Fe29.2Sn1",
+   "formula": "Ti69.80Fe29.20Sn1",
+   "doi": "10.1016/j.actamat.2015.07.007",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Bi0.5Sb1.5Te3",
+   "formula": "Bi0.5Sb1.5Te3.0",
+   "doi": "10.1016/j.actamat.2010.09.054",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "BaYCuO",
+   "formula": "YBaCuO",
+   "doi": "10.1016/S0038-1098(02)00714-7",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mg0.1Ni0.9O1",
+   "formula": "Ni0.9Mg0.1O",
+   "doi": "10.1016/j.ssi.2006.06.010",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "MIn2RuO6",
+   "formula": "In2RuMO6",
+   "doi": "10.1016/j.ssc.2011.10.034",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "R0.1Ta0.5Fe0.4Pb1O3",
+   "formula": "Pb(Fe0.4R0.1Ta0.5)O3",
+   "doi": "10.1016/j.jmmm.2007.01.005",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Nd0.03Y1.97Al5O12",
+   "formula": "Nd0.03Y1.97Al5O12",
+   "doi": "10.1016/j.ceramint.2017.05.015",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Fe1.9Co0.5Cu0.5Bi0.1O4",
+   "formula": "Cu0.5Co0.5Fe1.9Bi0.1O4",
+   "doi": "10.1007/s10854-016-5860-z",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La0.75Ti3Fe1Bi4.25O15",
+   "formula": "Bi4.25La0.75Ti3FeO15",
+   "doi": "10.1007/s10854-015-4044-6",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Fe2Co0.8Ni0.2O4",
+   "formula": "Ni0.2Co0.8Fe2O4",
+   "doi": "10.1016/j.matchemphys.2009.03.040",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mg0.5Zn0.5Fe2O4",
+   "formula": "Mg0.5Zn0.5Fe2O4",
+   "doi": "10.1016/j.snb.2011.12.072",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CaCeTi2O7",
+   "formula": "CaCeTi2O7",
+   "doi": "10.1016/j.jpcs.2004.10.012",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Cu2PbO2",
+   "formula": "PbCu2O2",
+   "doi": "10.1039/b719364e",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr1Fe0.2Co0.8O3",
+   "formula": "SrCo0.8Fe0.2O3",
+   "doi": "10.1016/j.ijhydene.2016.11.005",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Zn0.4Fe2Co0.2Ni0.4O4",
+   "formula": "Co0.2Ni0.4Zn0.4Fe2O4",
+   "doi": "10.1016/j.jallcom.2018.08.015",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "MnZnO4",
+   "formula": "ZnMnO4",
+   "doi": "10.1016/j.jpowsour.2016.02.056",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li3Mo4P5O24",
+   "formula": "Li3Mo4P5O24",
+   "doi": "10.1021/acs.chemmater.6b00177",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Mg0.6Ti1.6Al0.8O5",
+   "formula": "Mg0.6Al0.8Ti1.6O5",
+   "doi": "10.1016/j.materresbull.2013.09.042",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiFeP",
+   "formula": "LiFeP",
+   "doi": "10.1016/j.jpowsour.2017.09.005",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "NaCuO2",
+   "formula": "NaCuO2",
+   "doi": "10.1016/s0167-2738(97)00485-2",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "MEu(WO4)2",
+   "formula": "MEu(WO4)2",
+   "doi": "10.1021/acs.inorgchem.7b00804",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ho0.1Mn0.1Fe0.9Bi0.9O3",
+   "formula": "Bi0.9Ho0.1Fe0.9Mn0.1O3",
+   "doi": "10.1016/j.tsf.2014.11.030",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La0.8Tb0.2Mn1O3",
+   "formula": "La0.8Tb0.2MnO3",
+   "doi": "10.1016/j.jmmm.2008.10.030",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li3.6V0.4Si0.6O4",
+   "formula": "Li3.6Si0.6V0.4O4",
+   "doi": "10.1016/j.electacta.2018.01.122",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr0.75Ti1Pb0.25O3",
+   "formula": "(Pb0.25Sr0.75)TiO3",
+   "doi": "10.1007/s10853-011-5641-2",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ce0.8Zr0.2O2",
+   "formula": "Ce0.80Zr0.20O2",
+   "doi": "10.1149/1.3518756",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "SrTa2Bi2O9",
+   "formula": "SrBi2Ta2O9",
+   "doi": "10.1016/j.ssc.2008.12.044",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Cd4ReB3O10",
+   "formula": "Cd4ReO(BO3)3",
+   "doi": "10.1039/c2jm33029f",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca1Mn4.5Cu2.5O12",
+   "formula": "CaCu2.5Mn4.5O12",
+   "doi": "10.1021/cm0212616",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "MeLi2GeO4",
+   "formula": "Li2MeGeO4",
+   "doi": "10.1016/j.tca.2016.11.004",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr4FeMoO8",
+   "formula": "Sr4FeMoO8",
+   "doi": "10.1039/b416470a",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "R0.15Sr2.85Ti2O7",
+   "formula": "(Sr0.95R0.05)3Ti2O7",
+   "doi": "10.1016/j.jpcs.2014.01.002",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1Ga0.025Co0.975O2",
+   "formula": "LiCo0.975Ga0.025O2",
+   "doi": "10.1016/j.mseb.2005.12.008",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.68Sr0.32Ti1O3",
+   "formula": "Ba0.68Sr0.32TiO3",
+   "doi": "10.1016/j.materresbull.2008.03.030",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "YbTa(PbO3)2",
+   "formula": "Pb2YbTaO6",
+   "doi": "10.1016/S0038-1098(00)00314-8",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca1.8Al5.4Si6.6N14.2O1.8",
+   "formula": "Ca1.8Si6.6Al5.4O1.8N14.2",
+   "doi": "10.1016/j.materresbull.2007.02.035",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba1Mg0.2Ti1Fe10Co0.8O19",
+   "formula": "BaMg0.2Co0.8TiFe10O19",
+   "doi": "10.1007/s10854-016-5772-y",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Y3Sc2Al(GaO6)2",
+   "formula": "Y3Sc2Al1Ga2O12",
+   "doi": "10.1016/s0925-3467(02)00271-9",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Na6.24Fe4.88P8O28",
+   "formula": "Na6.24Fe4.88(P2O7)4",
+   "doi": "10.1039/C7CP02483E",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1Ce0.7Y0.2Zr0.1O2.9",
+   "formula": "BaZr0.1Ce0.7Y0.2O2.9",
+   "doi": "10.1016/j.ijhydene.2012.05.040",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.3Pr0.7Mn1O3",
+   "formula": "Pr0.7Sr0.3MnO3",
+   "doi": "10.1021/cm000206z",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiTi2",
+   "formula": "LiTi 2",
+   "doi": "10.1016/j.electacta.2018.05.096",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ce0.8Sm0.2O1.9",
+   "formula": "Sm0.2Ce0.8O1.9",
+   "doi": "10.1016/j.jpowsour.2014.06.164",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1.2Mn0.32Fe0.16Ni0.32O2",
+   "formula": "Li1.2(Mn0.32Ni0.32Fe0.16)O2",
+   "doi": "10.1016/j.electacta.2012.02.076",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Nd0.03Y1.97O3",
+   "formula": "(Y0.985Nd0.015)2O3",
+   "doi": "10.1016/j.materresbull.2014.09.038",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "R0.05Fe1Bi0.95O3",
+   "formula": "Bi0.95R0.05FeO3",
+   "doi": "10.1016/j.elspec.2014.02.003",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "BaGdCo2",
+   "formula": "GdBaCo2",
+   "doi": "10.1016/j.ijhydene.2010.01.079",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Mn1.7Cu1.3O4",
+   "formula": "Cu1.3Mn1.7O4",
+   "doi": "10.1016/j.surfcoat.2016.09.028",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Zn0.612Fe1.96Cu0.255Ni0.153O3.96",
+   "formula": "(Ni0.15Cu0.25Zn0.6O)1.02(Fe2O3)0.98",
+   "doi": "10.1016/j.mseb.2006.01.008",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1Mn1.5Cu0.05Ni0.45O4",
+   "formula": "LiNi0.45Cu0.05Mn1.5O4",
+   "doi": "10.1007/s10008-017-3545-z",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "BaMgF4",
+   "formula": "BaMgF4",
+   "doi": "10.1039/C4DT00904E",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li1Mn1.8Ni0.2O4",
+   "formula": "LiNi0.2Mn1.8O4",
+   "doi": "10.1039/c6cp01873d",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.8Ta2Bi2.4O9",
+   "formula": "Sr0.8Bi2.4Ta2.0O9",
+   "doi": "10.1016/S0921-5107(00)00508-0",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca3PbO",
+   "formula": "Ca3PbO",
+   "doi": "10.1103/PhysRevB.96.155109",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "CuAgSe",
+   "formula": "CuAgSe",
+   "doi": "10.1016/j.ssi.2014.03.025",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La2NiO4",
+   "formula": "La2NiO4",
+   "doi": "10.1016/j.ssi.2016.11.030",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "SrCoO3",
+   "formula": "SrCoO3.0",
+   "doi": "10.1021/jp107173b",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr2SiO4",
+   "formula": "Sr2SiO4",
+   "doi": "10.1016/j.matlet.2013.12.020",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ca2Mg3Zr0.25Ta2Ti1.75O12",
+   "formula": "(Ca2Mg3)Ta2(Ti1.75Zr0.25)O12",
+   "doi": "10.1007/s10854-011-0386-x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li0.3Mn0.05Zn0.4Fe2.25O4",
+   "formula": "Li0.3Zn0.4Fe2.25Mn0.05O4",
+   "doi": "10.1111/j.1551-2916.2007.02154.x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Li2TiF6",
+   "formula": "Li2TiF6",
+   "doi": "10.1016/j.electacta.2013.11.184",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "K2TiSi2O7",
+   "formula": "K2TiSi2O7",
+   "doi": "10.1016/j.ssi.2015.06.002",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na0.4871La0.0172Ti1Bi0.4871O3",
+   "formula": "Bi0.4871Na0.4871La0.0172TiO3",
+   "doi": "10.1007/s10854-015-3515-0",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Mo0.4W0.6",
+   "formula": "Mo0.4 W0.6",
+   "doi": "10.1149/1.3619774",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca2Mn3O8",
+   "formula": "Ca2Mn3O8",
+   "doi": "10.1016/j.ssi.2006.02.001",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ti0.98Mn0.02O2",
+   "formula": "Ti0.98Mn0.02O2",
+   "doi": "10.1016/j.jmmm.2015.11.065",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ga0.5Fe0.5O1.5",
+   "formula": "(GaFeO3)0.50",
+   "doi": "10.1021/jp2065216",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CePrO2",
+   "formula": "PrCeO2",
+   "doi": "10.1016/S0921-4534(00)00095-2",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "SbPt",
+   "formula": "PtSb",
+   "doi": "10.1016/j.apsusc.2005.03.221",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "CeZnO2",
+   "formula": "ZnCeO2",
+   "doi": "10.1007/s10854-015-3967-2",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1.1Mn1.95Fe0.05O4",
+   "formula": "Li1.1Mn1.95Fe0.05O4",
+   "doi": "10.1007/s10008-014-2486-z",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.3Sm0.7Co1O3",
+   "formula": "Sm0.7Sr0.3CoO3",
+   "doi": "10.1016/j.jpowsour.2009.02.016",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "ZnAgAuO",
+   "formula": "AuAgZnO",
+   "doi": "10.1021/acs.jpcc.7b02232",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1.03Mn1.8Al0.2S0.04O3.96",
+   "formula": "Li1.03Al0.2Mn1.8O3.96S0.04",
+   "doi": "10.1016/S1388-2481(99)00136-8",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba0.7Li0.09Ti0.7Zn0.12Fe0.69O3.3",
+   "formula": "(BaTiO3)0.70(Li0.3Zn0.4Fe2.3O4)0.30",
+   "doi": "10.1016/j.materresbull.2018.02.034",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li1Mn0.5Co0.5B1O3",
+   "formula": "LiMn0.5Co0.5BO3",
+   "doi": "10.1016/j.ijhydene.2017.09.118",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La0.04Zn0.5Fe1.46Cu0.5O4",
+   "formula": "Fe1.46Zn0.5La0.04Cu0.5O4",
+   "doi": "10.1007/s10854-016-5756-y",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Na0.1La0.9Ti1N0.8O2.2",
+   "formula": "Na0.1La0.9TiO2.2N0.8",
+   "doi": "10.1016/j.nanoen.2017.06.026",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba1Fe1.84Co0.16As2",
+   "formula": "Ba(Fe0.92Co0.08)2As2",
+   "doi": "10.1016/j.physc.2014.01.010",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Yb0.1Y1.89Tm0.02O3",
+   "formula": "Y1.89Yb0.1Tm0.02O3",
+   "doi": "10.1016/j.optmat.2012.06.019",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Gd0.01Mn0.02Zn0.97O1",
+   "formula": "Zn0.97Gd0.01Mn0.02O",
+   "doi": "10.1016/j.solidstatesciences.2018.07.020",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La4Fe0.03Ni2.97O9.95",
+   "formula": "La4Ni2.97Fe0.03O9.95",
+   "doi": "10.1016/j.jssc.2008.10.006",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Al0.06Fe0.94",
+   "formula": "Fe0.94Al0.06",
+   "doi": "10.1016/j.molliq.2017.04.046",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Y3Ga5O12",
+   "formula": "Y3Ga5O12",
+   "doi": "10.1016/j.jlumin.2006.01.265",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "NaCa2Nb3O10",
+   "formula": "Ca2NaNb3O10",
+   "doi": "10.1007/s10854-017-7210-1",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Al0.5Ga0.5P1O4",
+   "formula": "Al0.5Ga0.5PO4",
+   "doi": "10.1016/j.cattod.2007.06.083",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Y0.9Er0.1Al1O3",
+   "formula": "Er0.1Y0.9AlO3",
+   "doi": "10.1016/j.optmat.2018.06.049",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ce0.2U0.8O2",
+   "formula": "(U0.8Ce0.2)O2",
+   "doi": "10.1016/j.tca.2005.11.005",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ca3TaAl3(SiO7)2",
+   "formula": "Ca3TaAl3Si2O14",
+   "doi": "10.1021/acs.cgd.5b01822",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La2Si6Te2O19",
+   "formula": "La2(Si6O13)(TeO3)2",
+   "doi": "10.1016/j.jssc.2007.11.031",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mn2Sb3ClO6",
+   "formula": "Mn2Sb3O6Cl",
+   "doi": "10.1021/acs.jpcc.6b13092",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Gd1.2Eu0.8Mo3O12",
+   "formula": "Gd1.2Eu0.8(MoO4)3",
+   "doi": "10.1016/j.snb.2008.01.065",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba0.3Na0.7Ti0.3Nb0.7O3",
+   "formula": "Ba0.3Na0.7Ti0.3Nb0.7O3",
+   "doi": "10.1111/j.1551-2916.2006.01172.x",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Gd2MgTiO6",
+   "formula": "Gd2MgTiO6",
+   "doi": "10.1016/j.molstruc.2014.03.041",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LiFe5O8",
+   "formula": "LiFe5O8",
+   "doi": "10.1039/C5TC00099H",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La0.2Mn0.05Fe0.95Bi0.8O3",
+   "formula": "Bi0.8La0.2Fe0.95Mn0.05O3",
+   "doi": "10.1016/j.ceramint.2014.06.114",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Y(Fe5Si)2",
+   "formula": "YFe10Si2",
+   "doi": "10.1016/s0925-8388(98)00263-1",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Pr2ZrCuO6",
+   "formula": "Pr2CuZrO6",
+   "doi": "10.1007/s10854-015-4232-4",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na0.5Ti1Bi0.49O2.985",
+   "formula": "Na0.5Bi0.49TiO2.985",
+   "doi": "10.1016/j.ssi.2016.09.016",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "InNi21B20",
+   "formula": "InNi21B20",
+   "doi": "10.1039/c7dt02501g",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "NaTb9(Si3O13)2",
+   "formula": "NaTb9(SiO4)6O2",
+   "doi": "10.1016/j.jssc.2008.12.031",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mn0.05Fe1Bi0.95O3",
+   "formula": "Bi0.95Mn0.05FeO3",
+   "doi": "10.1016/j.ceramint.2015.10.005",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ce0.5U0.5O2",
+   "formula": "(U0.5Ce0.5)O2",
+   "doi": "10.1016/j.tca.2005.11.005",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "BaGd2Ti4O13",
+   "formula": "BaGd2Ti4O13",
+   "doi": "10.1016/j.materresbull.2013.11.009",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Bi0.1Pb0.9Se2",
+   "formula": "Pb0.9Bi0.1Se2",
+   "doi": "10.1016/j.solidstatesciences.2010.10.003",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La1Fe0.2Co0.8O3",
+   "formula": "LaCo0.8Fe0.2O3",
+   "doi": "10.1007/s11244-009-9376-0",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "ZnInO",
+   "formula": "InZnO",
+   "doi": "10.1039/c2jm16846d",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "AInO4",
+   "formula": "InAO4",
+   "doi": "10.1007/s10853-006-1472-y",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "A(FeO2)2",
+   "formula": "AFe2O4",
+   "doi": "10.1016/j.ijhydene.2011.01.073",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba5Ca2Y3(Cu4O9)2",
+   "formula": "Y3Ba5Ca2Cu8O18",
+   "doi": "10.1016/j.solidstatesciences.2011.08.024",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Na2Zr0.9Al0.1O2.95",
+   "formula": "Na2(Zr0.9Al0.1)O2.95",
+   "doi": "10.1021/jp508842e",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sm2MnCoO6",
+   "formula": "Sm2CoMnO6",
+   "doi": "10.1016/j.jmmm.2014.07.017",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Mg0.35Zn0.5Fe2Cu0.15O4",
+   "formula": "Mg0.35Cu0.15Zn0.5Fe2O4",
+   "doi": "10.1016/j.jmmm.2016.08.028",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "EuP5O14",
+   "formula": "EuP5O14",
+   "doi": "10.1149/2.0081407ssl",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "SrCeScO4",
+   "formula": "CeSrScO4",
+   "doi": "10.1016/j.jssc.2006.10.023",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Ba0.05Mn1.75Co0.45Cu0.05Ni0.7O4",
+   "formula": "Mn1.75Ni0.7Co0.45Cu0.05Ba0.05O4",
+   "doi": "10.1007/s00339-017-1192-y",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "MnFe2NiO4",
+   "formula": "MnNiFe2O4",
+   "doi": "10.1016/j.jmmm.2015.09.018",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Sr0.18La0.72Y0.15Zr0.85Mn1O5",
+   "formula": "(La0.8Sr0.2)0.9MnO3 Y0.15Zr0.85O2",
+   "doi": "10.1016/j.ijhydene.2016.07.177",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "CeCl3",
+   "formula": "CeCl3",
+   "doi": "10.1021/ic960746r",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba2Nb2Bi2O9",
+   "formula": "Ba2Bi2Nb2O9",
+   "doi": "10.1016/s0955-2219(01)00006-1",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Na3.4Sc2Si0.4P2.6O12",
+   "formula": "Na3.4Sc2Si0.4P2.6O12",
+   "doi": "10.1016/j.solidstatesciences.2017.03.005",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "NaP4(RuO7)2",
+   "formula": "NaRu2(P2O7)2",
+   "doi": "10.1016/S0025-5408(03)00067-9",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Rb4Ba2.5B20Br1O34",
+   "formula": "Rb4Ba2.5B20O34Br",
+   "doi": "10.1021/acs.inorgchem.6b01855",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "TiFe3Pb5ClO11",
+   "formula": "Pb5Fe3TiO11Cl",
+   "doi": "10.1016/j.jssc.2014.04.002",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sr0.5La0.5Co1O2.91",
+   "formula": "La0.5Sr0.5CoO2.91",
+   "doi": "10.1007/s10854-016-5712-x",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "La0.683Ti0.95Al0.05O3",
+   "formula": "La0.683Ti0.95Al0.05O3",
+   "doi": "10.1016/S0167-2738(99)00345-8",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Fe2Co0.9Cu0.1O4",
+   "formula": "Cu0.1Co0.9Fe2O4",
+   "doi": "10.1016/j.jmmm.2016.10.031",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Zn0.2Ga0.5Fe1.5Cu0.1Ni0.2O3.5",
+   "formula": "(GaFeO3)0.50 (Ni0.4Zn0.4Cu0.2Fe2O4)0.50",
+   "doi": "10.1021/jp2065216",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Ba1In0.1Fe11.9O19",
+   "formula": "BaFe11.9In0.1O19",
+   "doi": "10.1016/j.jmmm.2018.02.078",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "ZnCuS",
+   "formula": "ZnCuS",
+   "doi": "10.1007/s00339-015-9079-2",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "YbFeO3",
+   "formula": "YbFeO3",
+   "doi": "10.1016/j.jssc.2012.02.004",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Pr0.22Y0.78Ta1Ti1O6",
+   "formula": "Pr0.22Y0.78TiTaO6",
+   "doi": "10.1007/s10854-011-0416-8",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "La0.7Mn1Ag0.3O3",
+   "formula": "La0.7Ag0.3MnO3",
+   "doi": "10.1016/j.cattod.2010.06.001",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Sm2Pd2O5",
+   "formula": "Sm2Pd2O5",
+   "doi": "10.1016/s0921-5107(99)00108-7",
+   "synthesis_method": "sol-gel"
+  },
+  {
+   "reduced_formula": "Li3V2(PO4)3",
+   "formula": "Li3V2(PO4)3",
+   "doi": "10.1007/s10854-017-7834-1",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "LaBMoO6",
+   "formula": "LaBMoO6",
+   "doi": "10.1039/c3ce40364e",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "MV2(Bi2O5)3",
+   "formula": "MBi6V2O15",
+   "doi": "10.1016/j.solidstatesciences.2007.07.004",
+   "synthesis_method": "solid-state"
+  },
+  {
+   "reduced_formula": "Zn0.51Fe2Co0.37O4",
+   "formula": "Co0.37Zn0.51Fe2O4",
+   "doi": "10.1016/s0254-0584(96)01890-1",
+   "synthesis_method": "solid-state"
+  }
+ ]
+}

@@ -50,6 +50,13 @@ def _ci(entry: dict, digits: int = 3) -> str:
 
 # ---------------------------------------------------------------------------
 # Table 1: retrieval — formula-SRO (primary), element-SRO (secondary), oracle
+#
+# CANONICAL SOURCES (do not mix): formula-SRO, oracle, regret, and per-route
+# numbers come from transferability_results.json (retrievers called with
+# k=5 directly). Element-SRO/MCR/latency come from benchmark_results.json.
+# benchmark_results.json also carries a formula_sro column (retrieve at
+# k=20, truncate) — rank-fusion retrievers score slightly differently under
+# that protocol, so it is NOT used for Table 1.
 # ---------------------------------------------------------------------------
 
 def table1() -> str:

@@ -126,6 +126,14 @@ class BenchmarkResults:
     per_query_ndcg: dict[int, list[float]] = field(default_factory=dict)
     per_query_mrr: list[float] = field(default_factory=list)
 
+    # Formula-level SRO (non-circular; primary metric since audit 2026-07-14)
+    formula_sro: dict[int, float] = field(default_factory=dict)
+    per_query_formula_sro: dict[int, list[float]] = field(default_factory=dict)
+
+    # Oracle calibration (populated when the benchmark computes the ceiling)
+    mean_oracle: Optional[float] = None
+    mean_regret: Optional[float] = None
+
     # Wall-clock efficiency (per retrieve() call; index build excluded)
     per_query_latency: list[float] = field(default_factory=list)
 
@@ -144,16 +152,22 @@ class BenchmarkResults:
         """Return a compact ASCII table for quick inspection."""
         lines = [
             f"Retriever: {self.retriever_name}  (n={self.n_queries})",
-            f"{'k':>4}  {'SRO':>8}  {'MCR':>8}  {'NDCG':>8}",
-            "-" * 36,
+            f"{'k':>4}  {'fSRO':>8}  {'SRO':>8}  {'MCR':>8}  {'NDCG':>8}",
+            "-" * 46,
         ]
         for k in self.k_values:
             lines.append(
-                f"{k:>4}  {self.sro.get(k, float('nan')):>8.4f}  "
+                f"{k:>4}  {self.formula_sro.get(k, float('nan')):>8.4f}  "
+                f"{self.sro.get(k, float('nan')):>8.4f}  "
                 f"{self.mcr.get(k, float('nan')):>8.4f}  "
                 f"{self.ndcg.get(k, float('nan')):>8.4f}"
             )
         lines.append(f"MRR (threshold=0.3): {self.mean_mrr:.4f}")
+        if self.mean_oracle is not None:
+            lines.append(
+                f"Oracle fSRO@max-k: {self.mean_oracle:.4f}  "
+                f"(mean regret {self.mean_regret:.4f})"
+            )
         lat = self.latency_stats()
         lines.append(
             f"Latency per query: mean {lat['mean_s'] * 1000:.1f} ms, "
@@ -174,8 +188,23 @@ class RetrievalBenchmark:
         test_cases: Optional[list[TestCase]] = None,
         k_values: tuple[int, ...] = (1, 3, 5, 10, 20),
         max_cases: Optional[int] = None,
+        corpus: Optional[list[TestCase]] = None,
+        compute_oracle: bool = False,
         verbose: bool = True,
     ):
+        """
+        Args:
+            test_cases: Query cases (default: seeded builder — prefer the
+                committed file via load_retrieval_test_set()).
+            k_values: Cutoffs for all @k metrics.
+            max_cases: Truncate the query set (smoke runs).
+            corpus: Full retrieval corpus. Required for compute_oracle;
+                also used to score formula-SRO from corpus ground truth.
+            compute_oracle: If True, compute the oracle formula-SRO ceiling
+                and per-retriever regret at k = max(k_values). O(|queries|
+                x |corpus|), done once and shared across evaluate() calls.
+            verbose: Print progress.
+        """
         if test_cases is None:
             test_cases = build_test_set()
         if max_cases is not None:
@@ -184,6 +213,23 @@ class RetrievalBenchmark:
         self.k_values = list(k_values)
         self.verbose = verbose
         self._max_k = max(k_values)
+
+        from src.evaluation.transferability import (
+            FormulaSetIndex,
+            oracle_formula_sro_at_k,
+        )
+
+        self._formula_index = FormulaSetIndex(corpus or test_cases)
+        self._oracle_scores: Optional[list[float]] = None
+        if compute_oracle:
+            if corpus is None:
+                raise ValueError("compute_oracle requires the full corpus")
+            if verbose:
+                print(f"Computing oracle ceiling ({len(test_cases)} queries) ...")
+            self._oracle_scores = [
+                oracle_formula_sro_at_k(q, corpus, self._max_k, self._formula_index)
+                for q in test_cases
+            ]
 
     def evaluate(
         self,
@@ -204,11 +250,14 @@ class RetrievalBenchmark:
             k_values=self.k_values,
             n_queries=len(self.test_cases),
         )
+        from src.evaluation.transferability import formula_sro_at_k
+
         # Initialise per-query lists
         for k in self.k_values:
             results.per_query_sro[k] = []
             results.per_query_mcr[k] = []
             results.per_query_ndcg[k] = []
+            results.per_query_formula_sro[k] = []
 
         for i, query in enumerate(self.test_cases):
             if self.verbose and i % 100 == 0:
@@ -222,6 +271,9 @@ class RetrievalBenchmark:
                 results.per_query_sro[k].append(sro_at_k(query, neighbors, k))
                 results.per_query_mcr[k].append(mcr_at_k(query, neighbors, k))
                 results.per_query_ndcg[k].append(ndcg_at_k(query, neighbors, k))
+                results.per_query_formula_sro[k].append(
+                    formula_sro_at_k(query, neighbors, k, self._formula_index)
+                )
 
             results.per_query_mrr.append(mrr(query, neighbors))
 
@@ -230,7 +282,15 @@ class RetrievalBenchmark:
             results.sro[k] = float(np.mean(results.per_query_sro[k]))
             results.mcr[k] = float(np.mean(results.per_query_mcr[k]))
             results.ndcg[k] = float(np.mean(results.per_query_ndcg[k]))
+            results.formula_sro[k] = float(np.mean(results.per_query_formula_sro[k]))
         results.mean_mrr = float(np.mean(results.per_query_mrr))
+
+        if self._oracle_scores is not None:
+            achieved = results.per_query_formula_sro[self._max_k]
+            results.mean_oracle = float(np.mean(self._oracle_scores))
+            results.mean_regret = float(
+                np.mean([o - a for o, a in zip(self._oracle_scores, achieved)])
+            )
 
         if self.verbose:
             print(results.summary_table())

@@ -158,3 +158,44 @@ class TestBenchmarkTiming:
         stats = results.latency_stats()
         assert stats["total_s"] >= stats["mean_s"]
         assert set(stats) == {"mean_s", "median_s", "p95_s", "total_s"}
+
+
+# ---------------------------------------------------------------------------
+# Formula-SRO and oracle as first-class benchmark metrics (T2)
+# ---------------------------------------------------------------------------
+
+class TestFormulaSroInBenchmark:
+    def test_formula_sro_computed_per_k(self, tiny_test_cases):
+        from src.evaluation.baselines import ElementJaccardRetriever
+        from src.evaluation.benchmark import RetrievalBenchmark
+
+        bench = RetrievalBenchmark(
+            test_cases=tiny_test_cases, k_values=(1, 3),
+            corpus=tiny_test_cases, verbose=False,
+        )
+        res = bench.evaluate(ElementJaccardRetriever(corpus=tiny_test_cases), "j")
+        assert set(res.formula_sro) == {1, 3}
+        assert all(0.0 <= v <= 1.0 for v in res.formula_sro.values())
+        assert len(res.per_query_formula_sro[1]) == len(tiny_test_cases)
+
+    def test_oracle_bounds_every_retriever(self, tiny_test_cases):
+        from src.evaluation.baselines import RandomRetriever
+        from src.evaluation.benchmark import RetrievalBenchmark
+
+        bench = RetrievalBenchmark(
+            test_cases=tiny_test_cases, k_values=(1, 3),
+            corpus=tiny_test_cases, compute_oracle=True, verbose=False,
+        )
+        res = bench.evaluate(RandomRetriever(corpus=tiny_test_cases, seed=0), "r")
+        assert res.mean_oracle is not None
+        assert res.mean_regret >= -1e-9  # oracle is an upper bound
+        assert res.mean_oracle >= res.formula_sro[3] - 1e-9
+
+    def test_oracle_requires_corpus(self, tiny_test_cases):
+        import pytest
+        from src.evaluation.benchmark import RetrievalBenchmark
+
+        with pytest.raises(ValueError):
+            RetrievalBenchmark(
+                test_cases=tiny_test_cases, compute_oracle=True, verbose=False
+            )

@@ -139,6 +139,127 @@ def build_retrieval_corpus(
     return list(seen.values())
 
 
+def build_temporal_split(
+    recipes_path: Optional[Path] = None,
+    years_path: Optional[Path] = None,
+    cutoff_year: int = 2019,
+) -> tuple[list[TestCase], list[TestCase]]:
+    """Publication-year split, mirroring Retrieval-Retro's year division.
+
+    Train: unique formulas whose EARLIEST recipe predates cutoff_year.
+    Test:  unique formulas whose earliest recipe is >= cutoff_year (i.e.
+    materials first reported after the cutoff — the realistic "new
+    material" scenario; a formula published both before and after the
+    cutoff goes to train, since its recipe was already known).
+
+    Recipes whose DOI has no resolved year are DROPPED (not silently
+    assigned); the caller sees only dated materials. Years come from the
+    committed results/doi_years.json produced by scripts/fetch_doi_years.py.
+    """
+    import json as _json
+
+    from src import PROJECT_ROOT
+
+    if years_path is None:
+        years_path = PROJECT_ROOT / "results" / "doi_years.json"
+    years: dict = _json.loads(Path(years_path).read_text())
+
+    earliest: dict[str, int] = {}
+    representative: dict[str, TestCase] = {}
+    for recipe in load_recipes(recipes_path):
+        doi = recipe.get("doi") or ""
+        year = years.get(doi)
+        if year is None:
+            continue
+        target = (recipe.get("target") or {}).get("material_string", "") or ""
+        if not target:
+            continue
+        try:
+            comp = Composition(target)
+            reduced = comp.reduced_formula
+        except Exception:
+            continue
+
+        if reduced not in earliest or year < earliest[reduced]:
+            earliest[reduced] = year
+            method_text = (
+                recipe.get("synthesis_type", "")
+                + " "
+                + recipe.get("paragraph_string", "")
+            )
+            representative[reduced] = TestCase(
+                material_id="",
+                formula=target,
+                reduced_formula=reduced,
+                elements=sorted(str(el) for el in comp.elements),
+                synthesis_method=classify_synthesis_method(method_text),
+                precursor_elements=_extract_precursor_elements(recipe),
+                raw_recipe=recipe,
+            )
+
+    train = [tc for f, tc in representative.items() if earliest[f] < cutoff_year]
+    test = [tc for f, tc in representative.items() if earliest[f] >= cutoff_year]
+    return train, test
+
+
+def load_retrieval_test_set(
+    path: Optional[Path] = None,
+    recipes_path: Optional[Path] = None,
+) -> list[TestCase]:
+    """Load the committed, authoritative retrieval test set.
+
+    Like the planning test set, this is a FILE, not a seed: the seeded
+    builder's candidate pool depends on which formulas the installed
+    pymatgen version parses. Cases are re-anchored to corpus recipes by
+    (reduced formula, DOI); raises if any case cannot be recovered.
+    """
+    import json as _json
+
+    from src import PROJECT_ROOT
+
+    if path is None:
+        path = PROJECT_ROOT / "results" / "test_set_retrieval_seed42.json"
+    spec = _json.loads(Path(path).read_text())
+
+    by_key: dict[tuple[str, str], dict] = {}
+    for recipe in load_recipes(recipes_path):
+        target = (recipe.get("target") or {}).get("material_string", "") or ""
+        if not target:
+            continue
+        try:
+            reduced = Composition(target).reduced_formula
+        except Exception:
+            continue
+        by_key.setdefault((reduced, recipe.get("doi") or ""), recipe)
+
+    cases: list[TestCase] = []
+    missing: list[str] = []
+    for rec in spec["cases"]:
+        recipe = by_key.get((rec["reduced_formula"], rec["doi"] or ""))
+        if recipe is None:
+            missing.append(rec["reduced_formula"])
+            continue
+        comp = Composition(rec["reduced_formula"])
+        cases.append(
+            TestCase(
+                material_id="",
+                formula=rec["formula"],
+                reduced_formula=rec["reduced_formula"],
+                elements=sorted(str(el) for el in comp.elements),
+                synthesis_method=rec["synthesis_method"],
+                precursor_elements=_extract_precursor_elements(recipe),
+                raw_recipe=recipe,
+            )
+        )
+    if missing:
+        raise RuntimeError(
+            f"{len(missing)} retrieval test cases could not be re-anchored "
+            f"(e.g. {missing[:3]}); corpus or formula parsing changed. Do NOT "
+            f"silently rebuild the test set."
+        )
+    return cases
+
+
 def build_test_set(
     recipes_path: Optional[Path] = None,
     max_per_method: int = 200,

@@ -18,6 +18,7 @@ dependencies = [
     "monty>=2025.0.0",
     "python-dotenv>=1.0.0",
     "jupyterlab>=4.4.7",
+    "lightgbm>=4.6.0",
 ]
 
 [project.optional-dependencies]

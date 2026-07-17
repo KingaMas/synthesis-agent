@@ -162,3 +162,63 @@ class TestFormRerank:
         results = rr.retrieve(query, k=3)
         assert len(results) <= 3
         assert all(r.reduced_formula != query.reduced_formula for r in results)
+
+
+class TestPairwiseRank:
+    def test_feature_vector_shape_and_finiteness(self, tiny_test_cases):
+        from src.evaluation.pairwise_rank import PairFeatureExtractor
+
+        ex = PairFeatureExtractor(tiny_test_cases)
+        f = ex.features(tiny_test_cases[0], tiny_test_cases[1])
+        assert len(f) == len(ex.feature_names)
+        assert all(x == x for x in f)  # no NaNs
+
+    def test_ranker_implements_protocol(self, tiny_test_cases):
+        from src.evaluation.baselines import ElementJaccardRetriever
+        from src.evaluation.pairwise_rank import (
+            GradientBoostedRanker,
+            PairFeatureExtractor,
+            PairwiseRankRetriever,
+        )
+
+        ex = PairFeatureExtractor(tiny_test_cases)
+        base = ElementJaccardRetriever(corpus=tiny_test_cases)
+        ranker = GradientBoostedRanker(
+            ex, n_candidates=5, n_estimators=5, min_child_samples=1
+        ).fit(tiny_test_cases, base, verbose=False)
+        query = tiny_test_cases[0]
+        results = PairwiseRankRetriever(base, ranker, fetch_factor=2).retrieve(
+            query, k=3
+        )
+        assert len(results) <= 3
+        assert all(r.reduced_formula != query.reduced_formula for r in results)
+
+
+class TestMPCBridge:
+    def test_export_and_precomputed_retriever(self, tiny_test_cases, tmp_path):
+        import numpy as np
+
+        from src.evaluation.mpc_data import export_mpc_arrays
+        from src.evaluation.mpc_retriever import PrecomputedEmbeddingRetriever
+
+        meta = export_mpc_arrays(
+            tiny_test_cases, {"val": tiny_test_cases[:2]},
+            tmp_path / "arrays.npz",
+        )
+        blobs = np.load(tmp_path / "arrays.npz")
+        assert blobs["train_comp"].shape == (
+            len(tiny_test_cases), meta["n_elements"]
+        )
+        assert blobs["val_y"].shape == (2, meta["n_precursors"])
+
+        rng = np.random.default_rng(0)
+        emb = rng.normal(size=(len(tiny_test_cases), 8))
+        query = tiny_test_cases[0]
+        ret = PrecomputedEmbeddingRetriever(
+            tiny_test_cases, emb, {query.reduced_formula: emb[0]}
+        )
+        results = ret.retrieve(query, k=3)
+        assert len(results) == 3
+        assert all(r.reduced_formula != query.reduced_formula for r in results)
+        # unknown query embeddings yield no results rather than crashing
+        assert ret.retrieve(tiny_test_cases[1], k=3) == []

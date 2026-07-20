@@ -19,9 +19,6 @@ import argparse
 import json
 from pathlib import Path
 
-FIT_BEFORE = 2014
-VAL_BEFORE = 2016
-
 
 def main():
     parser = argparse.ArgumentParser(description="M2 internal validation")
@@ -33,7 +30,6 @@ def main():
                         default=Path("results/m2_validation_results.json"))
     args = parser.parse_args()
 
-    from src import PROJECT_ROOT
     from src.evaluation.baselines import ElementJaccardRetriever
     from src.evaluation.form_rerank import FormCooccurrenceModel, FormRerankRetriever
     from src.evaluation.pairwise_rank import (
@@ -42,26 +38,14 @@ def main():
         PairwiseRankRetriever,
     )
     from src.evaluation.statistics import holm_correction, wilcoxon_table
-    from src.evaluation.test_set_builder import load_temporal_split
+    from src.evaluation.test_set_builder import load_ladder_validation_split
     from src.evaluation.transferability import evaluate_transferability
 
-    print("Loading frozen temporal split (test side ignored) ...")
-    train, _test_unused = load_temporal_split()
-    years = json.loads(
-        (PROJECT_ROOT / "results" / "doi_years.json").read_text()
-    )
-
-    def year_of(tc):
-        return years.get(tc.raw_recipe.get("doi") or "")
-
-    fit = [tc for tc in train if year_of(tc) is not None
-           and year_of(tc) < FIT_BEFORE]
-    val = [tc for tc in train if year_of(tc) is not None
-           and FIT_BEFORE <= year_of(tc) < VAL_BEFORE]
+    print("Loading train-internal ladder validation split ...")
+    fit, val = load_ladder_validation_split()
     if args.max_val:
         val = val[: args.max_val]
-    print(f"  fit corpus {len(fit)} (<{FIT_BEFORE}), "
-          f"validation queries {len(val)} ({FIT_BEFORE}-{VAL_BEFORE - 1})")
+    print(f"  fit corpus {len(fit)}, validation queries {len(val)}")
 
     print("Fitting feature extractor on fit corpus ...")
     extractor = PairFeatureExtractor(fit)
@@ -101,8 +85,8 @@ def main():
         for k_, v in raw.items()
     }
     results["_config"].update({
-        "protocol": f"fit <{FIT_BEFORE}, validate {FIT_BEFORE}-{VAL_BEFORE - 1}"
-                    " (train-internal; frozen 2016 test split NOT consumed)",
+        "protocol": "fit <2014, validate 2014-2015 "
+                    "(train-internal; frozen 2016 test split NOT consumed)",
         "m2_configs": configs,
         "success_criterion": (
             "formula-SRO@5 >= 0.45 overall AND >= 0.33 sol-gel, "

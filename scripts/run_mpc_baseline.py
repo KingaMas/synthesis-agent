@@ -31,32 +31,21 @@ import json
 import random
 from pathlib import Path
 
-FIT_BEFORE = 2014
-VAL_BEFORE = 2016
-
 
 def load_protocol(protocol: str):
     """Returns (corpus, {set_name: query_cases}, eval_set_name)."""
-    from src import PROJECT_ROOT
-    from src.evaluation.test_set_builder import load_temporal_split
+    from src.evaluation.test_set_builder import (
+        load_ladder_validation_split,
+        load_temporal_split,
+    )
 
-    train, test = load_temporal_split()
     if protocol == "frozen":
+        train, test = load_temporal_split()
         rng = random.Random(42)
         es = rng.sample(train, max(1, len(train) // 10))
         return train, {"es": es, "test": test}, "test"
 
-    years = json.loads(
-        (PROJECT_ROOT / "results" / "doi_years.json").read_text()
-    )
-
-    def year_of(tc):
-        return years.get(tc.raw_recipe.get("doi") or "")
-
-    fit = [tc for tc in train if year_of(tc) is not None
-           and year_of(tc) < FIT_BEFORE]
-    val = [tc for tc in train if year_of(tc) is not None
-           and FIT_BEFORE <= year_of(tc) < VAL_BEFORE]
+    fit, val = load_ladder_validation_split()
     return fit, {"val": val}, "val"
 
 

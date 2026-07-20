@@ -55,11 +55,33 @@ def build_vocabs(train_corpus: list[TestCase]) -> tuple[list[str], list[str]]:
     return sorted(elements), sorted(precursors)
 
 
+def _magpie_matrix(cases: list[TestCase]) -> np.ndarray:
+    from matminer.featurizers.composition import ElementProperty
+
+    feat = ElementProperty.from_preset("magpie")
+    n_dim = len(feat.feature_labels())
+    rows = []
+    cache: dict[str, np.ndarray] = {}
+    for tc in cases:
+        v = cache.get(tc.reduced_formula)
+        if v is None:
+            try:
+                v = np.asarray(
+                    feat.featurize(Composition(tc.reduced_formula)), dtype=np.float32
+                )
+            except Exception:
+                v = np.full(n_dim, np.nan, dtype=np.float32)
+            cache[tc.reduced_formula] = v
+        rows.append(v)
+    return np.stack(rows)
+
+
 def export_mpc_arrays(
     train_corpus: list[TestCase],
     query_sets: dict[str, list[TestCase]],
     out_path: Path,
     train_exclude: set[str] | None = None,
+    include_magpie: bool = False,
 ) -> dict:
     """Write an .npz with composition features and precursor labels.
 
@@ -104,6 +126,17 @@ def export_mpc_arrays(
     for name, cases in query_sets.items():
         arrays[f"{name}_comp"] = comp_matrix(cases)
         arrays[f"{name}_y"] = label_matrix(cases)
+
+    if include_magpie:
+        # Raw (unstandardised) Magpie vectors; the torch-side driver
+        # standardises with the train statistics also stored here.
+        arrays["train_magpie"] = _magpie_matrix(train_corpus)
+        arrays["magpie_mean"] = np.nanmean(arrays["train_magpie"], axis=0)
+        std = np.nanstd(arrays["train_magpie"], axis=0)
+        std[std < 1e-9] = 1.0
+        arrays["magpie_std"] = std
+        for name, cases in query_sets.items():
+            arrays[f"{name}_magpie"] = _magpie_matrix(cases)
 
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)

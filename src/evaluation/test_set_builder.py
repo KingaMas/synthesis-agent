@@ -259,6 +259,41 @@ def load_temporal_split(
     return _anchor(spec["train"], "train"), _anchor(spec["test"], "test")
 
 
+LADDER_FIT_BEFORE = 2014
+LADDER_VAL_BEFORE = 2016
+
+
+def load_ladder_validation_split(
+    path: Optional[Path] = None,
+    recipes_path: Optional[Path] = None,
+) -> tuple[list[TestCase], list[TestCase]]:
+    """Train-internal temporal split for T4 ladder model selection.
+
+    Fit corpus: temporal-train materials first published before 2014;
+    validation queries: 2014-2015. Both are subsets of the frozen
+    temporal TRAIN side, so tuning on this split never consumes the
+    2016+ test queries. Used by M1/M2/M3 validation and the MPC
+    baseline's internal protocol.
+    """
+    import json as _json
+
+    from src import PROJECT_ROOT
+
+    train, _ = load_temporal_split(path=path, recipes_path=recipes_path)
+    years = _json.loads(
+        (PROJECT_ROOT / "results" / "doi_years.json").read_text()
+    )
+
+    def year_of(tc: TestCase):
+        return years.get(tc.raw_recipe.get("doi") or "")
+
+    fit = [tc for tc in train if year_of(tc) is not None
+           and year_of(tc) < LADDER_FIT_BEFORE]
+    val = [tc for tc in train if year_of(tc) is not None
+           and LADDER_FIT_BEFORE <= year_of(tc) < LADDER_VAL_BEFORE]
+    return fit, val
+
+
 def load_retrieval_test_set(
     path: Optional[Path] = None,
     recipes_path: Optional[Path] = None,

@@ -1,0 +1,121 @@
+{
+ "_config": {
+  "protocols": [
+   "max_heating",
+   "calcination",
+   "sintering"
+  ],
+  "route_scope": "solid-state only (Prein et al. protocol)",
+  "eval_split": "ladder validation (fit <2014, queries 2014-15); frozen 2016 test split not consumed",
+  "n_fit_solid": 4133,
+  "n_val_solid": 868
+ },
+ "coverage": {
+  "n_solid_state_recipes": 15040,
+  "n_max_heating_gt_corrupted_by_implausible_values": 13,
+  "max_heating": {
+   "n_with_temp": 12507,
+   "fraction": 0.8316
+  },
+  "calcination": {
+   "n_with_temp": 4977,
+   "fraction": 0.3309
+  },
+  "sintering": {
+   "n_with_temp": 4520,
+   "fraction": 0.3005
+  }
+ },
+ "replication_noise": {
+  "max_heating": {
+   "loo_mae": 128.44709599581492,
+   "pairwise_mad": 192.27091534728817,
+   "n_formulas": 2006,
+   "n_reports": 8953
+  },
+  "calcination": {
+   "loo_mae": 91.39202096243929,
+   "pairwise_mad": 139.59379370207841,
+   "n_formulas": 802,
+   "n_reports": 3489
+  },
+  "sintering": {
+   "loo_mae": 82.91790243732672,
+   "pairwise_mad": 112.61396783035198,
+   "n_formulas": 720,
+   "n_reports": 2953
+  }
+ },
+ "protocol_eval": {
+  "per_protocol_support": {
+   "max_heating": {
+    "n": 718,
+    "rule_median": {
+     "mae": 260.6433147632312,
+     "median_ae": 244.8499999999999
+    },
+    "retrieval_copy_jaccard": {
+     "mae": 260.37367688022283,
+     "median_ae": 200.0
+    }
+   },
+   "calcination": {
+    "n": 212,
+    "rule_median": {
+     "mae": 211.18349056603773,
+     "median_ae": 150.0
+    },
+    "retrieval_copy_jaccard": {
+     "mae": 209.44976415094342,
+     "median_ae": 149.925
+    }
+   },
+   "sintering": {
+    "n": 221,
+    "rule_median": {
+     "mae": 214.1466063348416,
+     "median_ae": 199.8499999999999
+    },
+    "retrieval_copy_jaccard": {
+     "mae": 212.63506787330317,
+     "median_ae": 130.0
+    }
+   }
+  },
+  "strict_common_support": {
+   "max_heating": {
+    "n": 144,
+    "rule_median": {
+     "mae": 235.1673611111111,
+     "median_ae": 235.0
+    },
+    "retrieval_copy_jaccard": {
+     "mae": 230.53437499999998,
+     "median_ae": 150.0
+    }
+   },
+   "calcination": {
+    "n": 123,
+    "rule_median": {
+     "mae": 188.2520325203252,
+     "median_ae": 150.0
+    },
+    "retrieval_copy_jaccard": {
+     "mae": 194.7479674796748,
+     "median_ae": 120.0
+    }
+   },
+   "sintering": {
+    "n": 124,
+    "rule_median": {
+     "mae": 216.89274193548388,
+     "median_ae": 199.92499999999995
+    },
+    "retrieval_copy_jaccard": {
+     "mae": 209.42217741935482,
+     "median_ae": 125.0
+    }
+   }
+  }
+ }
+}

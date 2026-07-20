@@ -14,6 +14,73 @@ import numpy as np
 from src.evaluation.test_set_builder import TestCase
 
 
+class ScoreMatrixRetriever:
+    """Top-k over a precomputed (query x corpus) score matrix.
+
+    Used for the Retrieval-Retro NRE baseline, whose score is a Gibbs
+    proxy computed offline in the torch venv. smallest=True ranks
+    ascending (their delta-G convention: smaller is better).
+    """
+
+    def __init__(
+        self,
+        corpus: list[TestCase],
+        scores: dict[str, np.ndarray],
+        smallest: bool = True,
+    ):
+        self.corpus = corpus
+        self._scores = scores
+        self._sign = 1.0 if smallest else -1.0
+
+    def retrieve(self, query: TestCase, k: int) -> list[TestCase]:
+        row = self._scores.get(query.reduced_formula)
+        if row is None:
+            return []
+        order = np.argsort(self._sign * row, kind="stable")
+        out = []
+        for i in order:
+            tc = self.corpus[i]
+            if tc.reduced_formula == query.reduced_formula:
+                continue
+            out.append(tc)
+            if len(out) == k:
+                break
+        return out
+
+
+class UnionRetriever:
+    """Their reference-set fusion: take the first retrievers' top picks
+    in order, skipping duplicates, until k candidates are collected.
+    Quotas follow Retrieval-Retro's usage (K=3 from MPC, rest from NRE).
+    """
+
+    def __init__(self, retrievers: list, quotas: list[int]):
+        assert len(retrievers) == len(quotas)
+        self.retrievers = retrievers
+        self.quotas = quotas
+
+    def retrieve(self, query: TestCase, k: int) -> list[TestCase]:
+        out: list[TestCase] = []
+        seen: set[str] = set()
+
+        def take(retriever, quota: int) -> None:
+            for tc in retriever.retrieve(query, k=k):
+                if quota <= 0 or len(out) == k:
+                    return
+                if tc.reduced_formula in seen:
+                    continue
+                seen.add(tc.reduced_formula)
+                out.append(tc)
+                quota -= 1
+
+        for retriever, quota in zip(self.retrievers, self.quotas):
+            take(retriever, quota)
+        # top up from the first retriever if a component undershot k
+        if len(out) < k:
+            take(self.retrievers[0], k - len(out))
+        return out
+
+
 class PrecomputedEmbeddingRetriever:
     """Cosine top-k over fixed embeddings keyed by reduced formula."""
 

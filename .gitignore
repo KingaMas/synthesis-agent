@@ -31,3 +31,4 @@ AGENTS.md
 test_recursive.py
 .claude/
 external/
+results/mpc/nre_scores_*.npz
